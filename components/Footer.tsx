@@ -37,7 +37,7 @@ export default function Footer() {
                                 <Phone className="text-saffron shrink-0 mt-1" size={18} />
                                 <div>
                                     <div className="text-xs text-gray-500 uppercase font-bold mb-1">Call Us</div>
-                                    <a href="tel:+919123456789" className="text-white font-bold hover:text-saffron text-lg block">+91 96638 28936</a>
+                                    <a href="tel:+919663828936" className="text-white font-bold hover:text-saffron text-lg block">+91 96638 28936</a>
                                     <span className="text-xs text-green-500">Available 6 AM - 10 PM</span>
                                 </div>
                             </li>
@@ -45,7 +45,7 @@ export default function Footer() {
                                 <Mail className="text-saffron shrink-0 mt-1" size={18} />
                                 <div>
                                     <div className="text-xs text-gray-500 uppercase font-bold mb-1">Email Us</div>
-                                    <a href="mailto:info@gokarnatemples.com" className="text-white hover:text-saffron">info@gokarnatemples.com</a>
+                                    <a href="mailto:gokarnatemples@gmail.com" className="text-white hover:text-saffron">gokarnatemples@gmail.com</a>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">

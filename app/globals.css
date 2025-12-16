@@ -6,10 +6,11 @@
   --color-gold: #D4AF37;
   --color-cream: #F8F9FA;
   --color-charcoal: #1F2937;
-  
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-noto);
-  --font-accent: var(--font-playfair);
+
+  --font-sans: var(--font-lato);
+  --font-serif: var(--font-playfair);
+  --font-display: var(--font-cinzel);
+  --font-script: var(--font-great-vibes);
 }
 
 :root {
@@ -19,10 +20,20 @@
 
 @layer base {
   body {
-    @apply bg-cream text-charcoal font-sans;
+    @apply bg-cream text-charcoal font-sans antialiased text-base leading-relaxed;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+
+  h1,
+  h2,
+  .h1,
+  .h2 {
+    @apply font-display tracking-tight text-charcoal;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif text-charcoal;
   }
 }
-

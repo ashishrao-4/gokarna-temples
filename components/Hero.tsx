@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Phone, ArrowRight } from "lucide-react";
+import heroBg from "../images/koti 1.jpg";
+import Typewriter from 'typewriter-effect';
 
 export default function Hero() {
     return (
@@ -15,7 +17,7 @@ export default function Hero() {
                 className="absolute inset-0 z-0"
             >
                 <Image
-                    src="https://images.unsplash.com/photo-1590459389230-01cc9eb40348?q=80&w=2070&auto=format&fit=crop"
+                    src={heroBg}
                     alt="Gokarna Temple"
                     fill
                     className="object-cover"
@@ -33,7 +35,7 @@ export default function Hero() {
                     <span className="inline-block py-1 px-3 rounded-full bg-saffron/20 border border-saffron/50 text-saffron font-bold text-sm mb-6 tracking-wide uppercase">
                         Official Gokarna Vedic Services
                     </span>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 leading-tight drop-shadow-lg">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight drop-shadow-lg text-white">
                         Experience Divine Relief from <br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron to-gold">
                             Ancestral Suffering
@@ -41,14 +43,34 @@ export default function Hero() {
                     </h1>
                 </motion.div>
 
-                <motion.p
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-lg md:text-xl max-w-2xl mb-10 text-gray-200 leading-relaxed font-light"
+                    className="relative max-w-4xl mx-auto mb-10 overflow-hidden rounded-2xl bg-gradient-to-br from-white/95 via-orange-50/90 to-white/95 backdrop-blur-md border-t-4 border-saffron shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-8 sm:p-10"
                 >
-                    Authentic Pitru Dosha, Narayana Bali, and Tripindi Shradh Pujas performed by expert Vedic Pandits in the holy grounds of Gokarna in Karnataka.
-                </motion.p>
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent opacity-50" />
+
+                    <div className="relative z-10 flex flex-col items-center text-center">
+                        <div className="flex flex-col md:flex-row gap-3 justify-center items-center flex-wrap text-charcoal font-medium text-xl md:text-2xl">
+                            <span className="font-serif text-gray-700">Authentic</span>
+                            <span className="text-saffron font-bold bg-orange-100/50 px-4 py-1.5 rounded-lg inline-block border border-orange-200/50 shadow-sm">
+                                <Typewriter
+                                    options={{
+                                        strings: ['Pitru Dosha Puja', 'Narayana Bali Puja', 'Tripindi Shradh Puja'],
+                                        autoStart: true,
+                                        loop: true,
+                                        delay: 50,
+                                        deleteSpeed: 30,
+                                    }}
+                                />
+                            </span>
+                        </div>
+                        <p className="mt-6 text-base md:text-lg text-gray-600 font-medium max-w-2xl leading-relaxed">
+                            Performed by expert <span className="text-saffron font-bold">Vedic Pandits</span> in the holy grounds of <span className="text-charcoal font-semibold">Gokarna</span>, honoring ancient traditions for your peace.
+                        </p>
+                    </div>
+                </motion.div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -80,7 +102,7 @@ export default function Hero() {
                 >
                     <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                        20+ Pujas performed today
+                        10+ Pujas performed everyday
                     </div>
                     <div className="flex items-center gap-2">
                         <span className="text-gold">★ 4.9/5</span> Trusted by 10k+ Devotees

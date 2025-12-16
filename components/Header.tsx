@@ -20,7 +20,7 @@ export default function Header() {
     const navLinks = [
         { name: "Poojas", href: "#poojas" },
         { name: "Benefits", href: "#benefits" },
-        { name: "Pricing", href: "#pricing" },
+        { name: "How to Reach", href: "#location" },
         { name: "Guruji", href: "#priest" },
         { name: "Contact", href: "#contact" },
     ];

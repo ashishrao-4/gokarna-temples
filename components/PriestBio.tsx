@@ -20,7 +20,7 @@ export default function PriestBio() {
                         <div className="aspect-[3/4] relative rounded-2xl overflow-hidden shadow-2xl w-full max-w-sm rotate-1 hover:rotate-0 transition-transform duration-500">
                             <Image
                                 src="https://images.unsplash.com/photo-1549063548-2621b184136e?q=80&w=800&auto=format&fit=crop"
-                                alt="Acharya Guruji"
+                                alt="Balachandra Prasad"
                                 fill
                                 className="object-cover"
                             />
@@ -55,7 +55,7 @@ export default function PriestBio() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <a href="tel:+919123456789" className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-transform hover:scale-105 shadow-lg shadow-saffron/30">
+                            <a href="tel:+919663828936" className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-transform hover:scale-105 shadow-lg shadow-saffron/30">
                                 <Phone size={20} />
                                 Talk to Guruji Directly
                             </a>

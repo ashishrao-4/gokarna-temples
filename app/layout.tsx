@@ -1,23 +1,30 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Noto_Serif_Devanagari } from "next/font/google";
+import { Inter, Playfair_Display, Noto_Serif_Devanagari, Cinzel, Lato, Great_Vibes } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ 
+const cinzel = Cinzel({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-cinzel",
   display: "swap",
 });
 
-const playfair = Playfair_Display({ 
-  subsets: ["latin"], 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
 });
 
-const noto = Noto_Serif_Devanagari({ 
-  subsets: ["devanagari", "latin"], 
-  variable: "--font-noto", 
-  weight: ["400", "700"],
+const lato = Lato({
+  subsets: ["latin"],
+  variable: "--font-lato",
+  weight: ["300", "400", "700", "900"],
+  display: "swap",
+});
+
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  variable: "--font-great-vibes",
+  weight: ["400"],
   display: "swap",
 });
 
@@ -34,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${playfair.variable} ${noto.variable} antialiased bg-cream text-charcoal`}
+        className={`${cinzel.variable} ${playfair.variable} ${lato.variable} ${greatVibes.variable} antialiased bg-cream text-charcoal font-sans`}
       >
         {children}
       </body>

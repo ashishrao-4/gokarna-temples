@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Navigation, ExternalLink } from "lucide-react";
+import { MapPin, Navigation, ExternalLink, Bus, Train, Plane } from "lucide-react";
 import Image from "next/image";
 
 export default function Location() {
@@ -45,7 +45,7 @@ export default function Location() {
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
                                     <div className="bg-blue-50 p-3 rounded-xl text-blue-600">
-                                        <Navigation size={24} />
+                                        <Bus size={24} />
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-lg text-charcoal">By Road</h4>
@@ -58,7 +58,7 @@ export default function Location() {
 
                                 <div className="flex items-start gap-4">
                                     <div className="bg-orange-50 p-3 rounded-xl text-orange-600">
-                                        <Navigation size={24} />
+                                        <Train size={24} />
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-lg text-charcoal">By Train</h4>
@@ -71,7 +71,7 @@ export default function Location() {
 
                                 <div className="flex items-start gap-4">
                                     <div className="bg-purple-50 p-3 rounded-xl text-purple-600">
-                                        <Navigation size={24} />
+                                        <Plane size={24} />
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-lg text-charcoal">By Air</h4>

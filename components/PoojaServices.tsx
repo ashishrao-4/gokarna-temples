@@ -3,35 +3,39 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
+import narayanaBali from "../images/narayana-bali.jpg";
+import tripindiShradh from "../images/tripindi1.jpg";
+import nagabali from "../images/nagabali.jpg";
+import pitruDoshaNivarana from "../images/pitrudosh.jpg";
 
 const poojas = [
     {
         id: 1,
         title: "Narayana Bali Puja",
         description: "Essential for liberation from ancestral curses (Pitru Dosha) and unnatural deaths.",
-        image: "https://images.unsplash.com/photo-1621827989330-8d53a9920160?q=80&w=600&auto=format&fit=crop",
+        image: narayanaBali,
         benefits: ["Peace for ancestors", "Remove sudden obstacles", "Restore family harmony"]
     },
     {
         id: 2,
         title: "Tripindi Shradh",
         description: "A powerful remedy to satisfy unsatisfied souls of the last 3 generations.",
-        image: "https://images.unsplash.com/photo-1605218427368-2c262a6e974e?q=80&w=600&auto=format&fit=crop",
+        image: tripindiShradh,
         benefits: ["Resolve marriage delays", "Improve health issues", "Career stability"]
     },
     {
         id: 3,
         title: "Nag Bali Samskara",
         description: "Cleansing of Sarpa Dosha and Naga Dosha for health, fertility, and peace.",
-        image: "https://images.unsplash.com/photo-1634543789498-8424dc418c35?q=80&w=600&auto=format&fit=crop",
+        image: nagabali,
         benefits: ["Resolve child birth issues", "Cure skin diseases", "Mental peace"]
     },
     {
         id: 4,
-        title: "Rudra Abhisheka",
-        description: "Powerful worship of Lord Shiva for overall protection, health, and prosperity.",
-        image: "https://images.unsplash.com/photo-1634543789505-bd639ba32684?q=80&w=600&auto=format&fit=crop",
-        benefits: ["Remove negativity", "Success in business", "Health & longevity"]
+        title: "Pitrudosha Nivarana",
+        description: "A spiritual ritual performed remove the negative influence of Pitru Dosha",
+        image: pitruDoshaNivarana,
+        benefits: ["Ancestral peace", "Family blessings", "Dosha relief"]
     }
 ];
 
@@ -85,7 +89,7 @@ export default function PoojaServices() {
                                     ))}
                                 </div>
 
-                                <a href="tel:+919123456789" className="w-full mt-auto bg-white hover:bg-saffron hover:text-white text-charcoal font-semibold py-3 rounded-xl border-2 border-saffron/20 hover:border-saffron transition-all flex justify-center items-center gap-2 group">
+                                <a href="tel:+919663828936" className="w-full mt-auto bg-white hover:bg-saffron hover:text-white text-charcoal font-semibold py-3 rounded-xl border-2 border-saffron/20 hover:border-saffron transition-all flex justify-center items-center gap-2 group">
                                     Enquire Now
                                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                                 </a>

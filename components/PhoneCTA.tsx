@@ -25,7 +25,7 @@ export default function PhoneCTA() {
                     className="fixed bottom-4 inset-x-4 z-50 flex gap-3 md:hidden"
                 >
                     <a
-                        href="https://wa.me/919123456789"
+                        href="https://wa.me/919663828936"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 bg-green-500 text-white py-3 rounded-xl shadow-lg font-bold flex justify-center items-center gap-2"
@@ -34,7 +34,7 @@ export default function PhoneCTA() {
                         WhatsApp
                     </a>
                     <a
-                        href="tel:+919123456789"
+                        href="tel:+919663828936"
                         className="flex-1 bg-saffron text-white py-3 rounded-xl shadow-lg font-bold flex justify-center items-center gap-2 animate-bounce-subtle"
                     >
                         <Phone size={20} className="fill-current" />
