@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display, Noto_Serif_Devanagari, Cinzel, Lato, Great_Vibes } from "next/font/google";
 import "./globals.css";
+import { siteMetadata, siteViewport } from "@/lib/metadata";
+import JsonLd from "@/components/JsonLd";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -28,10 +30,8 @@ const greatVibes = Great_Vibes({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Gokarna Temples | Ancestral Peace & Pooja Services",
-  description: "Experience divine relief from ancestral suffering. Book authentic pujas at Gokarna Temples. Direct contact with Guruji.",
-};
+export const metadata: Metadata = siteMetadata;
+export const viewport: Viewport = siteViewport;
 
 export default function RootLayout({
   children,
@@ -43,6 +43,7 @@ export default function RootLayout({
       <body
         className={`${cinzel.variable} ${playfair.variable} ${lato.variable} ${greatVibes.variable} antialiased bg-cream text-charcoal font-sans`}
       >
+        <JsonLd />
         {children}
       </body>
     </html>
