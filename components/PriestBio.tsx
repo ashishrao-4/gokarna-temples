@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Phone, Award, Star } from "lucide-react";
 
 export default function PriestBio() {
@@ -17,13 +16,24 @@ export default function PriestBio() {
                     <div className="absolute top-0 right-0 w-80 h-80 bg-saffron/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
 
                     <div className="w-full md:w-1/3 relative flex justify-center md:block">
-                        <div className="aspect-[3/4] relative rounded-2xl overflow-hidden shadow-2xl w-full max-w-sm rotate-1 hover:rotate-0 transition-transform duration-500">
-                            <Image
-                                src="https://images.unsplash.com/photo-1549063548-2621b184136e?q=80&w=800&auto=format&fit=crop"
-                                alt="Balachandra Prasad"
-                                fill
-                                className="object-cover"
-                            />
+                        <div className="aspect-[3/4] relative rounded-2xl overflow-hidden shadow-xl w-full max-w-sm bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 flex flex-col items-center justify-center p-8 text-center group">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-saffron/10 rounded-full blur-2xl translate-x-1/2 -translate-y-1/2" />
+                            <div className="absolute bottom-0 left-0 w-32 h-32 bg-saffron/10 rounded-full blur-2xl -translate-x-1/2 translate-y-1/2" />
+
+                            <div className="relative z-10">
+                                <span className="text-9xl text-saffron/20 font-serif select-none group-hover:text-saffron/30 transition-colors duration-500">🕉️</span>
+                                <div className="mt-8 space-y-2">
+                                    <p className="text-2xl font-serif font-bold text-saffron mb-1">
+                                        "धर्मो रक्षति रक्षितः"
+                                    </p>
+                                    <p className="text-lg font-serif font-bold text-saffron italic">
+                                        "Dharmo Rakshati Rakshitah"
+                                    </p>
+                                    <p className="text-sm text-gray-600 uppercase tracking-widest text-[11px]">
+                                        Dharma protects those who protect it
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                         <motion.div
                             initial={{ scale: 0 }}
@@ -32,7 +42,7 @@ export default function PriestBio() {
                             transition={{ delay: 0.5, type: "spring" }}
                             className="absolute -bottom-6 right-4 md:-right-6 bg-white p-4 rounded-xl shadow-lg border border-gray-100 flex flex-col items-center z-20"
                         >
-                            <span className="text-3xl font-bold text-saffron">25+</span>
+                            <span className="text-3xl font-bold text-saffron">20+</span>
                             <span className="text-xs text-gray-500 font-bold uppercase tracking-wider">Years Exp</span>
                         </motion.div>
                     </div>

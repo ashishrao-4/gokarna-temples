@@ -32,9 +32,18 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <span className="inline-block py-1 px-3 rounded-full bg-saffron/20 border border-saffron/50 text-saffron font-bold text-sm mb-6 tracking-wide uppercase">
-                        Official Gokarna Vedic Services
-                    </span>
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
+                        <span className="inline-block py-1 px-3 rounded-full bg-saffron/20 border border-saffron/50 text-saffron font-bold text-sm tracking-wide uppercase">
+                            Official Gokarna Vedic Services
+                        </span>
+                        <div className="flex items-center gap-2 bg-green-900/40 backdrop-blur-sm border border-green-500/30 px-3 py-1 rounded-full">
+                            <span className="relative flex h-3 w-3">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                            </span>
+                            <span className="text-green-400 text-xs font-bold uppercase tracking-wider">Available Now for Call</span>
+                        </div>
+                    </div>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight drop-shadow-lg text-white">
                         Experience Divine Relief from <br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron to-gold">
