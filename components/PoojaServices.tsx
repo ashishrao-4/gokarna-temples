@@ -65,13 +65,19 @@ export default function PoojaServices() {
                             className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow flex flex-col"
                         >
                             <div className="relative h-56 w-full">
-                                <Image
-                                    src={pooja.image}
-                                    alt={pooja.title}
-                                    fill
-                                    className="object-cover hover:scale-105 transition-transform duration-500"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                                <motion.div
+                                    className="w-full h-full relative"
+                                    animate={{ scale: [1, 1.1] }}
+                                    transition={{ duration: 10, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+                                >
+                                    <Image
+                                        src={pooja.image}
+                                        alt={pooja.title}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </motion.div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80"></div>
                                 <h3 className="absolute bottom-4 left-4 text-white text-xl font-bold font-serif shadow-black drop-shadow-md">{pooja.title}</h3>
                             </div>
                             <div className="p-6 flex flex-col flex-1">

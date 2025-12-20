@@ -1,28 +1,42 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Phone, ArrowRight } from "lucide-react";
 import heroBg from "../images/koti 1.jpg";
-import Typewriter from 'typewriter-effect';
 
 export default function Hero() {
+    const { scrollY } = useScroll();
+    const y = useTransform(scrollY, [0, 1000], [0, 400]);
+    const opacity = useTransform(scrollY, [0, 500], [1, 0]);
+
+    const [serviceIndex, setServiceIndex] = useState(0);
+    const services = ['Pitru Dosha Puja', 'Narayana Bali Puja', 'Tripindi Shradh Puja'];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setServiceIndex((prev) => (prev + 1) % services.length);
+        }, 4000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
-        <section className="relative min-h-[90vh] w-full pb-10">
-            {/* Background Image with Zoom Effect */}
+        <section className="relative min-h-[90vh] w-full pb-10 overflow-hidden">
+            {/* Background Image with Parallax & Zoom Effect */}
             <motion.div
-                initial={{ scale: 1.1 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 10, ease: "easeOut" }}
+                style={{ y, opacity }}
                 className="absolute inset-0 z-0"
             >
-                <Image
-                    src={heroBg}
-                    alt="Gokarna Temple"
-                    fill
-                    className="object-cover"
-                    priority
-                />
+                <div className="relative w-full h-[120%] -top-[10%]">
+                    <Image
+                        src={heroBg}
+                        alt="Gokarna Temple"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-charcoal/90 z-10" />
             </motion.div>
 
@@ -63,16 +77,18 @@ export default function Hero() {
                     <div className="relative z-10 flex flex-col items-center text-center">
                         <div className="flex flex-col md:flex-row gap-3 justify-center items-center flex-wrap text-charcoal font-medium text-xl md:text-2xl">
                             <span className="font-serif text-gray-700">Authentic</span>
-                            <span className="text-saffron font-bold bg-orange-100/50 px-4 py-1.5 rounded-lg inline-block border border-orange-200/50 shadow-sm">
-                                <Typewriter
-                                    options={{
-                                        strings: ['Pitru Dosha Puja', 'Narayana Bali Puja', 'Tripindi Shradh Puja'],
-                                        autoStart: true,
-                                        loop: true,
-                                        delay: 50,
-                                        deleteSpeed: 30,
-                                    }}
-                                />
+                            <span className="text-saffron font-bold bg-orange-100/50 px-4 py-1.5 rounded-lg inline-flex items-center justify-center border border-orange-200/50 shadow-sm min-w-[280px]">
+                                <AnimatePresence mode="wait">
+                                    <motion.span
+                                        key={serviceIndex}
+                                        initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
+                                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                                        exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
+                                        transition={{ duration: 0.5, ease: "easeOut" }}
+                                    >
+                                        {services[serviceIndex]}
+                                    </motion.span>
+                                </AnimatePresence>
                             </span>
                         </div>
                         <p className="mt-6 text-base md:text-lg text-gray-600 font-medium max-w-2xl leading-relaxed">
