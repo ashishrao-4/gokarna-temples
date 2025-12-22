@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display, Noto_Serif_Devanagari, Cinzel, Lato, Great_Vibes } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { siteMetadata, siteViewport } from "@/lib/metadata";
 import JsonLd from "@/components/JsonLd";
@@ -45,6 +46,7 @@ export default function RootLayout({
       >
         <JsonLd />
         {children}
+        <Analytics />
       </body>
     </html>
   );
