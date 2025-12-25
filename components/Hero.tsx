@@ -1,16 +1,13 @@
 "use client";
 
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Phone, ArrowRight } from "lucide-react";
 import heroBg from "../images/koti 1.jpg";
+import { sendGTMEvent } from "@/lib/gtag";
 
 export default function Hero() {
-    const { scrollY } = useScroll();
-    const y = useTransform(scrollY, [0, 1000], [0, 400]);
-    const opacity = useTransform(scrollY, [0, 500], [1, 0]);
-
     const [serviceIndex, setServiceIndex] = useState(0);
     const services = ['Pitru Dosha Puja', 'Narayana Bali Puja', 'Tripindi Shradh Puja'];
 
@@ -24,28 +21,25 @@ export default function Hero() {
     return (
         <section className="relative min-h-[90vh] w-full pb-10 overflow-hidden">
             {/* Background Image with Parallax & Zoom Effect */}
-            <motion.div
-                style={{ y, opacity }}
-                className="absolute inset-0 z-0"
-            >
-                <div className="relative w-full h-[120%] -top-[10%]">
+            {/* Background Image - Optimized for LCP (Static, no motion wrapper) */}
+            <div className="absolute inset-0 z-0">
+                <div className="relative w-full h-full">
                     <Image
                         src={heroBg}
                         alt="Gokarna Temple"
                         fill
                         className="object-cover"
                         priority
+                        sizes="100vw"
+                        placeholder="blur"
                     />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-charcoal/90 z-10" />
-            </motion.div>
+            </div>
 
             <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white pt-20">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                >
+                {/* Main Content - Remove initial opacity:0 for LCP */}
+                <div className="animate-in fade-in zoom-in duration-500">
                     <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
                         <span className="inline-block py-1 px-3 rounded-full bg-saffron/20 border border-saffron/50 text-saffron font-bold text-sm tracking-wide uppercase">
                             Official Gokarna Vedic Services
@@ -64,7 +58,7 @@ export default function Hero() {
                             Ancestral Suffering
                         </span>
                     </h1>
-                </motion.div>
+                </div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -105,6 +99,7 @@ export default function Hero() {
                 >
                     <a
                         href="tel:+919663828936"
+                        onClick={() => sendGTMEvent('click', 'contact', 'hero_call_now')}
                         className="group bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,153,51,0.4)]"
                     >
                         <Phone size={24} className="fill-current" />
