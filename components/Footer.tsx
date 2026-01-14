@@ -6,12 +6,11 @@ export default function Footer() {
     return (
         <footer id="contact" className="bg-charcoal text-gray-300 pt-16 pb-32 md:pb-8">
             <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-4 gap-8 mb-12">
-                    <div className="col-span-1 md:col-span-2">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                    <div className="col-span-1">
                         <h2 className="text-2xl font-serif font-bold text-white mb-4">Gokarna Temples</h2>
-                        <p className="max-w-md mb-6 leading-relaxed text-gray-400">
-                            Dedicated to providing authentic Vedic rituals for the peace of your ancestors and prosperity of your family.
-                            We bridge the gap between you and the divine traditions of Gokarna.
+                        <p className="mb-6 leading-relaxed text-gray-400 text-sm">
+                            Dedicated to providing authentic Vedic rituals for the peace of your ancestors and prosperity of your family in the holy grounds of Gokarna.
                         </p>
                         <div className="flex gap-4">
                             <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-saffron hover:text-white transition-colors"><Instagram size={20} /></a>
@@ -22,17 +21,27 @@ export default function Footer() {
 
                     <div>
                         <h3 className="text-white font-bold mb-6 font-serif tracking-wider">Quick Links</h3>
-                        <ul className="space-y-3">
-                            <li><Link href="#poojas" className="hover:text-saffron transition-colors hover:pl-2">Pooja Services</Link></li>
-                            <li><Link href="#benefits" className="hover:text-saffron transition-colors hover:pl-2">Why Us</Link></li>
-                            <li><Link href="#pricing" className="hover:text-saffron transition-colors hover:pl-2">Seva Packages</Link></li>
-                            <li><Link href="#priest" className="hover:text-saffron transition-colors hover:pl-2">About Guruji</Link></li>
+                        <ul className="space-y-3 text-sm">
+                            <li><Link href="/#poojas" className="hover:text-saffron transition-colors hover:pl-2">Pooja Services</Link></li>
+                            <li><Link href="/#benefits" className="hover:text-saffron transition-colors hover:pl-2">Why Us</Link></li>
+                            <li><Link href="/#location" className="hover:text-saffron transition-colors hover:pl-2">How to Reach</Link></li>
+                            <li><Link href="/#priest" className="hover:text-saffron transition-colors hover:pl-2">About Guruji</Link></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 className="text-white font-bold mb-6 font-serif tracking-wider">Rituals in Gokarna</h3>
+                        <ul className="space-y-3 text-sm">
+                            <li><Link href="/narayana-bali-pooja-gokarna" className="hover:text-saffron transition-colors hover:pl-2">Narayana Bali</Link></li>
+                            <li><Link href="/pitru-dosha-pooja-gokarna" className="hover:text-saffron transition-colors hover:pl-2">Pitru Dosha Pooja</Link></li>
+                            <li><Link href="/nag-bali-sarpa-dosha-gokarna" className="hover:text-saffron transition-colors hover:pl-2">Nag Bali / Sarpa Dosha</Link></li>
+                            <li><Link href="/pitru-dosha-pooja-gokarna" className="hover:text-saffron transition-colors hover:pl-2">Tripindi Shradh</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h3 className="text-white font-bold mb-6 font-serif tracking-wider">Contact Info</h3>
-                        <ul className="space-y-4">
+                        <ul className="space-y-4 text-sm">
                             <li className="flex items-start gap-3">
                                 <Phone className="text-saffron shrink-0 mt-1" size={18} />
                                 <div>
@@ -52,7 +61,7 @@ export default function Footer() {
                                 <MapPin className="text-saffron shrink-0 mt-1" size={18} />
                                 <div>
                                     <div className="text-xs text-gray-500 uppercase font-bold mb-1">Location</div>
-                                    <span>Car Street, Near Mahabaleshwar Temple, Gokarna, Karnataka 581326</span>
+                                    <span>Car Street, Near Mahabaleshwar Temple, Gokarna, Karnataka</span>
                                 </div>
                             </li>
                         </ul>

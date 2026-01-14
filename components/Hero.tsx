@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Phone, ArrowRight } from "lucide-react";
+import { Phone, ArrowRight, Info } from "lucide-react";
 import heroBg from "../images/koti 1.jpg";
 import { sendGTMEvent } from "@/lib/gtag";
 
@@ -59,6 +59,8 @@ export default function Hero() {
                         </span>
                     </h1>
                 </div>
+
+
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
