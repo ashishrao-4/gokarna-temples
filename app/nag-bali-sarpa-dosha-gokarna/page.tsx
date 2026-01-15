@@ -8,8 +8,11 @@ import PhoneCTA from '@/components/PhoneCTA';
 import nagabali from '../../images/sarpadosha.jpg';
 
 export const metadata: Metadata = {
-    title: 'Nag Bali & Sarpa Dosha Pooja in Gokarna | Naga Dosha Remedies',
-    description: 'Perform Nag Bali and Sarpa Dosha Nivarana in Gokarna with experienced pandits. Remedies for Naga Dosha, child birth issues, and ancestral snake-related karmas.',
+    title: 'Nag Bali Sarpa Dosha Pooja Gokarna | Naga Dosha Remedies',
+    description: 'Nag Bali and Sarpa Dosha pooja in Gokarna. Remedies for Naga Dosha and ancestral issues. Authentic',
+    alternates: {
+        canonical: 'https://www.gokarnatemples.com/nag-bali-sarpa-dosha-gokarna/',
+    },
 };
 
 export default function NagBaliPage() {
@@ -22,7 +25,7 @@ export default function NagBaliPage() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src={nagabali}
-                        alt="Nag Bali Pooja Grounds"
+                        alt="Nag Bali Pooja Gokarna ritual"
                         fill
                         className="object-cover"
                         priority
@@ -39,9 +42,8 @@ export default function NagBaliPage() {
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight drop-shadow-lg text-white">
                             Nag Bali & Sarpa Dosha Pooja in <span className="text-saffron">Gokarna</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-2xl mx-auto font-medium">
-                            Find relief from Naga Dosha, Kaal Sarp Dosh, and health impediments.
-                            Participate in authentic Nag Bali Samskara at the sacred grounds of Gokarna.
+                        <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto font-medium">
+                            Find complete relief from the afflictions of Naga Dosha, Kaal Sarp Dosh, and unexplained health impediments. Participate in the authentic Nag Bali Sarpa Dosha Pooja in Gokarna, a potent Samskara to propitiate the Serpent Deities. Our expert pandits perform these specialized remedies at the sacred grounds to cure skin ailments, fertility issues, and restore mental peace.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">

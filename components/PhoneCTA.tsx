@@ -37,8 +37,10 @@ export default function PhoneCTA() {
                     </a>
                     <a
                         href="tel:+919663828936"
-                        onClick={() => sendGTMEvent('click', 'contact', 'sticky_call')}
-                        className="flex-1 bg-saffron text-white py-3 rounded-xl shadow-lg font-bold flex justify-center items-center gap-2 animate-bounce-subtle"
+                        onClick={() => {
+                            if ((window as any).gtag) sendGTMEvent('click', 'contact', 'sticky_call');
+                        }}
+                        className="flex-1 bg-saffron text-white py-3 rounded-xl shadow-lg font-bold flex justify-center items-center gap-2"
                     >
                         <Phone size={20} className="fill-current" />
                         Call Guruji

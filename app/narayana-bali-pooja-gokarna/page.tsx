@@ -8,8 +8,11 @@ import PhoneCTA from '@/components/PhoneCTA';
 import narayanaBali from '../../images/narayana-bali.jpg';
 
 export const metadata: Metadata = {
-    title: 'Narayana Bali Pooja in Gokarna | Pitru Dosha Remedy by Experienced Pandits',
-    description: 'Book Narayana Bali pooja in Gokarna with traditional Vedic pandits. Authentic Pitru Karya, detailed guidance, complete arrangements for your family.',
+    title: 'Narayana Bali Pooja Gokarna | Expert Pandits, Authentic Rituals',
+    description: 'Narayana Bali pooja in Gokarna for Pitru Dosha relief. Expert pandits, authentic rituals, complete',
+    alternates: {
+        canonical: 'https://www.gokarnatemples.com/narayana-bali-pooja-gokarna/',
+    },
 };
 
 export default function NarayanaBaliPage() {
@@ -22,7 +25,7 @@ export default function NarayanaBaliPage() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src={narayanaBali}
-                        alt="Narayana Bali Pooja Setup"
+                        alt="Narayana Bali Pooja Gokarna ritual"
                         fill
                         className="object-cover"
                         priority
@@ -39,9 +42,8 @@ export default function NarayanaBaliPage() {
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight drop-shadow-lg text-white">
                             Narayana Bali Pooja in <span className="text-saffron">Gokarna</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-2xl mx-auto font-medium">
-                            Experience relief from Pitru Dosha and unnatural deaths in the family.
-                            Performed by experienced Vedic Pandits at the holy grounds of Gokarna.
+                        <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto font-medium">
+                            Experience liberation and relief from Pitru Dosha by performing the sacred Narayana Bali Pooja in Gokarna. This powerful Vedic ritual is essential for souls who suffered unnatural deaths, ensuring their transition to Moksha. Our experienced pandits guide you through authentic Narayana Bali and Tripindi Shradh ceremonies to restore family harmony.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">

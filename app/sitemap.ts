@@ -3,20 +3,30 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://gokarnatemples.com';
 
-    // High intent routes - prioritize these
+    // Key pages and assets
     const routes = [
         '',
-        '#poojas',
-        '#benefits',
-        '#priest',
-        '#contact',
-        '#location'
+        '/narayana-bali-pooja-gokarna',
+        '/pitru-dosha-pooja-gokarna',
+        '/nag-bali-sarpa-dosha-gokarna',
     ].map((route) => ({
-        url: `${baseUrl}/${route}`,
+        url: `${baseUrl}${route}`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
-        priority: route === '' ? 1 : 0.8,
+        priority: route === '' ? 1 : 0.9,
     }));
 
-    return routes;
+    // Add llms.txt
+    const assets = [
+        {
+            url: `${baseUrl}/llms.txt`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: 0.5,
+        }
+    ];
+
+    return [...routes, ...assets];
+
+
 }

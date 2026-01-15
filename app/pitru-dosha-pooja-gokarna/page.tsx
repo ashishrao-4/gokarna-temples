@@ -8,8 +8,11 @@ import PhoneCTA from '@/components/PhoneCTA';
 import pitruDoshaNivarana from '../../images/pitrudosh.jpg';
 
 export const metadata: Metadata = {
-    title: 'Pitru Dosha Pooja in Gokarna | Ancestral Peace & Remedies',
-    description: 'Perform Pitru Dosha Nivarana pooja in Gokarna with traditional Vedic pandits. Remedies for ancestral issues, repeated obstacles, and peace for departed souls.',
+    title: 'Pitru Dosha Pooja Gokarna | Ancestral Remedies by Vedic Priests',
+    description: 'Pitru Dosha Nivarana pooja in Gokarna. Ancestral karma solutions by traditional Vedic priests. Expe',
+    alternates: {
+        canonical: 'https://www.gokarnatemples.com/pitru-dosha-pooja-gokarna/',
+    },
 };
 
 export default function PitruDoshaPage() {
@@ -22,7 +25,7 @@ export default function PitruDoshaPage() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src={pitruDoshaNivarana}
-                        alt="Pitru Dosha Pooja Setup"
+                        alt="Pitru Dosha Pooja Gokarna ritual"
                         fill
                         className="object-cover"
                         priority
@@ -39,9 +42,8 @@ export default function PitruDoshaPage() {
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight drop-shadow-lg text-white">
                             Pitru Dosha Pooja in <span className="text-saffron">Gokarna</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-2xl mx-auto font-medium">
-                            Resolve family obstacles and find peace for your ancestors.
-                            Authentic Vedic remedies for Pitru Dosha at the Mukti Sthala of Gokarna.
+                        <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto font-medium">
+                            Resolve persistent family obstacles and find deep peace for your ancestors with the authentic Pitru Dosha Pooja in Gokarna. Pitru Dosha Nivarana is a vital Vedic remedy for removing ancestral curses that cause career delays, health issues, and marriage hurdles. Our traditional priestly lineage (Vedic Pandits) performs these sacred rites at the holy Mukti Sthala.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">

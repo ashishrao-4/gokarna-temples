@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { Shield, Clock, Users, Heart, Sun, MapPin } from "lucide-react";
 
 const benefits = [
-    { icon: Shield, title: "100% Vedic Authenticity", desc: "Rituals performed exactly as prescribed in the holy scriptures without shortcuts." },
-    { icon: Users, title: "Experienced Pandits", desc: "Our priests have 20+ years of experience and come from a traditional Gokarna lineage." },
-    { icon: Heart, title: "Personalized Sankalpa", desc: "We ensure specific prayers are offered for your name, gotra, and ancestors." },
-    { icon: Sun, title: "Spiritual De-Commercialization", desc: "We focus on devotion and your peace of mind, not aggressive upselling." },
+    { icon: Shield, title: "Authentic Gokarna Temple Traditions", desc: "Rituals performed exactly as prescribed in the holy scriptures without shortcuts." },
+    { icon: Users, title: "20+ Years of Vedic Experience", desc: "Our priests have 20+ years of experience and come from a traditional Gokarna lineage." },
+    { icon: Heart, title: "Complete Family Guidance", desc: "We ensure specific prayers are offered for your name, gotra, and ancestors with full support." },
+    { icon: Sun, title: "Expert in Narayana Bali", desc: "Specialized knowledge in performing Narayana Bali and Pitru Dosha Nivarana correctly." },
     { icon: Clock, title: "Punctual & Systematic", desc: "We value your time. Rituals start on time and are conducted with proper procedure." },
-    { icon: MapPin, title: "Prime Holy Location", desc: "Our facility is located at the spiritual heart of Gokarna, near the main temple." },
+    { icon: MapPin, title: "Prime Sacred Location", desc: "Our facility is located at the spiritual heart of Gokarna, offering a divine atmosphere." },
 ];
 
 export default function Benefits() {
@@ -22,9 +22,9 @@ export default function Benefits() {
                         viewport={{ once: true }}
                         className="text-3xl md:text-5xl font-serif font-bold text-charcoal mb-4"
                     >
-                        Why Devotees Trust Us
+                        Why Choose Our Gokarna Pooja Services?
                     </motion.h2>
-                    <p className="text-gray-600">Experience the difference of authentic Vedic service.</p>
+                    <p className="text-gray-600">Expert guidance for Narayana Bali, Pitru Dosha, and Nag Bali ceremonies.</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

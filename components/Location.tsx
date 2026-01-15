@@ -107,11 +107,10 @@ export default function Location() {
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1930.9719244671592!2d74.3184742!3d14.5452037!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbe83d377ddbb57%3A0xed891f7b6776b07a!2sG8V9%2BXC4%2C%20Dandebagh%2C%20Gokarna%2C%20Karnataka%20581326!5e0!3m2!1sen!2sin!4v1765800193073!5m2!1sen!2sin"
                             width="100%"
                             height="100%"
-                            style={{ border: 0 }}
                             allowFullScreen={true}
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            className="absolute inset-0 grayscale hover:grayscale-0 transition-all duration-700"
+                            className="absolute inset-0 grayscale hover:grayscale-0 transition-all duration-700 border-0"
                         ></iframe>
                         <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg max-w-xs">
                             <p className="font-bold text-charcoal flex items-center gap-1">

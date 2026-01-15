@@ -7,15 +7,15 @@ export default function JsonLd() {
         "description": "Authentic Vedic Pujas in Gokarna for Pitru Dosha, Narayana Bali, and Ancestral Peace performed by expert hereditary priests.",
         "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Gokarna",
-            "addressRegion": "Karnataka",
+            "addressLocality": "Gokarna, Kumta Taluk",
+            "addressRegion": "Uttara Kannada District, Karnataka",
             "postalCode": "581326",
             "addressCountry": "IN"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 14.5452,
-            "longitude": 74.3185
+            "latitude": 14.5517,
+            "longitude": 74.7449
         },
         "telephone": "+919663828936",
         "url": "https://gokarnatemples.com",

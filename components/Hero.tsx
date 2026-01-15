@@ -30,7 +30,8 @@ export default function Hero() {
                         fill
                         className="object-cover"
                         priority
-                        sizes="100vw"
+                        quality={85}
+                        sizes="(max-width: 768px) 100vw, 100vw"
                         placeholder="blur"
                     />
                 </div>
@@ -53,45 +54,29 @@ export default function Hero() {
                         </div>
                     </div>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight drop-shadow-lg text-white">
-                        Experience Divine Relief from <br className="hidden md:block" />
+                        Narayana Bali Pooja in <br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron to-gold">
-                            Ancestral Suffering
-                        </span>
+                            Gokarna
+                        </span> <span className="text-3xl md:text-5xl block mt-2 font-serif text-white/90">| Ancestral Peace & Moksha</span>
                     </h1>
                 </div>
-
-
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative max-w-4xl mx-auto mb-10 overflow-hidden rounded-2xl bg-gradient-to-br from-white/95 via-orange-50/90 to-white/95 backdrop-blur-md border-t-4 border-saffron shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-8 sm:p-10"
+                    className="relative max-w-4xl mx-auto mb-6 p-4"
                 >
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent opacity-50" />
-
-                    <div className="relative z-10 flex flex-col items-center text-center">
-                        <div className="flex flex-col md:flex-row gap-3 justify-center items-center flex-wrap text-charcoal font-medium text-xl md:text-2xl">
-                            <span className="font-serif text-gray-700">Authentic</span>
-                            <span className="text-saffron font-bold bg-orange-100/50 px-4 py-1.5 rounded-lg inline-flex items-center justify-center border border-orange-200/50 shadow-sm min-w-[280px]">
-                                <AnimatePresence mode="wait">
-                                    <motion.span
-                                        key={serviceIndex}
-                                        initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
-                                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                                        exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
-                                        transition={{ duration: 0.5, ease: "easeOut" }}
-                                    >
-                                        {services[serviceIndex]}
-                                    </motion.span>
-                                </AnimatePresence>
-                            </span>
-                        </div>
-                        <p className="mt-6 text-base md:text-lg text-gray-600 font-medium max-w-2xl leading-relaxed">
-                            Performed by expert <span className="text-saffron font-bold">Vedic Pandits</span> in the holy grounds of <span className="text-charcoal font-semibold">Gokarna</span>, honoring ancient traditions for your peace.
-                        </p>
-                    </div>
+                    <p className="text-lg md:text-xl text-gray-200 font-medium max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+                        Experience authentic <span className="text-saffron font-bold">Pitru Dosha remedies</span> and <span className="text-saffron font-bold">Narayana Bali rituals</span> performed by experienced Vedic pandits in sacred Gokarna.
+                    </p>
+                    <p className="mt-4 text-sm text-gray-400 bg-black/40 inline-block px-4 py-1 rounded-full backdrop-blur-sm border border-white/10">
+                        Note: We are an independent Vedic ritual service in Gokarna, not the official Mahabaleshwar Temple.
+                    </p>
                 </motion.div>
+
+
+
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -101,15 +86,17 @@ export default function Hero() {
                 >
                     <a
                         href="tel:+919663828936"
-                        onClick={() => sendGTMEvent('click', 'contact', 'hero_call_now')}
-                        className="group bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,153,51,0.4)]"
+                        onClick={() => {
+                            if ((window as any).gtag) sendGTMEvent('click', 'contact', 'hero_call_now');
+                        }}
+                        className="btn-primary group"
                     >
                         <Phone size={24} className="fill-current" />
                         <span>Call Guruji Now</span>
                     </a>
                     <a
                         href="#poojas"
-                        className="group bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2"
+                        className="btn-secondary group"
                     >
                         <span>View Services</span>
                         <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -131,6 +118,6 @@ export default function Hero() {
                     </div>
                 </motion.div>
             </div>
-        </section>
+        </section >
     )
 }

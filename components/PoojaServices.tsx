@@ -13,32 +13,32 @@ const poojas = [
     {
         id: 1,
         title: "Narayana Bali Puja",
-        description: "Essential for liberation from ancestral curses (Pitru Dosha) and unnatural deaths.",
+        description: "Narayana Bali is a powerful ritual performed in Gokarna for liberation from ancestral curses (Pitru Dosha) and unnatural deaths.",
         image: narayanaBali,
         benefits: ["Peace for ancestors", "Remove sudden obstacles", "Restore family harmony"],
         link: "/narayana-bali-pooja-gokarna"
     },
     {
         id: 2,
-        title: "Tripindi Shradh",
-        description: "A powerful remedy to satisfy unsatisfied souls of the last 3 generations.",
-        image: tripindiShradh,
-        benefits: ["Resolve marriage delays", "Improve health issues", "Career stability"],
+        title: "Pitru Dosha Pooja",
+        description: "Pitru Dosha Nivarana is performed when ancestral issues cause career or marriage delays in the family.",
+        image: pitruDoshaNivarana,
+        benefits: ["Ancestral karma solutions", "Improve health issues", "Career stability"],
         link: "/pitru-dosha-pooja-gokarna"
     },
     {
         id: 3,
-        title: "Nag Bali Samskara",
-        description: "Cleansing of Sarpa Dosha and Naga Dosha for health, fertility, and peace.",
+        title: "Nag Bali Sarpa Dosha",
+        description: "Nag Bali and Sarpa Dosha Nivarana are performed in Gokarna to resolve Naga Dosha and Kaal Sarp Dosh.",
         image: nagabali,
         benefits: ["Resolve child birth issues", "Cure skin diseases", "Mental peace"],
         link: "/nag-bali-sarpa-dosha-gokarna"
     },
     {
         id: 4,
-        title: "Pitrudosha Nivarana",
-        description: "A spiritual ritual performed remove the negative influence of Pitru Dosha",
-        image: pitruDoshaNivarana,
+        title: "Tripindi Shradh",
+        description: "Tripindi Shradh in Gokarna satisfies unsatisfied souls of the last 3 generations.",
+        image: tripindiShradh,
         benefits: ["Ancestral peace", "Family blessings", "Dosha relief"],
         link: "/pitru-dosha-pooja-gokarna"
     }
@@ -54,8 +54,8 @@ export default function PoojaServices() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-charcoal mb-4">Our Sacred Vedic Services</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto text-lg">Performed with strict adherence to Vedic scriptures by experienced Gokarna priests.</p>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-charcoal mb-4">Our Sacred Vedic Rituals in Gokarna</h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto text-lg">Authentic Narayana Bali, Pitru Dosha, and Nag Bali poojas performed by experienced Vedic pandits.</p>
                     </motion.div>
                 </div>
 
@@ -79,6 +79,7 @@ export default function PoojaServices() {
                                         src={pooja.image}
                                         alt={pooja.title}
                                         fill
+                                        loading="lazy"
                                         className="object-cover group-hover/card:scale-110 transition-transform duration-700"
                                     />
                                 </motion.div>
