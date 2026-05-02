@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Phone, Award, Star } from "lucide-react";
-import { sendGTMEvent } from "@/lib/gtag";
+import { gtag_report_conversion } from "@/lib/gtag";
 
 export default function PriestBio() {
     return (
@@ -68,7 +68,7 @@ export default function PriestBio() {
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a
                                 href="tel:+919663828936"
-                                onClick={() => sendGTMEvent('click', 'contact', 'priest_bio_call')}
+                                onClick={() => gtag_report_conversion()}
                                 className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-transform hover:scale-105 shadow-lg shadow-saffron/30"
                             >
                                 <Phone size={20} />

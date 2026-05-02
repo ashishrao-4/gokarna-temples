@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Instagram, Facebook, Youtube } from "lucide-react";
+import { gtag_report_conversion } from "@/lib/gtag";
 
 export default function Footer() {
     return (
@@ -59,7 +60,7 @@ export default function Footer() {
                                 <Phone className="text-saffron shrink-0 mt-1" size={18} />
                                 <div>
                                     <div className="text-xs text-gray-500 uppercase font-bold mb-1">Phone</div>
-                                    <a href="tel:+919663828936" className="text-white font-bold hover:text-saffron text-lg block">+91 96638 28936</a>
+                                    <a href="tel:+919663828936" onClick={() => gtag_report_conversion()} className="text-white font-bold hover:text-saffron text-lg block">+91 96638 28936</a>
                                 </div>
                             </div>
 
@@ -71,7 +72,7 @@ export default function Footer() {
                                 </div>
                                 <div>
                                     <div className="text-xs text-gray-500 uppercase font-bold mb-1">WhatsApp</div>
-                                    <a href="https://wa.me/919663828936" className="text-white hover:text-saffron block">Chat on WhatsApp</a>
+                                    <a href="https://wa.me/919663828936" target="_blank" rel="noopener noreferrer" onClick={() => gtag_report_conversion()} className="text-white hover:text-saffron block">Chat on WhatsApp</a>
                                 </div>
                             </div>
 

@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { siteMetadata, siteViewport } from "@/lib/metadata";
 import JsonLd from "@/components/JsonLd";
+import Script from "next/script";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -49,19 +50,16 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-402638274"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'AW-402638274');
-            `,
-          }}
-        />
+        {/* Google Ads Base Tag */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-402638274" strategy="afterInteractive" />
+        <Script id="google-ads-config" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-402638274');
+          `}
+        </Script>
       </body>
     </html>
   );

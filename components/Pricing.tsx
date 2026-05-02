@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check, Phone } from "lucide-react";
+import { gtag_report_conversion } from "@/lib/gtag";
 
 const packages = [
     {
@@ -83,6 +84,7 @@ export default function Pricing() {
 
                             <a
                                 href="tel:+919663828936"
+                                onClick={() => gtag_report_conversion()}
                                 className={`w-full py-4 rounded-xl font-bold flex justify-center items-center gap-2 transition-all ${pkg.recommended ? "bg-saffron text-white hover:bg-orange-600 shadow-lg shadow-saffron/30 hover:scale-105" : "bg-gray-100 text-charcoal hover:bg-gray-200"}`}
                             >
                                 <Phone size={18} className={pkg.recommended ? "fill-current" : ""} />

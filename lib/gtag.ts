@@ -27,15 +27,21 @@ export const sendGTMEvent = (
     }
 };
 
-// Specifically for Google Ads conversion tracking on calls/whatsapp
-// Since the user provided the SAME config snippet, they likely want standard conversion tracking
-// We'll use a standard 'conversion' event or 'contact' event.
-export const trackConversion = (conversionId: string) => {
-    // If the user had a specific conversion label (e.g. AW-402638274/AbCdEfGhIj), we would use that.
-    // For now, we will track a generic conversion event which they can configure in GAds.
+export const gtag_report_conversion = (url?: string) => {
     if (typeof window !== "undefined" && (window as unknown as WindowWithGTag).gtag) {
-        (window as unknown as WindowWithGTag).gtag("event", "conversion", {
-            'send_to': conversionId
+        const callback = function () {
+            if (typeof url !== 'undefined') {
+                window.location.href = url;
+            }
+        };
+        (window as unknown as WindowWithGTag).gtag('event', 'conversion', {
+            'send_to': 'AW-402638274/Y9tvCMqhnaYcEMKL_78B',
+            'value': 1.0,
+            'currency': 'INR',
+            'event_callback': callback
         });
+    } else if (url) {
+        window.location.href = url;
     }
-}
+    return false;
+};

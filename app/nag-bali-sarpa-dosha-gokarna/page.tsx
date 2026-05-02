@@ -5,6 +5,7 @@ import { Phone, MessageCircle, Calendar, Check, Info, ArrowRight } from 'lucide-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
+import TrackedLink from '@/components/TrackedLink';
 import nagabali from '../../images/sarpadosha.jpg';
 
 export const metadata: Metadata = {
@@ -47,20 +48,20 @@ export default function NagBaliPage() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-                            <a
+                            <TrackedLink
                                 href="tel:+919663828936"
                                 className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.4)]"
                             >
                                 <Phone size={24} className="fill-current" />
                                 Call Guruji Now
-                            </a>
-                            <a
+                            </TrackedLink>
+                            <TrackedLink
                                 href="https://wa.me/919663828936?text=Namaste%20Guruji,%20I%20want%20to%20know%20about%20Nag%20Bali%20Pooja%20in%20Gokarna."
                                 className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105"
                             >
                                 <MessageCircle size={24} />
                                 WhatsApp Enquiry
-                            </a>
+                            </TrackedLink>
                         </div>
                     </div>
                 </div>
@@ -89,9 +90,9 @@ export default function NagBaliPage() {
                         ))}
                     </div>
                     <div className="mt-10">
-                        <a href="tel:+919663828936" className="inline-flex items-center gap-2 text-saffron font-bold text-lg hover:underline decoration-2 underline-offset-4">
+                        <TrackedLink href="tel:+919663828936" className="inline-flex items-center gap-2 text-saffron font-bold text-lg hover:underline decoration-2 underline-offset-4">
                             Discuss with Guruji <ArrowRight size={20} />
-                        </a>
+                        </TrackedLink>
                     </div>
                 </div>
             </section>
@@ -140,9 +141,9 @@ export default function NagBaliPage() {
                     </p>
 
                     <div>
-                        <a href="tel:+919663828936" className="inline-block bg-saffron hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,153,51,0.3)]">
+                        <TrackedLink href="tel:+919663828936" className="inline-block bg-saffron hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,153,51,0.3)]">
                             Get Cost Details
-                        </a>
+                        </TrackedLink>
                     </div>
                 </div>
             </section>

@@ -5,6 +5,7 @@ import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { gtag_report_conversion } from "@/lib/gtag";
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -86,6 +87,7 @@ export default function Header() {
                         ))}
                         <a
                             href="tel:+919663828936"
+                            onClick={() => gtag_report_conversion()}
                             className="bg-saffron hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold flex items-center gap-2 transition-transform hover:scale-105 shadow-lg"
                         >
                             <Phone size={18} />
@@ -145,6 +147,7 @@ export default function Header() {
 
                             <a
                                 href="tel:+919663828936"
+                                onClick={() => gtag_report_conversion()}
                                 className="bg-saffron text-white py-3 rounded-xl font-bold text-lg flex justify-center items-center gap-2 mt-4"
                             >
                                 <Phone size={20} />

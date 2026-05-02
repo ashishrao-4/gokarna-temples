@@ -79,6 +79,7 @@ export default function PoojaServices() {
                                         src={pooja.image}
                                         alt={pooja.title}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                         loading="lazy"
                                         className="object-cover group-hover/card:scale-110 transition-transform duration-700"
                                     />

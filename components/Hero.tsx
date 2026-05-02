@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Phone, ArrowRight, Info } from "lucide-react";
 import heroBg from "../images/koti 1.jpg";
-import { sendGTMEvent } from "@/lib/gtag";
+import { gtag_report_conversion } from "@/lib/gtag";
 
 export default function Hero() {
     const [serviceIndex, setServiceIndex] = useState(0);
@@ -86,9 +86,7 @@ export default function Hero() {
                 >
                     <a
                         href="tel:+919663828936"
-                        onClick={() => {
-                            if ((window as any).gtag) sendGTMEvent('click', 'contact', 'hero_call_now');
-                        }}
+                        onClick={() => gtag_report_conversion()}
                         className="btn-primary group"
                     >
                         <Phone size={24} className="fill-current" />
