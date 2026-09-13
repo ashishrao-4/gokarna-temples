@@ -35,7 +35,7 @@ export const gtag_report_conversion = (url?: string) => {
             }
         };
         (window as unknown as WindowWithGTag).gtag('event', 'conversion', {
-            'send_to': 'AW-402638274/Y9tvCMqhnaYcEMKL_78B',
+            'send_to': 'AW-402638274/6OqPCJimpfYcEMKL_78B',
             'value': 1.0,
             'currency': 'INR',
             'event_callback': callback
