@@ -1,18 +1,24 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Phone, MessageCircle, Calendar, Check, Info, ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
 import TrackedLink from '@/components/TrackedLink';
+import { siteMetadata } from '@/lib/metadata';
 import narayanaBali from '../../images/narayana-bali.jpg';
 
 export const metadata: Metadata = {
     title: 'Narayana Bali Pooja Gokarna | Expert Pandits, Authentic Rituals',
-    description: 'Narayana Bali pooja in Gokarna for Pitru Dosha relief. Expert pandits, authentic rituals, complete',
+    description: "Narayana Bali pooja in Gokarna for Pitru Dosha. Guided by an experienced Vedic priest. Call to plan your family's ritual.",
     alternates: {
-        canonical: 'https://www.gokarnatemples.com/narayana-bali-pooja-gokarna/',
+        canonical: '/narayana-bali-pooja-gokarna',
+    },
+    openGraph: {
+        ...siteMetadata.openGraph,
+        title: 'Narayana Bali Pooja Gokarna | Expert Pandits, Authentic Rituals',
+        description: "Narayana Bali pooja in Gokarna for Pitru Dosha. Guided by an experienced Vedic priest. Call to plan your family's ritual.",
+        url: '/narayana-bali-pooja-gokarna',
     },
 };
 
@@ -44,7 +50,7 @@ export default function NarayanaBaliPage() {
                             Narayana Bali Pooja in <span className="text-saffron">Gokarna</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto font-medium">
-                            Experience liberation and relief from Pitru Dosha by performing the sacred Narayana Bali Pooja in Gokarna. This powerful Vedic ritual is essential for souls who suffered unnatural deaths, ensuring their transition to Moksha. Our experienced pandits guide you through authentic Narayana Bali and Tripindi Shradh ceremonies to restore family harmony.
+                            Perform the sacred Narayana Bali Pooja in Gokarna to seek liberation for the departed soul and relief from Pitru Dosha, as prescribed in shastra. This Vedic ritual is performed for souls who suffered unnatural or untimely deaths, guiding them, as per shastra, toward Moksha. Our experienced pandits guide you through authentic Narayana Bali and Tripindi Shradh ceremonies to restore family harmony.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
@@ -107,7 +113,7 @@ export default function NarayanaBaliPage() {
                     <p className="text-charcoal/80 text-xl mb-12 leading-relaxed max-w-3xl mx-auto">
                         The ritual commences with a <span className="font-bold text-charcoal">Sankalpa</span> (sacred vow) at the holy river banks or designated Mukti Sthala.
                         It involves invoking Lord Narayana to liberate the soul. The process includes <span className="font-bold text-charcoal">Homa</span>, offering of Pindas (Pind Daan),
-                        and final prayers for the soul's ascension.
+                        and final prayers for the soul&apos;s ascension.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6 text-left">
                         <div className="bg-white/80 backdrop-blur p-8 rounded-2xl shadow-lg border border-saffron/20 flex-1 transform transition hover:-translate-y-1">
@@ -176,14 +182,14 @@ export default function NarayanaBaliPage() {
                     </h2>
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="bg-white p-8 rounded-2xl shadow-sm italic text-gray-700 relative">
-                            <span className="text-6xl text-saffron/20 absolute top-4 left-4 font-serif">"</span>
+                            <span className="text-6xl text-saffron/20 absolute top-4 left-4 font-serif">&ldquo;</span>
                             <p className="relative z-10 text-lg">We were very worried about our family issues. Guruji guided us for Narayana Bali perfectly. The pooja was done with great devotion.</p>
                             <div className="mt-6 font-bold not-italic text-charcoal flex items-center gap-2">
                                 <span className="w-8 h-[2px] bg-saffron"></span> Rajesh Kumar, Bangalore
                             </div>
                         </div>
                         <div className="bg-white p-8 rounded-2xl shadow-sm italic text-gray-700 relative">
-                            <span className="text-6xl text-saffron/20 absolute top-4 left-4 font-serif">"</span>
+                            <span className="text-6xl text-saffron/20 absolute top-4 left-4 font-serif">&ldquo;</span>
                             <p className="relative z-10 text-lg">Arrangements were excellent. Panditji explained every step of the Narayana Bali pooja. We felt very light and peaceful afterwards.</p>
                             <div className="mt-6 font-bold not-italic text-charcoal flex items-center gap-2">
                                 <span className="w-8 h-[2px] bg-saffron"></span> Sharma Family, Mumbai
@@ -224,7 +230,7 @@ export default function NarayanaBaliPage() {
                                 <span className="group-open:rotate-180 transition-transform text-saffron">▼</span>
                             </summary>
                             <p className="mt-4 text-gray-600 leading-relaxed">
-                                Yes, if you cannot travel, Sankalpa can be done in your name. However, for Narayana Bali, physical presence is highly recommended for maximum benefit if possible.
+                                Yes, if you cannot travel, Sankalpa can be done in your name. However, for Narayana Bali, Guruji recommends the family attend in person at Gokarna wherever possible, as the karta traditionally performs the rites.
                             </p>
                         </details>
                     </div>

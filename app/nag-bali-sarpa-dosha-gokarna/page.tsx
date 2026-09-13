@@ -6,13 +6,20 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
 import TrackedLink from '@/components/TrackedLink';
+import { siteMetadata } from '@/lib/metadata';
 import nagabali from '../../images/sarpadosha.jpg';
 
 export const metadata: Metadata = {
     title: 'Nag Bali Sarpa Dosha Pooja Gokarna | Naga Dosha Remedies',
-    description: 'Nag Bali and Sarpa Dosha pooja in Gokarna. Remedies for Naga Dosha and ancestral issues. Authentic',
+    description: 'Nag Bali and Sarpa Dosha pooja in Gokarna. Traditional ritual for Naga Dosha, guided personally by Guruji. Call to know more.',
     alternates: {
-        canonical: 'https://www.gokarnatemples.com/nag-bali-sarpa-dosha-gokarna/',
+        canonical: '/nag-bali-sarpa-dosha-gokarna',
+    },
+    openGraph: {
+        ...siteMetadata.openGraph,
+        title: 'Nag Bali Sarpa Dosha Pooja Gokarna | Naga Dosha Remedies',
+        description: 'Nag Bali and Sarpa Dosha pooja in Gokarna. Traditional ritual for Naga Dosha, guided personally by Guruji. Call to know more.',
+        url: '/nag-bali-sarpa-dosha-gokarna',
     },
 };
 
@@ -44,7 +51,7 @@ export default function NagBaliPage() {
                             Nag Bali & Sarpa Dosha Pooja in <span className="text-saffron">Gokarna</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto font-medium">
-                            Find complete relief from the afflictions of Naga Dosha, Kaal Sarp Dosh, and unexplained health impediments. Participate in the authentic Nag Bali Sarpa Dosha Pooja in Gokarna, a potent Samskara to propitiate the Serpent Deities. Our expert pandits perform these specialized remedies at the sacred grounds to cure skin ailments, fertility issues, and restore mental peace.
+                            Seek relief from the afflictions of Naga Dosha and Sarpa Dosha through the Nag Bali Sarpa Dosha Pooja in Gokarna, a Samskara performed to seek the blessings of Naga Devata. Our experienced priests perform this ritual at the sacred grounds, as prescribed in shastra, for the well-being and peace of mind of your family.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
@@ -75,11 +82,11 @@ export default function NagBaliPage() {
                     </h2>
                     <div className="grid md:grid-cols-2 gap-6 text-left">
                         {[
-                            "Indications of Sarpa Dosha or Kaal Sarp Dosh",
-                            "Difficulty in conceiving children (Putra Dosha)",
-                            "Repeated skin diseases or health ailments",
-                            "Seeing snakes in dreams frequently",
-                            "Ancestral history of harming snakes (Sarpa Hatya)"
+                            "Signs pointing to Sarpa Dosha in the family",
+                            "Delay in Santana (progeny) linked to Sarpa Dosha in the Jataka",
+                            "Elders or a jyotishi advising Nag Bali for the family",
+                            "Recurring dreams involving Naga",
+                            "A family history connected with Sarpa Hatya"
                         ].map((item, i) => (
                             <div key={i} className="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-all hover:border-green-200">
                                 <div className="mt-1 bg-green-100 p-2 rounded-full text-green-700 shrink-0">
@@ -105,8 +112,8 @@ export default function NagBaliPage() {
                         Nag Bali Procedure (Vidhi)
                     </h2>
                     <p className="text-charcoal/80 text-xl mb-12 leading-relaxed max-w-3xl mx-auto">
-                        Nag Bali involves the respectful symbolic funeral of a snake made of dough or silver, to release the curse of 'Sarpa Hatya' (Killing of Snake).
-                        It is a propitiatory rite to please Nag Devata and seek forgiveness.
+                        Nag Bali involves offering a symbolic Naga made of dough or silver, with due rites as prescribed in shastra, to redress the effects of Sarpa Hatya committed by the family, knowingly or unknowingly, across generations.
+                        It is performed to seek the blessings of Naga Devata.
                         This is often performed alongside <span className="font-bold text-charcoal">Narayana Bali</span> if both Doshas are present.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6 text-left">

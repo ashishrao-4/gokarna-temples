@@ -51,7 +51,7 @@ export default function Testimonials() {
                         transition={{ delay: 0.1 }}
                         className="text-blue-200"
                     >
-                        Trusted by thousands of families for ancestral peace.
+                        Trusted by families for ancestral peace, across India.
                     </motion.p>
                 </div>
 
@@ -71,7 +71,7 @@ export default function Testimonials() {
                                     <Star key={i} size={18} className="text-gold fill-current" />
                                 ))}
                             </div>
-                            <p className="text-gray-200 mb-8 italic leading-relaxed text-lg">"{t.text}"</p>
+                            <p className="text-gray-200 mb-8 italic leading-relaxed text-lg">&ldquo;{t.text}&rdquo;</p>
                             <div className="flex items-center gap-4 border-t border-white/10 pt-6">
                                 <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-saffron bg-saffron/20 flex items-center justify-center">
                                     <User size={30} className="text-saffron" />

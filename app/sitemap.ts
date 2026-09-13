@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next';
+import { SITE_URL } from '@/lib/metadata';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://gokarnatemples.com';
+    const baseUrl = SITE_URL;
 
     // Key pages and assets
     const routes = [

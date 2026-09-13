@@ -25,10 +25,10 @@ export default function PriestBio() {
                                 <span className="text-9xl text-saffron/20 font-serif select-none group-hover:text-saffron/30 transition-colors duration-500">🕉️</span>
                                 <div className="mt-8 space-y-2">
                                     <p className="text-2xl font-serif font-bold text-saffron mb-1">
-                                        "धर्मो रक्षति रक्षितः"
+                                        &ldquo;धर्मो रक्षति रक्षितः&rdquo;
                                     </p>
                                     <p className="text-lg font-serif font-bold text-saffron italic">
-                                        "Dharmo Rakshati Rakshitah"
+                                        &ldquo;Dharmo Rakshati Rakshitah&rdquo;
                                     </p>
                                     <p className="text-sm text-gray-600 uppercase tracking-widest text-[11px]">
                                         Dharma protects those who protect it
@@ -49,10 +49,10 @@ export default function PriestBio() {
                     </div>
 
                     <div className="w-full md:w-2/3 relative z-10">
-                        <span className="text-saffron font-bold tracking-widest uppercase text-sm mb-2 block">Head Priest</span>
+                        <span className="text-saffron font-bold tracking-widest uppercase text-sm mb-2 block">Your Family Priest</span>
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-charcoal mb-6">Balachandra Prasad</h2>
                         <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                            A renowned Vedic scholar from the lineage of Gokarna priests. Acharya ji specializes in Pitru Karya and Narayana Bali rituals, having performed over 10,000 successful pujas. His guidance provides spiritual clarity and effective remedies for your family's well-being.
+                            A Vedic priest from a traditional Gokarna lineage, Guruji specializes in Pitru Karya and Narayana Bali rituals, guiding families through them for over 20 years. He explains each step clearly and helps your family understand the right ritual for your ancestors&apos; peace.
                         </p>
 
                         <div className="grid grid-cols-1 gap-6 mb-10">

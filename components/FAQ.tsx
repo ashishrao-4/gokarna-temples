@@ -14,7 +14,7 @@ const faqs = [
     },
     {
         q: "Does the entire family need to be present?",
-        a: "It is recommended for the Karta (main performer) to be present. Other family members are welcome. If travel is impossible, we can perform the puja with your Sankalpa remotely and share video evidence, though physical presence yields the most satisfaction."
+        a: "It is recommended for the Karta (main performer) to be present. Other family members are welcome. If travel is impossible, we can perform the puja with your Sankalpa remotely and share photos and videos of the ritual, though being physically present is considered more meaningful when possible."
     },
     {
         q: "How long does the ritual take?",

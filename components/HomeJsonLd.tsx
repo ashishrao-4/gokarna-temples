@@ -1,10 +1,13 @@
+import { SITE_URL } from "@/lib/metadata";
+
+// The business entity (ProfessionalService) lives site-wide in JsonLd.tsx; don't duplicate it here.
 export default function HomeJsonLd() {
     const organizationSchema = {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Gokarna Temples",
-        "url": "https://www.gokarnatemples.com",
-        "logo": "https://www.gokarnatemples.com/logo.png",
+        "url": SITE_URL,
+        "logo": `${SITE_URL}/images/gokarna-temples-logo.png`,
         "description": "Independent Vedic ritual service offering authentic Narayana Bali, Pitru Dosha, and Nag Bali poojas in Gokarna, Karnataka.",
         "sameAs": [
             "https://www.facebook.com/gokarnatemples",
@@ -14,14 +17,14 @@ export default function HomeJsonLd() {
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "Customer Service",
-            "telephone": "+91-96638-28936",
+            "telephone": "+919663828936",
             "email": "contact@gokarnatemples.com"
         },
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Car Street, Near Mahabaleshwar Temple",
-            "addressLocality": "Gokarna, Kumta Taluk",
-            "addressRegion": "Uttara Kannada District, Karnataka",
+            "addressLocality": "Gokarna",
+            "addressRegion": "KA",
             "postalCode": "581326",
             "addressCountry": "IN"
         },
@@ -33,49 +36,19 @@ export default function HomeJsonLd() {
         }
     };
 
-    const localBusinessSchema = {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Gokarna Temples - Vedic Rituals",
-        "image": "https://www.gokarnatemples.com/image.jpg",
-        "url": "https://www.gokarnatemples.com",
-        "telephone": "+91-96638-28936",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Car Street, Near Mahabaleshwar Temple",
-            "addressLocality": "Gokarna",
-            "addressRegion": "Karnataka",
-            "postalCode": "581326",
-            "addressCountry": "IN"
-        },
-        "priceRange": "₹",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "47"
-        },
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "06:00",
-            "closes": "22:00"
-        }
-    };
-
     const personSchema = {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Balachandra Prasad",
         "jobTitle": "Vedic Ritual Priest & Expert",
-        "description": "Expert Vedic priest with 20+ years of experience performing authentic Narayana Bali, Pitru Dosha Nivarana, and Nag",
-        "url": "https://www.gokarnatemples.com",
-        "image": "https://www.gokarnatemples.com/guruji-photo.jpg",
+        "description": "Expert Vedic priest with 20+ years of experience performing authentic Narayana Bali, Pitru Dosha Nivarana, and Nag Bali rituals in Gokarna.",
+        "url": SITE_URL,
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "Customer Service",
-            "telephone": "+91-96638-28936"
+            "telephone": "+919663828936"
         },
-        "affiliation": "Gokarna Temples",
+        "affiliation": { "@id": `${SITE_URL}/#business` },
         "knowsAbout": ["Narayana Bali Pooja", "Pitru Dosha Nivarana", "Nag Bali Sarpa Dosha", "Vedic Rituals", "Ancestral Karma"],
         "worksLocation": {
             "@type": "Place",
@@ -88,10 +61,6 @@ export default function HomeJsonLd() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
             />
             <script
                 type="application/ld+json"

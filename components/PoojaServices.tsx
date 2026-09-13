@@ -15,7 +15,7 @@ const poojas = [
         title: "Narayana Bali Puja",
         description: "Narayana Bali is a powerful ritual performed in Gokarna for liberation from ancestral curses (Pitru Dosha) and unnatural deaths.",
         image: narayanaBali,
-        benefits: ["Peace for ancestors", "Remove sudden obstacles", "Restore family harmony"],
+        benefits: ["Peace for ancestors", "Support through sudden setbacks", "Restore family harmony"],
         link: "/narayana-bali-pooja-gokarna"
     },
     {
@@ -23,15 +23,15 @@ const poojas = [
         title: "Pitru Dosha Pooja",
         description: "Pitru Dosha Nivarana is performed when ancestral issues cause career or marriage delays in the family.",
         image: pitruDoshaNivarana,
-        benefits: ["Ancestral karma solutions", "Improve health issues", "Career stability"],
+        benefits: ["Ancestral karma solutions", "Guidance for family well-being", "Career stability"],
         link: "/pitru-dosha-pooja-gokarna"
     },
     {
         id: 3,
         title: "Nag Bali Sarpa Dosha",
-        description: "Nag Bali and Sarpa Dosha Nivarana are performed in Gokarna to resolve Naga Dosha and Kaal Sarp Dosh.",
+        description: "Nag Bali and Sarpa Dosha Nivarana are performed in Gokarna to seek relief from Naga Dosha, as per shastra.",
         image: nagabali,
-        benefits: ["Resolve child birth issues", "Cure skin diseases", "Mental peace"],
+        benefits: ["Support for progeny concerns", "Blessings for family well-being", "Mental peace"],
         link: "/nag-bali-sarpa-dosha-gokarna"
     },
     {
@@ -39,7 +39,7 @@ const poojas = [
         title: "Tripindi Shradh",
         description: "Tripindi Shradh in Gokarna satisfies unsatisfied souls of the last 3 generations.",
         image: tripindiShradh,
-        benefits: ["Ancestral peace", "Family blessings", "Dosha relief"],
+        benefits: ["Ancestral peace", "Family blessings", "Dosha nivarana guidance"],
         link: "/pitru-dosha-pooja-gokarna"
     }
 ];

@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { Shield, Clock, Users, Heart, Sun, MapPin } from "lucide-react";
 
 const benefits = [
-    { icon: Shield, title: "Authentic Gokarna Temple Traditions", desc: "Rituals performed exactly as prescribed in the holy scriptures without shortcuts." },
+    { icon: Shield, title: "Authentic Gokarna Vedic Traditions", desc: "Rituals performed exactly as prescribed in the holy scriptures without shortcuts." },
     { icon: Users, title: "20+ Years of Vedic Experience", desc: "Our priests have 20+ years of experience and come from a traditional Gokarna lineage." },
     { icon: Heart, title: "Complete Family Guidance", desc: "We ensure specific prayers are offered for your name, gotra, and ancestors with full support." },
     { icon: Sun, title: "Expert in Narayana Bali", desc: "Specialized knowledge in performing Narayana Bali and Pitru Dosha Nivarana correctly." },
     { icon: Clock, title: "Punctual & Systematic", desc: "We value your time. Rituals start on time and are conducted with proper procedure." },
-    { icon: MapPin, title: "Prime Sacred Location", desc: "Our facility is located at the spiritual heart of Gokarna, offering a divine atmosphere." },
+    { icon: MapPin, title: "Prime Sacred Location", desc: "Guruji is based right in the spiritual heart of Gokarna, close to Kotiteertha and the Mahabaleshwar temple." },
 ];
 
 export default function Benefits() {

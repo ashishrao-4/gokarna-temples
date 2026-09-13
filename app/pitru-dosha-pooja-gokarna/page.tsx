@@ -6,13 +6,20 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
 import TrackedLink from '@/components/TrackedLink';
+import { siteMetadata } from '@/lib/metadata';
 import pitruDoshaNivarana from '../../images/pitrudosh.jpg';
 
 export const metadata: Metadata = {
-    title: 'Pitru Dosha Pooja Gokarna | Ancestral Remedies by Vedic Priests',
-    description: 'Pitru Dosha Nivarana pooja in Gokarna. Ancestral karma solutions by traditional Vedic priests. Expe',
+    title: 'Pitru Dosha Pooja Gokarna | Pitru Dosha Nivarana by Vedic Priests',
+    description: "Pitru Dosha Nivarana pooja in Gokarna. Guidance from a traditional Vedic priest. Call to plan your family's ritual.",
     alternates: {
-        canonical: 'https://www.gokarnatemples.com/pitru-dosha-pooja-gokarna/',
+        canonical: '/pitru-dosha-pooja-gokarna',
+    },
+    openGraph: {
+        ...siteMetadata.openGraph,
+        title: 'Pitru Dosha Pooja Gokarna | Pitru Dosha Nivarana by Vedic Priests',
+        description: "Pitru Dosha Nivarana pooja in Gokarna. Guidance from a traditional Vedic priest. Call to plan your family's ritual.",
+        url: '/pitru-dosha-pooja-gokarna',
     },
 };
 
@@ -44,7 +51,7 @@ export default function PitruDoshaPage() {
                             Pitru Dosha Pooja in <span className="text-saffron">Gokarna</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto font-medium">
-                            Resolve persistent family obstacles and find deep peace for your ancestors with the authentic Pitru Dosha Pooja in Gokarna. Pitru Dosha Nivarana is a vital Vedic remedy for removing ancestral curses that cause career delays, health issues, and marriage hurdles. Our traditional priestly lineage (Vedic Pandits) performs these sacred rites at the holy Mukti Sthala.
+                            Perform the authentic Pitru Dosha Pooja in Gokarna to seek peace for your ancestors and address family concerns believed to stem from unresolved ancestral karma. Pitru Dosha Nivarana is a Vedic ritual performed, as per shastra, when career delays, health worries, or marriage hurdles are attributed to Pitru Dosha. Our traditional priestly lineage (Vedic Pandits) performs these sacred rites at the holy Mukti Sthala.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
@@ -79,7 +86,7 @@ export default function PitruDoshaPage() {
                             "Family disputes and lack of harmony",
                             "Advice from learned elders or pandits",
                             "Delay in marriage or progeny (child birth)",
-                            "Chronic health issues without medical reason"
+                            "Pitru Dosha seen in the family Jataka (horoscope)"
                         ].map((item, i) => (
                             <div key={i} className="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-all hover:border-orange-200">
                                 <div className="mt-1 bg-saffron/10 p-2 rounded-full text-saffron shrink-0">
@@ -105,10 +112,10 @@ export default function PitruDoshaPage() {
                     </h2>
                     <div className="bg-white p-8 rounded-2xl shadow-sm border-l-4 border-saffron text-left space-y-6">
                         <p className="text-gray-700 text-lg leading-relaxed">
-                            <strong>Narayana Bali</strong> is a specific ritual for "unnatural deaths" or severe accidental causes, often considered a prerequisite for Pitru Dosha nivarana in such cases.
+                            <strong>Narayana Bali</strong> is a specific ritual for &ldquo;unnatural deaths&rdquo; or severe accidental causes, often considered a prerequisite for Pitru Dosha nivarana in such cases.
                         </p>
                         <p className="text-gray-700 text-lg leading-relaxed">
-                            <strong>Pitru Dosha Pooja / Tripindi Shradh</strong> is generally performed for "unsatisfied souls" from the last three generations who may have passed naturally but are stuck.
+                            <strong>Pitru Dosha Pooja / Tripindi Shradh</strong> is generally performed for &ldquo;unsatisfied souls&rdquo; from the last three generations who may have passed naturally but are stuck.
                         </p>
                         <div className="pt-4">
                             <Link href="/narayana-bali-pooja-gokarna" className="text-saffron font-bold hover:underline flex items-center gap-1 text-lg">
@@ -196,14 +203,14 @@ export default function PitruDoshaPage() {
                     </h2>
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="bg-white p-8 rounded-2xl shadow-sm italic text-gray-700 relative">
-                            <span className="text-6xl text-saffron/20 absolute top-4 left-4 font-serif">"</span>
-                            <p className="relative z-10 text-lg">After performing Pitru Dosha pooja in Gokarna, we finally saw progress in our son's marriage proposals. Thank you Guruji.</p>
+                            <span className="text-6xl text-saffron/20 absolute top-4 left-4 font-serif">&ldquo;</span>
+                            <p className="relative z-10 text-lg">After performing Pitru Dosha pooja in Gokarna with Guruji&apos;s guidance, our family felt more at peace, and things slowly began moving forward for our son. Thank you, Guruji.</p>
                             <div className="mt-6 font-bold not-italic text-charcoal flex items-center gap-2">
                                 <span className="w-8 h-[2px] bg-saffron"></span> Venkat, Chennai
                             </div>
                         </div>
                         <div className="bg-white p-8 rounded-2xl shadow-sm italic text-gray-700 relative">
-                            <span className="text-6xl text-saffron/20 absolute top-4 left-4 font-serif">"</span>
+                            <span className="text-6xl text-saffron/20 absolute top-4 left-4 font-serif">&ldquo;</span>
                             <p className="relative z-10 text-lg">The atmosphere in Gokarna is very powerful. The pandits were very knowledgeable and patient.</p>
                             <div className="mt-6 font-bold not-italic text-charcoal flex items-center gap-2">
                                 <span className="w-8 h-[2px] bg-saffron"></span> Amit Verma, Pune

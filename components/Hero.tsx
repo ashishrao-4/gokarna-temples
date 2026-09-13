@@ -43,7 +43,7 @@ export default function Hero() {
                 <div className="animate-in fade-in zoom-in duration-500">
                     <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
                         <span className="inline-block py-1 px-3 rounded-full bg-saffron/20 border border-saffron/50 text-saffron font-bold text-sm tracking-wide uppercase">
-                            Official Gokarna Vedic Services
+                            Independent Vedic Rituals, Gokarna
                         </span>
                         <div className="flex items-center gap-2 bg-green-900/40 backdrop-blur-sm border border-green-500/30 px-3 py-1 rounded-full">
                             <span className="relative flex h-3 w-3">
@@ -109,10 +109,10 @@ export default function Hero() {
                 >
                     <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                        10+ Pujas performed everyday
+                        Rituals Performed Through the Year
                     </div>
                     <div className="flex items-center gap-2">
-                        <span className="text-gold">★ 4.9/5</span> Trusted by 10k+ Devotees
+                        Trusted by Devotees Across India
                     </div>
                 </motion.div>
             </div>

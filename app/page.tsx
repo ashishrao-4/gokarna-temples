@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import HomeJsonLd from "@/components/HomeJsonLd";
+import { siteMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: "Narayana Bali Pooja Gokarna | Pitru Dosha & Ancestral Rituals",
-  description: "Book authentic Narayana Bali and Pitru Dosha pooja in Gokarna. 20+ years Vedic experience. Complete ancestral peace.",
+  description: "Book authentic Narayana Bali and Pitru Dosha pooja in Gokarna. 20+ years of Vedic experience. Personal guidance for your family's rituals, by phone.",
   alternates: {
-    canonical: 'https://www.gokarnatemples.com/',
+    canonical: '/',
+  },
+  openGraph: {
+    ...siteMetadata.openGraph,
+    title: "Narayana Bali Pooja Gokarna | Pitru Dosha & Ancestral Rituals",
+    description: "Book authentic Narayana Bali and Pitru Dosha pooja in Gokarna. 20+ years of Vedic experience. Personal guidance for your family's rituals, by phone.",
+    url: '/',
   },
 };
 import Hero from "@/components/Hero";

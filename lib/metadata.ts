@@ -1,7 +1,12 @@
 import { Metadata, Viewport } from "next";
 
+// Canonical host: the live site is served on www (non-www 307s to it).
+// No trailing slash (next.config.ts leaves trailingSlash unset).
+export const SITE_URL = "https://www.gokarnatemples.com";
+export const OG_IMAGE = "/images/og-gokarna-koti-tirtha.jpg";
+
 export const siteMetadata: Metadata = {
-    metadataBase: new URL("https://gokarnatemples.com"),
+    metadataBase: new URL(SITE_URL),
     title: {
         default: "Gokarna Temples | Authentic Narayana Bali & Pitru Dosha Pujas",
         template: "%s | Gokarna Temples",
@@ -17,8 +22,7 @@ export const siteMetadata: Metadata = {
         "Ancestral Puja Gokarna",
         "Narayana Bali Cost Gokarna",
         "Gokarna Puja Online Booking",
-        "Mahabaleshwar Temple Puja",
-        "Kaal Sarp Dosh Puja Gokarna",
+        "Mahabaleshwar Kshetra Puja Gokarna",
         "Pind Daan Gokarna",
         "Vedic Rituals Gokarna",
         "Gokarna Kshetra Purohit",
@@ -37,16 +41,16 @@ export const siteMetadata: Metadata = {
         title: "Gokarna Temples | Authentic Ancestral Pujas",
         description:
             "Perform authentic Narayana Bali and Pitru Dosha Pujas in the holy grounds of Gokarna. Consult expert priests directly.",
-        url: "https://gokarnatemples.com",
+        url: "/",
         siteName: "Gokarna Temples",
         locale: "en_IN",
         type: "website",
         images: [
             {
-                url: "/images/gokarna-temples.png",
-                width: 1200,
-                height: 630,
-                alt: "Gokarna Temples Vedic Services",
+                url: OG_IMAGE,
+                width: 1080,
+                height: 609,
+                alt: "Koti Tirtha, Gokarna",
             },
         ],
     },

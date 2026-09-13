@@ -6,13 +6,20 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
 import TrackedLink from '@/components/TrackedLink';
+import { siteMetadata } from '@/lib/metadata';
 import tripindiShradh from '../../images/tripindi1.jpg';
 
 export const metadata: Metadata = {
     title: { absolute: 'Pitru Paksha 2026 Puja in Gokarna | Tripindi & Narayana Bali' },
     description: 'Pitru Paksha 2026 (Sep 26 - Oct 10) shraddha in Gokarna: Tripindi, Narayana Bali, Pinda Daan. Call +91 96638 28936 to fix the right day for your family.',
     alternates: {
-        canonical: 'https://gokarnatemples.com/pitru-paksha-gokarna',
+        canonical: '/pitru-paksha-gokarna',
+    },
+    openGraph: {
+        ...siteMetadata.openGraph,
+        title: 'Pitru Paksha 2026 Puja in Gokarna | Tripindi & Narayana Bali',
+        description: 'Pitru Paksha 2026 (Sep 26 - Oct 10) shraddha in Gokarna: Tripindi, Narayana Bali, Pinda Daan. Call +91 96638 28936 to fix the right day for your family.',
+        url: '/pitru-paksha-gokarna',
     },
 };
 
