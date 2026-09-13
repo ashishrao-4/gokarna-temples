@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   description: "Book authentic Narayana Bali and Pitru Dosha pooja in Gokarna. 20+ years of Vedic experience. Personal guidance for your family's rituals, by phone.",
   alternates: {
     canonical: '/',
+    languages: {
+      'en-IN': '/',
+      'kn-IN': '/kn',
+      'te-IN': '/te',
+    },
   },
   openGraph: {
     ...siteMetadata.openGraph,

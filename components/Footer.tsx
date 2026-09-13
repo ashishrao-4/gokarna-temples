@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Phone, Mail, MapPin, Instagram, Facebook, Youtube } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { gtag_report_conversion } from "@/lib/gtag";
 
 export default function Footer() {
@@ -10,14 +10,12 @@ export default function Footer() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                     <div className="col-span-1">
                         <h2 className="text-2xl font-serif font-bold text-white mb-4">Gokarna Temples</h2>
-                        <p className="mb-6 leading-relaxed text-gray-400 text-sm">
+                        <p className="mb-4 leading-relaxed text-gray-400 text-sm">
                             Dedicated to providing authentic Vedic rituals for the peace of your ancestors and prosperity of your family in the holy grounds of Gokarna.
                         </p>
-                        <div className="flex gap-4">
-                            <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-saffron hover:text-white transition-colors"><Instagram size={20} /></a>
-                            <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-saffron hover:text-white transition-colors"><Facebook size={20} /></a>
-                            <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-saffron hover:text-white transition-colors"><Youtube size={20} /></a>
-                        </div>
+                        <p className="text-gray-400 text-sm">
+                            Guruji speaks Kannada, Telugu, Hindi and Marathi on the phone.
+                        </p>
                     </div>
 
                     <div>
@@ -78,7 +76,7 @@ export default function Footer() {
 
                             <div className="text-xs text-green-500 flex items-center gap-2 border-t border-white/10 pt-4 mt-2">
                                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                                Available: 6:00 AM - 10:00 PM (7 days)
+                                Available: 6:00 AM - 12:00 midnight (7 days)
                             </div>
                         </div>
                     </div>

@@ -18,6 +18,21 @@
   --foreground: var(--color-charcoal);
 }
 
+/* Native-language pages (/kn, /te): brand fonts have no Kannada/Telugu glyphs,
+   so point every brand family at the Noto script font inside the wrapper.
+   The wrapper must also carry `font-sans` so the override resolves there. */
+.lang-kn {
+  --font-lato: var(--font-noto-kannada);
+  --font-playfair: var(--font-noto-kannada);
+  --font-cinzel: var(--font-noto-kannada);
+}
+
+.lang-te {
+  --font-lato: var(--font-noto-telugu);
+  --font-playfair: var(--font-noto-telugu);
+  --font-cinzel: var(--font-noto-telugu);
+}
+
 @layer base {
   body {
     @apply bg-cream text-charcoal font-sans antialiased text-base leading-relaxed;

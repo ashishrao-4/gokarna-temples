@@ -9,16 +9,11 @@ export default function HomeJsonLd() {
         "url": SITE_URL,
         "logo": `${SITE_URL}/images/gokarna-temples-logo.png`,
         "description": "Independent Vedic ritual service offering authentic Narayana Bali, Pitru Dosha, and Nag Bali poojas in Gokarna, Karnataka.",
-        "sameAs": [
-            "https://www.facebook.com/gokarnatemples",
-            "https://www.instagram.com/gokarnatemples",
-            "https://www.youtube.com/@gokarnatemples"
-        ],
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "Customer Service",
             "telephone": "+919663828936",
-            "email": "contact@gokarnatemples.com"
+            "availableLanguage": ["Kannada", "Telugu", "Hindi", "Marathi", "English"]
         },
         "address": {
             "@type": "PostalAddress",

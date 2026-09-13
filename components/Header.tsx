@@ -86,6 +86,10 @@ export default function Header() {
                                 )}
                             </div>
                         ))}
+                        <div className={`flex items-center gap-3 text-sm ${!isTransparent ? "text-charcoal/70" : "text-white/80"}`}>
+                            <Link href="/kn" lang="kn" hrefLang="kn" className="hover:text-saffron transition-colors">ಕನ್ನಡ</Link>
+                            <Link href="/te" lang="te" hrefLang="te" className="hover:text-saffron transition-colors">తెలుగు</Link>
+                        </div>
                         <a
                             href="tel:+919663828936"
                             onClick={() => gtag_report_conversion()}
@@ -147,6 +151,11 @@ export default function Header() {
                                 <Link href="/pitru-paksha-gokarna" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-medium text-saffron">
                                     Pitru Paksha 2026
                                 </Link>
+                            </div>
+
+                            <div className="flex justify-center gap-6 text-base text-charcoal/70">
+                                <Link href="/kn" lang="kn" hrefLang="kn" onClick={() => setIsMobileMenuOpen(false)}>ಕನ್ನಡ</Link>
+                                <Link href="/te" lang="te" hrefLang="te" onClick={() => setIsMobileMenuOpen(false)}>తెలుగు</Link>
                             </div>
 
                             <a

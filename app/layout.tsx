@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display, Noto_Serif_Devanagari, Cinzel, Lato, Great_Vibes } from "next/font/google";
+import { Inter, Playfair_Display, Noto_Serif_Devanagari, Cinzel, Lato, Great_Vibes, Noto_Sans_Kannada, Noto_Sans_Telugu } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
@@ -33,6 +33,22 @@ const greatVibes = Great_Vibes({
   display: "swap",
 });
 
+// Lato/Playfair/Cinzel have no Kannada/Telugu glyphs. Used only on /kn and /te
+// (via .lang-kn / .lang-te in globals.css); preload off so English pages don't fetch them.
+const notoKannada = Noto_Sans_Kannada({
+  subsets: ["kannada", "latin"],
+  variable: "--font-noto-kannada",
+  display: "swap",
+  preload: false,
+});
+
+const notoTelugu = Noto_Sans_Telugu({
+  subsets: ["telugu", "latin"],
+  variable: "--font-noto-telugu",
+  display: "swap",
+  preload: false,
+});
+
 export const metadata: Metadata = siteMetadata;
 export const viewport: Viewport = siteViewport;
 
@@ -44,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${cinzel.variable} ${playfair.variable} ${lato.variable} ${greatVibes.variable} antialiased bg-cream text-charcoal font-sans`}
+        className={`${cinzel.variable} ${playfair.variable} ${lato.variable} ${greatVibes.variable} ${notoKannada.variable} ${notoTelugu.variable} antialiased bg-cream text-charcoal font-sans`}
       >
         <JsonLd />
         {children}
