@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/narayana-bali-pooja-gokarna',
         '/pitru-dosha-pooja-gokarna',
         '/nag-bali-sarpa-dosha-gokarna',
+        '/pitru-paksha-gokarna',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),

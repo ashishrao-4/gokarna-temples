@@ -32,6 +32,7 @@ export default function Header() {
                 { name: "Narayana Bali", href: "/narayana-bali-pooja-gokarna" },
                 { name: "Pitru Dosha", href: "/pitru-dosha-pooja-gokarna" },
                 { name: "Nag Bali", href: "/nag-bali-sarpa-dosha-gokarna" },
+                { name: "Pitru Paksha 2026", href: "/pitru-paksha-gokarna" },
             ]
         },
         { name: "Benefits", href: "/#benefits" },
@@ -142,6 +143,9 @@ export default function Header() {
                                 </Link>
                                 <Link href="/nag-bali-sarpa-dosha-gokarna" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-medium text-saffron">
                                     Nag Bali
+                                </Link>
+                                <Link href="/pitru-paksha-gokarna" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-medium text-saffron">
+                                    Pitru Paksha 2026
                                 </Link>
                             </div>
 
