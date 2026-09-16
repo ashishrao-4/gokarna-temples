@@ -5,6 +5,7 @@ import { Phone, MessageCircle, Calendar, Check, Info, ArrowRight } from 'lucide-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
+import PageJsonLd from '@/components/PageJsonLd';
 import TrackedLink from '@/components/TrackedLink';
 import { siteMetadata } from '@/lib/metadata';
 import pitruDoshaNivarana from '../../images/pitrudosh.jpg';
@@ -23,9 +24,39 @@ export const metadata: Metadata = {
     },
 };
 
+// Single source for the visible FAQ section and the FAQPage structured data.
+const faqs = [
+    {
+        q: 'How do I know if I have Pitru Dosha?',
+        a: 'Common signs include delay in progeny, constant illness, and money loss. Consulting a family pandit can provide clarity.',
+    },
+    {
+        q: 'Can women perform Pitru Dosha Pooja?',
+        a: 'Yes, women can perform specific rituals or participate along with family. Guruji can guide on the exact Vidhi based on tradition.',
+    },
+    {
+        q: 'What is the difference between Narayana Bali and Pitru Dosha Pooja?',
+        a: 'Narayana Bali is a specific ritual for unnatural or severe accidental deaths, and in such cases it is often considered a prerequisite for Pitru Dosha nivarana. Pitru Dosha Pooja or Tripindi Shradh is generally performed for unsatisfied souls from the last three generations who may have passed naturally but are stuck.',
+    },
+    {
+        q: 'How long does the Pitru Dosha Nivarana take?',
+        a: 'The rites usually take 3-4 hours and are best performed in the morning hours. Commonly Tripindi Shradh or Tila Homa is performed, with pindas offered to the ancestors of the father, mother and in-law lineages.',
+    },
+    {
+        q: 'How is the dakshina decided?',
+        a: 'There is no fixed package. The dakshina depends on the rites advised, such as a simple Tila Homa or a complete Tripindi Shradh. Guruji tells you the amount openly on the phone, and there are no hidden charges.',
+    },
+];
+
 export default function PitruDoshaPage() {
     return (
         <main className="min-h-screen bg-cream selection:bg-saffron selection:text-white font-sans">
+            <PageJsonLd
+                path="/pitru-dosha-pooja-gokarna"
+                name="Pitru Dosha Pooja in Gokarna"
+                description="Pitru Dosha Nivarana pooja in Gokarna. Guidance from a traditional Vedic priest. Call to plan your family's ritual."
+                faqs={faqs}
+            />
             <Header />
 
             {/* HERO SECTION - Full Background */}
@@ -133,10 +164,15 @@ export default function PitruDoshaPage() {
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-8">
                         How Pitru Dosha Nivarana is Performed
                     </h2>
-                    <p className="text-charcoal/80 text-xl mb-12 leading-relaxed max-w-3xl mx-auto">
+                    <p className="text-charcoal/80 text-xl mb-6 leading-relaxed max-w-3xl mx-auto">
                         The exact procedure (Vidhi) depends on the guidance of the Pandit.
                         Commonly, <span className="font-bold text-charcoal">Tripindi Shradh</span> or <span className="font-bold text-charcoal">Tila Homa</span> is performed.
                         It involves offering pindas to ancestors of father/mother/in-law lineages to satisfy their souls.
+                    </p>
+                    <p className="text-charcoal/80 text-lg mb-12 leading-relaxed max-w-3xl mx-auto">
+                        Many families prefer to do these rites during the{' '}
+                        <Link href="/pitru-paksha-gokarna" className="text-saffron font-bold hover:underline">Pitru Paksha fortnight in Gokarna</Link>,
+                        when Shraddha and Tarpana for ancestors carry special significance.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6 text-left">
                         <div className="bg-white/80 backdrop-blur p-8 rounded-2xl shadow-lg border border-saffron/20 flex-1 transform transition hover:-translate-y-1">
@@ -227,24 +263,15 @@ export default function PitruDoshaPage() {
                         Frequently Asked Questions
                     </h2>
                     <div className="space-y-4">
-                        <details className="group bg-gray-50 p-6 rounded-xl border border-gray-100 open:bg-orange-50 open:border-orange-100 transition-all cursor-pointer">
-                            <summary className="font-bold text-lg text-charcoal list-none flex justify-between items-center outline-none">
-                                How do I know if I have Pitru Dosha?
-                                <span className="group-open:rotate-180 transition-transform text-saffron">▼</span>
-                            </summary>
-                            <p className="mt-4 text-gray-600 leading-relaxed">
-                                Common signs include delay in progeny, constant illness, and money loss. Consulting a family pandit can provide clarity.
-                            </p>
-                        </details>
-                        <details className="group bg-gray-50 p-6 rounded-xl border border-gray-100 open:bg-orange-50 open:border-orange-100 transition-all cursor-pointer">
-                            <summary className="font-bold text-lg text-charcoal list-none flex justify-between items-center outline-none">
-                                Can women perform Pitru Dosha Pooja?
-                                <span className="group-open:rotate-180 transition-transform text-saffron">▼</span>
-                            </summary>
-                            <p className="mt-4 text-gray-600 leading-relaxed">
-                                Yes, women can perform specific rituals or participate along with family. Guruji can guide on the exact Vidhi based on tradition.
-                            </p>
-                        </details>
+                        {faqs.map((faq) => (
+                            <details key={faq.q} className="group bg-gray-50 p-6 rounded-xl border border-gray-100 open:bg-orange-50 open:border-orange-100 transition-all cursor-pointer">
+                                <summary className="font-bold text-lg text-charcoal list-none flex justify-between items-center outline-none">
+                                    {faq.q}
+                                    <span className="group-open:rotate-180 transition-transform text-saffron">▼</span>
+                                </summary>
+                                <p className="mt-4 text-gray-600 leading-relaxed">{faq.a}</p>
+                            </details>
+                        ))}
                     </div>
                 </div>
             </section>

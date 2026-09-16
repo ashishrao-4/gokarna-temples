@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Phone, MessageCircle, Calendar, Check, Info, ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
+import PageJsonLd from '@/components/PageJsonLd';
 import TrackedLink from '@/components/TrackedLink';
 import { siteMetadata } from '@/lib/metadata';
 import narayanaBali from '../../images/narayana-bali.jpg';
@@ -22,9 +24,39 @@ export const metadata: Metadata = {
     },
 };
 
+// Single source for the visible FAQ section and the FAQPage structured data.
+const faqs = [
+    {
+        q: 'On which days can Narayana Bali be done?',
+        a: 'Ideally performed on Amavasya, Purnima, or specialized muhurtas. Guruji will check the panchang and suggest the best date.',
+    },
+    {
+        q: 'How many family members should attend?',
+        a: 'The main Karta (performer) must attend. Other family members can participate. It is good if the whole family attends for collective blessings.',
+    },
+    {
+        q: 'Can I do Narayana Bali if I live abroad?',
+        a: 'Yes, if you cannot travel, Sankalpa can be done in your name. However, for Narayana Bali, Guruji recommends the family attend in person at Gokarna wherever possible, as the karta traditionally performs the rites.',
+    },
+    {
+        q: 'How is the dakshina for Narayana Bali decided?',
+        a: 'There is no fixed package. The dakshina depends on the number of days, the number of pandits involved, and any additional rites such as Tripindi Shradh performed along with it. Guruji tells you the amount openly on the phone, and there are no hidden charges.',
+    },
+    {
+        q: 'Which languages can we speak to Guruji in?',
+        a: 'Guruji Balachandra Prasad has over 20 years of experience in these rituals and speaks Kannada, Telugu, Hindi and Marathi, apart from English, so families can discuss the vidhi comfortably in their own language.',
+    },
+];
+
 export default function NarayanaBaliPage() {
     return (
         <main className="min-h-screen bg-cream selection:bg-saffron selection:text-white font-sans">
+            <PageJsonLd
+                path="/narayana-bali-pooja-gokarna"
+                name="Narayana Bali Pooja in Gokarna"
+                description="Narayana Bali pooja in Gokarna for Pitru Dosha. Guided by an experienced Vedic priest. Call to plan your family's ritual."
+                faqs={faqs}
+            />
             <Header />
 
             {/* HERO SECTION - Full Background Image */}
@@ -113,14 +145,19 @@ export default function NarayanaBaliPage() {
                     <p className="text-charcoal/80 text-xl mb-12 leading-relaxed max-w-3xl mx-auto">
                         The ritual commences with a <span className="font-bold text-charcoal">Sankalpa</span> (sacred vow) at the holy river banks or designated Mukti Sthala.
                         It involves invoking Lord Narayana to liberate the soul. The process includes <span className="font-bold text-charcoal">Homa</span>, offering of Pindas (Pind Daan),
-                        and final prayers for the soul&apos;s ascension.
+                        and final prayers for the soul&apos;s ascension. Where Sarpa Dosha is also indicated in the family, the{' '}
+                        <Link href="/nag-bali-sarpa-dosha-gokarna" className="text-saffron font-bold hover:underline">Nag Bali pooja</Link>{' '}
+                        is performed along with it as Nag-Narayana Bali.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6 text-left">
                         <div className="bg-white/80 backdrop-blur p-8 rounded-2xl shadow-lg border border-saffron/20 flex-1 transform transition hover:-translate-y-1">
                             <h3 className="font-bold text-2xl text-saffron mb-3 flex items-center gap-3">
                                 <Calendar size={28} /> Duration
                             </h3>
-                            <p className="text-charcoal font-medium">Typically 1 day ritual (sometimes 2 days based on severity). Usually starts early morning.</p>
+                            <p className="text-charcoal font-medium">
+                                Typically 1 day ritual (sometimes 2 days based on severity). Usually starts early morning. Many families choose the{' '}
+                                <Link href="/pitru-paksha-gokarna" className="text-saffron hover:underline">Pitru Paksha fortnight</Link> for it.
+                            </p>
                         </div>
                         <div className="bg-white/80 backdrop-blur p-8 rounded-2xl shadow-lg border border-saffron/20 flex-1 transform transition hover:-translate-y-1">
                             <h3 className="font-bold text-2xl text-saffron mb-3 flex items-center gap-3">
@@ -206,33 +243,15 @@ export default function NarayanaBaliPage() {
                         Narayana Bali FAQ
                     </h2>
                     <div className="space-y-4">
-                        <details className="group bg-gray-50 p-6 rounded-xl border border-gray-100 open:bg-orange-50 open:border-orange-100 transition-all cursor-pointer">
-                            <summary className="font-bold text-lg text-charcoal list-none flex justify-between items-center outline-none">
-                                On which days can Narayana Bali be done?
-                                <span className="group-open:rotate-180 transition-transform text-saffron">▼</span>
-                            </summary>
-                            <p className="mt-4 text-gray-600 leading-relaxed">
-                                Ideally performed on Amavasya, Purnima, or specialized muhurtas. Guruji will check the panchang and suggest the best date.
-                            </p>
-                        </details>
-                        <details className="group bg-gray-50 p-6 rounded-xl border border-gray-100 open:bg-orange-50 open:border-orange-100 transition-all cursor-pointer">
-                            <summary className="font-bold text-lg text-charcoal list-none flex justify-between items-center outline-none">
-                                How many family members should attend?
-                                <span className="group-open:rotate-180 transition-transform text-saffron">▼</span>
-                            </summary>
-                            <p className="mt-4 text-gray-600 leading-relaxed">
-                                The main Karta (performer) must attend. Other family members can participate. It is good if the whole family attends for collective blessings.
-                            </p>
-                        </details>
-                        <details className="group bg-gray-50 p-6 rounded-xl border border-gray-100 open:bg-orange-50 open:border-orange-100 transition-all cursor-pointer">
-                            <summary className="font-bold text-lg text-charcoal list-none flex justify-between items-center outline-none">
-                                Can I do Narayana Bali if I live abroad?
-                                <span className="group-open:rotate-180 transition-transform text-saffron">▼</span>
-                            </summary>
-                            <p className="mt-4 text-gray-600 leading-relaxed">
-                                Yes, if you cannot travel, Sankalpa can be done in your name. However, for Narayana Bali, Guruji recommends the family attend in person at Gokarna wherever possible, as the karta traditionally performs the rites.
-                            </p>
-                        </details>
+                        {faqs.map((faq) => (
+                            <details key={faq.q} className="group bg-gray-50 p-6 rounded-xl border border-gray-100 open:bg-orange-50 open:border-orange-100 transition-all cursor-pointer">
+                                <summary className="font-bold text-lg text-charcoal list-none flex justify-between items-center outline-none">
+                                    {faq.q}
+                                    <span className="group-open:rotate-180 transition-transform text-saffron">▼</span>
+                                </summary>
+                                <p className="mt-4 text-gray-600 leading-relaxed">{faq.a}</p>
+                            </details>
+                        ))}
                     </div>
                 </div>
             </section>

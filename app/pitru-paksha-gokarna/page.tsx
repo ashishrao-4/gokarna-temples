@@ -5,6 +5,7 @@ import { Phone, MessageCircle, Calendar, Check, ArrowRight } from 'lucide-react'
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
+import PageJsonLd from '@/components/PageJsonLd';
 import TrackedLink from '@/components/TrackedLink';
 import { siteMetadata } from '@/lib/metadata';
 import tripindiShradh from '../../images/tripindi1.jpg';
@@ -101,6 +102,12 @@ const faqs = [
 export default function PitruPakshaPage() {
     return (
         <main className="min-h-screen bg-cream selection:bg-saffron selection:text-white font-sans">
+            <PageJsonLd
+                path="/pitru-paksha-gokarna"
+                name="Pitru Paksha 2026 Shraddha in Gokarna"
+                description="Pitru Paksha 2026 (Sep 26 - Oct 10) shraddha in Gokarna: Tripindi, Narayana Bali, Pinda Daan. Call +91 96638 28936 to fix the right day for your family."
+                faqs={faqs}
+            />
             <Header />
 
             {/* HERO SECTION - Full Background Image */}

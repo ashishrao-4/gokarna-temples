@@ -5,6 +5,7 @@ import { Phone, MessageCircle, Calendar, Check, Info, ArrowRight } from 'lucide-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
+import PageJsonLd from '@/components/PageJsonLd';
 import TrackedLink from '@/components/TrackedLink';
 import { siteMetadata } from '@/lib/metadata';
 import nagabali from '../../images/sarpadosha.jpg';
@@ -23,9 +24,39 @@ export const metadata: Metadata = {
     },
 };
 
+// Single source for the visible FAQ section and the FAQPage structured data.
+const faqs = [
+    {
+        q: 'Who should perform Nag Bali in Gokarna?',
+        a: 'Families who see signs pointing to Sarpa Dosha, a delay in Santana linked to Sarpa Dosha in the Jataka, recurring dreams involving Naga, or a family history connected with Sarpa Hatya. Many families come after elders or a jyotishi advise Nag Bali.',
+    },
+    {
+        q: 'What happens during the Nag Bali vidhi?',
+        a: 'A symbolic Naga made of dough or silver is offered with the due rites as prescribed in shastra, to redress the effects of Sarpa Hatya committed by the family, knowingly or unknowingly, across generations. The rites are performed to seek the blessings of Naga Devata.',
+    },
+    {
+        q: 'Which tradition is followed for Nag Bali here?',
+        a: 'The vidhi follows the Skanda Purana guidelines available in the Gokarna tradition. Guruji Balachandra Prasad, with over 20 years of experience, performs the rites in person at Gokarna, and the karta traditionally attends.',
+    },
+    {
+        q: 'Is Nag Bali performed along with Narayana Bali?',
+        a: 'Yes. When both Doshas are present, the two are often performed together as Nag-Narayana Bali. Where Sarpa Dosha is linked to the ancestors, Pitru Dosha Pooja may also be advised.',
+    },
+    {
+        q: 'How is the dakshina for Nag Bali decided?',
+        a: 'There is no fixed package. It depends on whether Nag Bali is performed alone or combined with Narayana Bali, and on the rites advised for your family. Guruji tells you the amount openly on the phone, and there are no hidden charges.',
+    },
+];
+
 export default function NagBaliPage() {
     return (
         <main className="min-h-screen bg-cream selection:bg-saffron selection:text-white font-sans">
+            <PageJsonLd
+                path="/nag-bali-sarpa-dosha-gokarna"
+                name="Nag Bali & Sarpa Dosha Pooja in Gokarna"
+                description="Nag Bali and Sarpa Dosha pooja in Gokarna. Traditional ritual for Naga Dosha, guided personally by Guruji. Call to know more."
+                faqs={faqs}
+            />
             <Header />
 
             {/* HERO SECTION - Full Background */}
@@ -114,7 +145,9 @@ export default function NagBaliPage() {
                     <p className="text-charcoal/80 text-xl mb-12 leading-relaxed max-w-3xl mx-auto">
                         Nag Bali involves offering a symbolic Naga made of dough or silver, with due rites as prescribed in shastra, to redress the effects of Sarpa Hatya committed by the family, knowingly or unknowingly, across generations.
                         It is performed to seek the blessings of Naga Devata.
-                        This is often performed alongside <span className="font-bold text-charcoal">Narayana Bali</span> if both Doshas are present.
+                        It is often performed alongside the{' '}
+                        <Link href="/narayana-bali-pooja-gokarna" className="text-saffron font-bold hover:underline">Narayana Bali pooja in Gokarna</Link>{' '}
+                        if both Doshas are present.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6 text-left">
                         <div className="bg-white/80 backdrop-blur p-8 rounded-2xl shadow-lg border border-green-100 flex-1 transform transition hover:-translate-y-1">
@@ -151,6 +184,23 @@ export default function NagBaliPage() {
                         <TrackedLink href="tel:+919663828936" className="inline-block bg-saffron hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,153,51,0.3)]">
                             Get Cost Details
                         </TrackedLink>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ */}
+            <section className="py-20 bg-white">
+                <div className="container mx-auto px-4 max-w-3xl">
+                    <h2 className="text-3xl font-serif font-bold text-charcoal text-center mb-12">
+                        Nag Bali & Sarpa Dosha FAQ
+                    </h2>
+                    <div className="space-y-6">
+                        {faqs.map((faq) => (
+                            <div key={faq.q} className="bg-stone-50 p-6 rounded-xl border border-stone-100">
+                                <h3 className="font-bold text-lg text-charcoal">{faq.q}</h3>
+                                <p className="mt-3 text-gray-600 leading-relaxed">{faq.a}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
