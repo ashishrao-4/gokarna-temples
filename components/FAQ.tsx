@@ -2,29 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
-
-const faqs = [
-    {
-        q: "What is the importance of performing pujas in Gokarna?",
-        a: "Gokarna is known as the 'Dakshin Kashi' (Kashi of the South) and is one of the seven Mukti Sthalas. It is believed that Lord Shiva (Mahabaleshwar) resides here in the Atma Linga form. Performing ancestral rites (Pitru Karya) here is considered extremely powerful for liberation of souls."
-    },
-    {
-        q: "What is the best time to perform Narayana Bali Puja?",
-        a: "These rituals can be performed on most days, but Amavasya (New Moon) days, Pitru Paksha, and specific nakshatras are considered highly auspicious. Please consult Guruji by phone for the best muhurtham based on your birth chart."
-    },
-    {
-        q: "Does the entire family need to be present?",
-        a: "It is recommended for the Karta (main performer) to be present. Other family members are welcome. If travel is impossible, we can perform the puja with your Sankalpa remotely and share photos and videos of the ritual, though being physically present is considered more meaningful when possible."
-    },
-    {
-        q: "How long does the ritual take?",
-        a: "Most dosha nivaran pujas like Narayana Bali or Tripindi Shradh take approximately 3-5 hours. We recommend arriving the previous evening or early morning (before 7 AM) to start the rituals on time."
-    },
-    {
-        q: "Do you help with accommodation and food?",
-        a: "Yes, we can assist you in booking clean, satvik accommodation near the temple. Simple satvik food (Prasadam) is often arranged as part of the ritual or guidance is provided for nearby pure veg restaurants."
-    }
-];
+import { homeFaqs as faqs } from "@/lib/faqs";
 
 export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);

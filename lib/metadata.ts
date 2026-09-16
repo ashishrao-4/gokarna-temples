@@ -69,6 +69,11 @@ export const siteMetadata: Metadata = {
         icon: "/icon.png",
         apple: "/icon.png",
     },
+    // Google Search Console HTML-tag verification. Set NEXT_PUBLIC_GSC_VERIFICATION
+    // in Vercel to the content value Search Console gives; left out when unset.
+    ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
+        ? { verification: { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION } }
+        : {}),
 };
 
 export const siteViewport: Viewport = {

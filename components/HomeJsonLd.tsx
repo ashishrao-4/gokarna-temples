@@ -1,4 +1,5 @@
 import { SITE_URL } from "@/lib/metadata";
+import { homeFaqs } from "@/lib/faqs";
 
 // The business entity (ProfessionalService) lives site-wide in JsonLd.tsx; don't duplicate it here.
 export default function HomeJsonLd() {
@@ -51,8 +52,27 @@ export default function HomeJsonLd() {
         }
     };
 
+    // Same questions as the FAQ section on the page, so search engines and AI
+    // assistants can answer them directly and cite the site.
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": homeFaqs.map((faq) => ({
+            "@type": "Question",
+            "name": faq.q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.a,
+            },
+        })),
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

@@ -49,6 +49,9 @@ const notoTelugu = Noto_Sans_Telugu({
   preload: false,
 });
 
+// Set NEXT_PUBLIC_GA_ID (e.g. G-XXXXXXXXXX) in Vercel to switch GA4 on.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+
 export const metadata: Metadata = siteMetadata;
 export const viewport: Viewport = siteViewport;
 
@@ -66,7 +69,8 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
-        {/* Google Ads Base Tag */}
+        {/* Google Ads base tag. The same gtag.js also feeds GA4 when
+            NEXT_PUBLIC_GA_ID is set in the Vercel environment variables. */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=AW-402638274" strategy="afterInteractive" />
         <Script id="google-ads-config" strategy="afterInteractive">
           {`
@@ -74,6 +78,7 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-402638274');
+            ${GA_ID ? `gtag('config', '${GA_ID}');` : ''}
           `}
         </Script>
       </body>
