@@ -49,8 +49,9 @@ const notoTelugu = Noto_Sans_Telugu({
   preload: false,
 });
 
-// Set NEXT_PUBLIC_GA_ID (e.g. G-XXXXXXXXXX) in Vercel to switch GA4 on.
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+// GA4 measurement ID. Public by design (it ships in the page HTML);
+// NEXT_PUBLIC_GA_ID can override it per environment.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-4B7GT6QNVK";
 
 export const metadata: Metadata = siteMetadata;
 export const viewport: Viewport = siteViewport;
