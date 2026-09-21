@@ -27,13 +27,25 @@ export const sendGTMEvent = (
     }
 };
 
-export const gtag_report_conversion = (url?: string) => {
+// Which CTA the visitor tapped. The Google Ads conversion below is identical for
+// every channel (unchanged on purpose); this only adds a separate GA4 event so
+// call vs WhatsApp can be told apart in reporting.
+export type ContactChannel = "call" | "whatsapp" | "other";
+
+export const gtag_report_conversion = (url?: string, channel: ContactChannel = "other") => {
     if (typeof window !== "undefined" && (window as unknown as WindowWithGTag).gtag) {
         const callback = function () {
             if (typeof url !== 'undefined') {
                 window.location.href = url;
             }
         };
+        if (channel !== "other") {
+            (window as unknown as WindowWithGTag).gtag('event', 'contact_click', {
+                'contact_channel': channel,
+                'event_category': 'contact',
+                'event_label': channel,
+            });
+        }
         (window as unknown as WindowWithGTag).gtag('event', 'conversion', {
             'send_to': 'AW-402638274/6OqPCJimpfYcEMKL_78B',
             'value': 1.0,

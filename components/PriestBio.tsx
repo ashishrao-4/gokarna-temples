@@ -68,7 +68,7 @@ export default function PriestBio() {
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a
                                 href="tel:+919663828936"
-                                onClick={() => gtag_report_conversion()}
+                                onClick={() => gtag_report_conversion(undefined, "call")}
                                 className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-transform hover:scale-105 shadow-lg shadow-saffron/30"
                             >
                                 <Phone size={20} />

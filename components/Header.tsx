@@ -92,7 +92,7 @@ export default function Header() {
                         </div>
                         <a
                             href="tel:+919663828936"
-                            onClick={() => gtag_report_conversion()}
+                            onClick={() => gtag_report_conversion(undefined, "call")}
                             className="bg-saffron hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold flex items-center gap-2 transition-transform hover:scale-105 shadow-lg"
                         >
                             <Phone size={18} />
@@ -100,18 +100,29 @@ export default function Header() {
                         </a>
                     </nav>
 
-                    {/* Mobile Menu Button */}
-                    <button
-                        className="md:hidden text-charcoal"
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        aria-label="Toggle menu"
-                    >
-                        {isMobileMenuOpen ? (
-                            <X className="text-charcoal" size={28} />
-                        ) : (
-                            <Menu className={!isTransparent ? "text-charcoal" : "text-white"} size={28} />
-                        )}
-                    </button>
+                    {/* Mobile: one-tap call + menu toggle */}
+                    <div className="flex items-center gap-3 md:hidden">
+                        <a
+                            href="tel:+919663828936"
+                            onClick={() => gtag_report_conversion(undefined, "call")}
+                            aria-label="Call Guruji"
+                            className="bg-saffron text-white px-4 py-2 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg"
+                        >
+                            <Phone size={16} className="fill-current" />
+                            <span>Call</span>
+                        </a>
+                        <button
+                            className="text-charcoal"
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            aria-label="Toggle menu"
+                        >
+                            {isMobileMenuOpen ? (
+                                <X className="text-charcoal" size={28} />
+                            ) : (
+                                <Menu className={!isTransparent ? "text-charcoal" : "text-white"} size={28} />
+                            )}
+                        </button>
+                    </div>
                 </div>
             </header>
 
@@ -160,7 +171,7 @@ export default function Header() {
 
                             <a
                                 href="tel:+919663828936"
-                                onClick={() => gtag_report_conversion()}
+                                onClick={() => gtag_report_conversion(undefined, "call")}
                                 className="bg-saffron text-white py-3 rounded-xl font-bold text-lg flex justify-center items-center gap-2 mt-4"
                             >
                                 <Phone size={20} />

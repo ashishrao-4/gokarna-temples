@@ -119,6 +119,8 @@ export default function PitruPakshaPage() {
                         fill
                         className="object-cover"
                         priority
+                        quality={85}
+                        sizes="100vw"
                         placeholder="blur"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-charcoal/90 z-10" />
@@ -129,14 +131,14 @@ export default function PitruPakshaPage() {
                         <span className="inline-flex items-center gap-2 py-1 px-4 rounded-full bg-saffron/20 border border-saffron/50 text-saffron font-bold text-sm tracking-widest uppercase backdrop-blur-sm">
                             <Calendar size={16} /> Sat, Sep 26 &ndash; Sat, Oct 10, 2026
                         </span>
+                        <p className="text-sm md:text-base text-gray-200 max-w-2xl mx-auto bg-black/30 border border-white/10 rounded-xl px-4 py-2 backdrop-blur-sm">
+                            The Pitru Paksha fortnight runs <span className="font-bold text-white">Sep 26 &ndash; Oct 10, 2026</span>. Mahalaya Amavasya (Sat, Oct 10) and the other major days are taken up first, so call early to fix your family&apos;s day.
+                        </p>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight drop-shadow-lg text-white">
                             Pitru Paksha 2026 Shraddha in <span className="text-saffron">Gokarna</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto font-medium">
                             The fortnight of the ancestors is the most meaningful time of the year to offer shraddha. Perform Tripindi Shraddha, Narayana Bali or Pinda Daan in Gokarna with an experienced local priest who first listens to your family&apos;s situation, then advises the right ritual and the right day.
-                        </p>
-                        <p className="text-base text-gray-300">
-                            Sarva Pitru / Mahalaya Amavasya: <span className="font-bold text-white">Saturday, October 10, 2026</span>
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">

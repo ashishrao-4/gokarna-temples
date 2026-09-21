@@ -68,6 +68,8 @@ export default function NagBaliPage() {
                         fill
                         className="object-cover"
                         priority
+                        quality={85}
+                        sizes="100vw"
                         placeholder="blur"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-charcoal/90 z-10" />
@@ -82,7 +84,7 @@ export default function NagBaliPage() {
                             Nag Bali & Sarpa Dosha Pooja in <span className="text-saffron">Gokarna</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto font-medium">
-                            Seek relief from the afflictions of Naga Dosha and Sarpa Dosha through the Nag Bali Sarpa Dosha Pooja in Gokarna, a Samskara performed to seek the blessings of Naga Devata. Our experienced priests perform this ritual at the sacred grounds, as prescribed in shastra, for the well-being and peace of mind of your family.
+                            Nag Bali and Sarpa Dosha Pooja in Gokarna, performed by experienced priests seeking the blessings of Naga Devata.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
@@ -91,7 +93,7 @@ export default function NagBaliPage() {
                                 className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.4)]"
                             >
                                 <Phone size={24} className="fill-current" />
-                                Call Guruji Now
+                                Call Guruji: +91 96638 28936
                             </TrackedLink>
                             <TrackedLink
                                 href="https://wa.me/919663828936?text=Namaste%20Guruji,%20I%20want%20to%20know%20about%20Nag%20Bali%20Pooja%20in%20Gokarna."
@@ -101,6 +103,9 @@ export default function NagBaliPage() {
                                 WhatsApp Enquiry
                             </TrackedLink>
                         </div>
+                        <p className="text-sm text-gray-300">
+                            No fixed packages. Guruji tells you the dakshina openly on the call.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -201,6 +206,35 @@ export default function NagBaliPage() {
                                 <p className="mt-3 text-gray-600 leading-relaxed">{faq.a}</p>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* FINAL CTA */}
+            <section className="py-20 bg-stone-900 text-white text-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-stone-900 to-black"></div>
+                <div className="container mx-auto px-4 max-w-3xl relative z-10">
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-white">
+                        Talk to Guruji About Nag Bali
+                    </h2>
+                    <p className="text-gray-300 text-xl mb-10 leading-relaxed">
+                        Guruji hears your family&apos;s situation, advises the right vidhi and the day, and tells you the dakshina openly on the call.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <TrackedLink
+                            href="tel:+919663828936"
+                            className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.4)]"
+                        >
+                            <Phone size={24} className="fill-current" />
+                            Call +91 96638 28936
+                        </TrackedLink>
+                        <TrackedLink
+                            href="https://wa.me/919663828936?text=Namaste%20Guruji,%20I%20want%20to%20know%20about%20Nag%20Bali%20Pooja%20in%20Gokarna."
+                            className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105"
+                        >
+                            <MessageCircle size={24} />
+                            WhatsApp Guruji
+                        </TrackedLink>
                     </div>
                 </div>
             </section>

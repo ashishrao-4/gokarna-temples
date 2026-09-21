@@ -24,13 +24,11 @@ export const metadata: Metadata = {
 import Hero from "@/components/Hero";
 import PoojaServices from "@/components/PoojaServices";
 import Benefits from "@/components/Benefits";
-import Testimonials from "@/components/Testimonials";
 import Location from "@/components/Location";
 import PriestBio from "@/components/PriestBio";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import PhoneCTA from "@/components/PhoneCTA";
-import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -40,11 +38,9 @@ export default function Home() {
       <Hero />
       <PoojaServices />
       <Benefits />
-      <Testimonials />
       <Location />
       <PriestBio />
       <FAQ />
-      <ContactForm />
       <Footer />
       <PhoneCTA />
     </main>

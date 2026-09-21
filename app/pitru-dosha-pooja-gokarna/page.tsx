@@ -68,6 +68,8 @@ export default function PitruDoshaPage() {
                         fill
                         className="object-cover"
                         priority
+                        quality={85}
+                        sizes="100vw"
                         placeholder="blur"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-charcoal/90 z-10" />
@@ -82,7 +84,7 @@ export default function PitruDoshaPage() {
                             Pitru Dosha Pooja in <span className="text-saffron">Gokarna</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto font-medium">
-                            Perform the authentic Pitru Dosha Pooja in Gokarna to seek peace for your ancestors and address family concerns believed to stem from unresolved ancestral karma. Pitru Dosha Nivarana is a Vedic ritual performed, as per shastra, when career delays, health worries, or marriage hurdles are attributed to Pitru Dosha. Our traditional priestly lineage (Vedic Pandits) performs these sacred rites at the holy Mukti Sthala.
+                            Pitru Dosha Nivarana in Gokarna, performed at the holy Mukti Sthala by pandits of a traditional Vedic lineage.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
@@ -91,7 +93,7 @@ export default function PitruDoshaPage() {
                                 className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.4)]"
                             >
                                 <Phone size={24} className="fill-current" />
-                                Call Guruji Now
+                                Call Guruji: +91 96638 28936
                             </TrackedLink>
                             <TrackedLink
                                 href="https://wa.me/919663828936?text=Namaste%20Guruji,%20I%20want%20to%20know%20about%20Pitru%20Dosha%20Pooja%20in%20Gokarna."
@@ -101,6 +103,9 @@ export default function PitruDoshaPage() {
                                 WhatsApp Enquiry
                             </TrackedLink>
                         </div>
+                        <p className="text-sm text-gray-300">
+                            No fixed packages. Guruji tells you the dakshina openly on the call.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -227,31 +232,6 @@ export default function PitruDoshaPage() {
                         <TrackedLink href="tel:+919663828936" className="inline-block bg-saffron hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,153,51,0.3)]">
                             Speak to Guruji
                         </TrackedLink>
-                    </div>
-                </div>
-            </section>
-
-            {/* TESTIMONIALS */}
-            <section className="py-20 bg-cream">
-                <div className="container mx-auto px-4 max-w-4xl">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal text-center mb-12">
-                        Devotee Experiences
-                    </h2>
-                    <div className="grid md:grid-cols-2 gap-8">
-                        <div className="bg-white p-8 rounded-2xl shadow-sm italic text-gray-700 relative">
-                            <span className="text-6xl text-saffron/20 absolute top-4 left-4 font-serif">&ldquo;</span>
-                            <p className="relative z-10 text-lg">After performing Pitru Dosha pooja in Gokarna with Guruji&apos;s guidance, our family felt more at peace, and things slowly began moving forward for our son. Thank you, Guruji.</p>
-                            <div className="mt-6 font-bold not-italic text-charcoal flex items-center gap-2">
-                                <span className="w-8 h-[2px] bg-saffron"></span> Venkat, Chennai
-                            </div>
-                        </div>
-                        <div className="bg-white p-8 rounded-2xl shadow-sm italic text-gray-700 relative">
-                            <span className="text-6xl text-saffron/20 absolute top-4 left-4 font-serif">&ldquo;</span>
-                            <p className="relative z-10 text-lg">The atmosphere in Gokarna is very powerful. The pandits were very knowledgeable and patient.</p>
-                            <div className="mt-6 font-bold not-italic text-charcoal flex items-center gap-2">
-                                <span className="w-8 h-[2px] bg-saffron"></span> Amit Verma, Pune
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>

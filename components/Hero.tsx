@@ -1,25 +1,14 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { Phone, ArrowRight, Info } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 import heroBg from "../images/koti 1.jpg";
 import { gtag_report_conversion } from "@/lib/gtag";
 
 export default function Hero() {
-    const [serviceIndex, setServiceIndex] = useState(0);
-    const services = ['Pitru Dosha Puja', 'Narayana Bali Puja', 'Tripindi Shradh Puja'];
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setServiceIndex((prev) => (prev + 1) % services.length);
-        }, 4000);
-        return () => clearInterval(timer);
-    }, []);
-
     return (
-        <section className="relative min-h-[90vh] w-full pb-10 overflow-hidden">
+        <section className="relative min-h-[600px] md:min-h-[85vh] w-full pb-8 overflow-hidden">
             {/* Background Image with Parallax & Zoom Effect */}
             {/* Background Image - Optimized for LCP (Static, no motion wrapper) */}
             <div className="absolute inset-0 z-0">
@@ -41,7 +30,7 @@ export default function Hero() {
             <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white pt-20">
                 {/* Main Content - Remove initial opacity:0 for LCP */}
                 <div className="animate-in fade-in zoom-in duration-500">
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-4">
                         <span className="inline-block py-1 px-3 rounded-full bg-saffron/20 border border-saffron/50 text-saffron font-bold text-sm tracking-wide uppercase">
                             Independent Vedic Rituals, Gokarna
                         </span>
@@ -53,7 +42,7 @@ export default function Hero() {
                             <span className="text-green-400 text-xs font-bold uppercase tracking-wider">Available Now for Call</span>
                         </div>
                     </div>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight drop-shadow-lg text-white">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-4 leading-tight drop-shadow-lg text-white">
                         Narayana Bali Pooja in <br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron to-gold">
                             Gokarna
@@ -65,28 +54,22 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative max-w-4xl mx-auto mb-6 p-4"
+                    className="relative max-w-2xl mx-auto mb-5"
                 >
-                    <p className="text-lg md:text-xl text-gray-200 font-medium max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-                        Experience authentic <span className="text-saffron font-bold">Pitru Dosha remedies</span> and <span className="text-saffron font-bold">Narayana Bali rituals</span> performed by experienced Vedic pandits in sacred Gokarna.
-                    </p>
-                    <p className="mt-4 text-sm text-gray-400 bg-black/40 inline-block px-4 py-1 rounded-full backdrop-blur-sm border border-white/10">
-                        Note: We are an independent Vedic ritual service in Gokarna, not the official Mahabaleshwar Temple.
+                    <p className="text-lg md:text-xl text-gray-200 font-medium leading-relaxed drop-shadow-md">
+                        <span className="text-saffron font-bold">Pitru Dosha</span> and <span className="text-saffron font-bold">Narayana Bali</span> rituals by experienced Vedic pandits in Gokarna.
                     </p>
                 </motion.div>
-
-
-
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4"
+                    className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto px-4"
                 >
                     <a
                         href="tel:+919663828936"
-                        onClick={() => gtag_report_conversion()}
+                        onClick={() => gtag_report_conversion(undefined, "call")}
                         className="btn-primary group"
                     >
                         <Phone size={24} className="fill-current" />
@@ -101,11 +84,15 @@ export default function Hero() {
                     </a>
                 </motion.div>
 
+                <p className="mt-4 max-w-md px-4 text-xs text-gray-400/90">
+                    Note: We are an independent Vedic ritual service in Gokarna, not the official Mahabaleshwar Temple.
+                </p>
+
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1, duration: 1 }}
-                    className="mt-16 flex justify-center gap-8 text-sm text-gray-400"
+                    className="mt-8 flex justify-center gap-8 text-sm text-gray-400"
                 >
                     <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
