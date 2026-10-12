@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Phone, MessageCircle, Calendar, Check, Info, ArrowRight } from 'lucide-react';
+import { Phone, MessageCircle, Calendar, Check, Info, ArrowRight, Users, Flame } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
 import PageJsonLd from '@/components/PageJsonLd';
 import TrackedLink from '@/components/TrackedLink';
 import { siteMetadata } from '@/lib/metadata';
-import narayanaBali from '../../images/narayana-bali.jpg';
+import narayanaBali from '../../images/koti 2.jpg';
 
 export const metadata: Metadata = {
     title: 'Narayana Bali Pooja Gokarna | Expert Pandits, Authentic Rituals',
@@ -64,7 +64,7 @@ export default function NarayanaBaliPage() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         src={narayanaBali}
-                        alt="Narayana Bali Pooja Gokarna ritual"
+                        alt="Koti Teertha tank at Gokarna, where ancestral rites are performed"
                         fill
                         className="object-cover"
                         priority
@@ -90,14 +90,14 @@ export default function NarayanaBaliPage() {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
                             <TrackedLink
                                 href="tel:+919663828936"
-                                className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.4)]"
+                                className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors shadow-md"
                             >
                                 <Phone size={24} className="fill-current" />
                                 Call Guruji: +91 96638 28936
                             </TrackedLink>
                             <TrackedLink
                                 href="https://wa.me/919663828936?text=Namaste%20Guruji,%20I%20want%20to%20perform%20Narayana%20Bali%20in%20Gokarna.%20Please%20guide."
-                                className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105"
+                                className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
                             >
                                 <MessageCircle size={24} />
                                 WhatsApp Booking
@@ -142,7 +142,6 @@ export default function NarayanaBaliPage() {
 
             {/* HOW IT HAPPENS - Abstract background */}
             <section className="py-20 bg-saffron/5 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                 <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-8">
                         How Narayana Bali Pooja Happens in Gokarna
@@ -180,18 +179,18 @@ export default function NarayanaBaliPage() {
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal text-center mb-12">
                         What We Arrange for Your Family
                     </h2>
-                    <div className="grid md:grid-cols-3 gap-8">
+                    {/* Distinct icons, left aligned. Three identical check-marks in three
+                        identical circles is the row every generated page ships with. */}
+                    <div className="grid md:grid-cols-3 gap-10">
                         {[
-                            { title: "Expert Pandits", desc: "Experienced Gokarna pandits from traditional lineage proficient in Narayana Bali Vidhi." },
-                            { title: "Complete Samagri", desc: "All organic and scripturally correct pooja items (Samagri) arranged by us." },
-                            { title: "Muhurtha Guidance", desc: "Selection of best dates based on your family details." }
-                        ].map((item, i) => (
-                            <div key={i} className="bg-stone-50 p-8 rounded-2xl border border-stone-100 text-center hover:shadow-xl transition-all hover:bg-orange-50/50 hover:border-orange-100 group">
-                                <div className="w-16 h-16 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
-                                    <Check className="text-saffron" size={32} />
-                                </div>
-                                <h3 className="font-bold text-xl text-charcoal mb-3">{item.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                            { Icon: Users, title: "Expert Pandits", desc: "Experienced Gokarna pandits from traditional lineage proficient in Narayana Bali Vidhi." },
+                            { Icon: Flame, title: "Complete Samagri", desc: "All organic and scripturally correct pooja items (Samagri) arranged by us." },
+                            { Icon: Calendar, title: "Muhurtha Guidance", desc: "Selection of best dates based on your family details." }
+                        ].map(({ Icon, title, desc }) => (
+                            <div key={title} className="border-t-2 border-saffron/30 pt-6">
+                                <Icon className="text-saffron mb-4" size={28} strokeWidth={1.5} />
+                                <h3 className="font-bold text-xl text-charcoal mb-3">{title}</h3>
+                                <p className="text-gray-600 leading-relaxed">{desc}</p>
                             </div>
                         ))}
                     </div>
@@ -209,7 +208,7 @@ export default function NarayanaBaliPage() {
                     </p>
 
                     <div>
-                        <TrackedLink href="tel:+919663828936" className="inline-block bg-saffron hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,153,51,0.3)]">
+                        <TrackedLink href="tel:+919663828936" className="inline-block bg-saffron hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-colors shadow-md">
                             Call Guruji for Estimate
                         </TrackedLink>
                     </div>

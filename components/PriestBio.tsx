@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Phone, Award, Star } from "lucide-react";
+import { Phone } from "lucide-react";
 import { gtag_report_conversion } from "@/lib/gtag";
 
 export default function PriestBio() {
@@ -13,39 +13,21 @@ export default function PriestBio() {
                     viewport={{ once: true }}
                     className="flex flex-col md:flex-row items-center gap-12 bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 overflow-hidden relative"
                 >
-                    {/* Decorative background */}
-                    <div className="absolute top-0 right-0 w-80 h-80 bg-saffron/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
-
-                    <div className="w-full md:w-1/3 relative flex justify-center md:block">
-                        <div className="aspect-[3/4] relative rounded-2xl overflow-hidden shadow-xl w-full max-w-sm bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 flex flex-col items-center justify-center p-8 text-center group">
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-saffron/10 rounded-full blur-2xl translate-x-1/2 -translate-y-1/2" />
-                            <div className="absolute bottom-0 left-0 w-32 h-32 bg-saffron/10 rounded-full blur-2xl -translate-x-1/2 translate-y-1/2" />
-
-                            <div className="relative z-10">
-                                <span className="text-9xl text-saffron/20 font-serif select-none group-hover:text-saffron/30 transition-colors duration-500">🕉️</span>
-                                <div className="mt-8 space-y-2">
-                                    <p className="text-2xl font-serif font-bold text-saffron mb-1">
-                                        &ldquo;धर्मो रक्षति रक्षितः&rdquo;
-                                    </p>
-                                    <p className="text-lg font-serif font-bold text-saffron italic">
-                                        &ldquo;Dharmo Rakshati Rakshitah&rdquo;
-                                    </p>
-                                    <p className="text-sm text-gray-600 uppercase tracking-widest text-[11px]">
-                                        Dharma protects those who protect it
-                                    </p>
-                                </div>
-                            </div>
+                    {/* Guruji does not want a photograph of himself on the site. A plain
+                        shloka panel stands in — no emoji, no blurred colour orbs. */}
+                    <div className="w-full md:w-1/3 flex justify-center md:block">
+                        <div className="aspect-[3/4] w-full max-w-sm rounded-2xl border border-gold/40 bg-charcoal flex flex-col items-center justify-center p-8 text-center">
+                            <p className="text-3xl font-serif text-gold leading-relaxed">
+                                धर्मो रक्षति रक्षितः
+                            </p>
+                            <div className="w-12 h-px bg-gold/40 my-6" />
+                            <p className="text-base font-serif italic text-white/70">
+                                Dharmo Rakshati Rakshitah
+                            </p>
+                            <p className="mt-3 text-sm text-white/50 leading-relaxed">
+                                Dharma protects those who protect it
+                            </p>
                         </div>
-                        <motion.div
-                            initial={{ scale: 0 }}
-                            whileInView={{ scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.5, type: "spring" }}
-                            className="absolute -bottom-6 right-4 md:-right-6 bg-white p-4 rounded-xl shadow-lg border border-gray-100 flex flex-col items-center z-20"
-                        >
-                            <span className="text-3xl font-bold text-saffron">20+</span>
-                            <span className="text-xs text-gray-500 font-bold uppercase tracking-wider">Years Exp</span>
-                        </motion.div>
                     </div>
 
                     <div className="w-full md:w-2/3 relative z-10">
@@ -55,29 +37,33 @@ export default function PriestBio() {
                             A Vedic priest from a traditional Gokarna lineage, Guruji specializes in Pitru Karya and Narayana Bali rituals, guiding families through them for over 20 years. He explains each step clearly and helps your family understand the right ritual for your ancestors&apos; peace.
                         </p>
 
-                        <div className="grid grid-cols-1 gap-6 mb-10">
-                            <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-xl">
-                                <Star className="text-gold shrink-0 mt-1" size={24} />
-                                <div>
-                                    <h4 className="font-bold text-charcoal">Gokarna Native</h4>
-                                    <p className="text-sm text-gray-500">Traditional Parampara Lineage</p>
-                                </div>
+                        <dl className="mb-10 divide-y divide-gray-100 border-y border-gray-100">
+                            <div className="flex gap-6 py-3">
+                                <dt className="w-32 shrink-0 text-sm text-gray-500">From</dt>
+                                <dd className="text-charcoal">Gokarna, traditional parampara lineage</dd>
                             </div>
-                        </div>
+                            <div className="flex gap-6 py-3">
+                                <dt className="w-32 shrink-0 text-sm text-gray-500">Experience</dt>
+                                <dd className="text-charcoal">Over 20 years of Pitru Karya and Narayana Bali</dd>
+                            </div>
+                            <div className="flex gap-6 py-3">
+                                <dt className="w-32 shrink-0 text-sm text-gray-500">Speaks</dt>
+                                <dd className="text-charcoal">Kannada, Telugu, Hindi, Marathi, English</dd>
+                            </div>
+                        </dl>
 
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                             <a
                                 href="tel:+919663828936"
                                 onClick={() => gtag_report_conversion(undefined, "call")}
-                                className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-transform hover:scale-105 shadow-lg shadow-saffron/30"
+                                className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-colors shadow-md"
                             >
                                 <Phone size={20} />
                                 Talk to Guruji Directly
                             </a>
-                            <div className="flex items-center gap-2 px-6 py-4 text-gray-500 justify-center">
-                                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                                Available Now
-                            </div>
+                            <p className="text-gray-500 text-sm">
+                                Calls taken 6 AM to midnight.
+                            </p>
                         </div>
                     </div>
                 </motion.div>

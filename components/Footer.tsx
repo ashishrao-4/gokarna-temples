@@ -74,9 +74,8 @@ export default function Footer() {
                                 </div>
                             </div>
 
-                            <div className="text-xs text-green-500 flex items-center gap-2 border-t border-white/10 pt-4 mt-2">
-                                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                                Available: 6:00 AM - 12:00 midnight (7 days)
+                            <div className="text-xs text-gray-400 border-t border-white/10 pt-4 mt-2">
+                                Calls taken 6:00 AM to midnight, all seven days.
                             </div>
                         </div>
                     </div>
@@ -85,8 +84,8 @@ export default function Footer() {
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
                     <p>&copy; 2026 Gokarna Temples. All rights reserved.</p>
                     <div className="flex gap-6 mt-4 md:mt-0">
-                        <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+                        <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>

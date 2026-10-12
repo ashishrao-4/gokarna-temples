@@ -32,7 +32,7 @@ export default function Header() {
                 { name: "Narayana Bali", href: "/narayana-bali-pooja-gokarna" },
                 { name: "Pitru Dosha", href: "/pitru-dosha-pooja-gokarna" },
                 { name: "Nag Bali", href: "/nag-bali-sarpa-dosha-gokarna" },
-                { name: "Pitru Paksha 2026", href: "/pitru-paksha-gokarna" },
+                { name: "Pitru Paksha", href: "/pitru-paksha-gokarna" },
             ]
         },
         { name: "Benefits", href: "/#benefits" },
@@ -93,7 +93,7 @@ export default function Header() {
                         <a
                             href="tel:+919663828936"
                             onClick={() => gtag_report_conversion(undefined, "call")}
-                            className="bg-saffron hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold flex items-center gap-2 transition-transform hover:scale-105 shadow-lg"
+                            className="bg-saffron hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold flex items-center gap-2 transition-colors shadow-md"
                         >
                             <Phone size={18} />
                             <span>Call Now</span>
@@ -160,7 +160,7 @@ export default function Header() {
                                     Nag Bali
                                 </Link>
                                 <Link href="/pitru-paksha-gokarna" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-medium text-saffron">
-                                    Pitru Paksha 2026
+                                    Pitru Paksha
                                 </Link>
                             </div>
 

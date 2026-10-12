@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import narayanaBali from "../images/narayana-bali.jpg";
+import narayanaBali from "../images/koti 3.jpg";
 import tripindiShradh from "../images/tripindi1.jpg";
 import nagabali from "../images/sarpadosha.jpg";
 import pitruDoshaNivarana from "../images/pitrudosh.jpg";
@@ -70,20 +70,16 @@ export default function PoojaServices() {
                             className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow flex flex-col group/card"
                         >
                             <Link href={pooja.link} className="relative h-56 w-full overflow-hidden block">
-                                <motion.div
-                                    className="w-full h-full relative"
-                                    animate={{ scale: [1, 1.1] }}
-                                    transition={{ duration: 10, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-                                >
-                                    <Image
-                                        src={pooja.image}
-                                        alt={pooja.title}
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                        loading="lazy"
-                                        className="object-cover group-hover/card:scale-110 transition-transform duration-700"
-                                    />
-                                </motion.div>
+                                {/* No looping Ken Burns pan. It never stopped, it cost battery on phones,
+                                    and a photo that drifts forever is the giveaway of a template. */}
+                                <Image
+                                    src={pooja.image}
+                                    alt={pooja.title}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                    loading="lazy"
+                                    className="object-cover"
+                                />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80"></div>
                                 <h3 className="absolute bottom-4 left-4 text-white text-xl font-bold font-serif shadow-black drop-shadow-md group-hover/card:text-saffron transition-colors">{pooja.title}</h3>
                             </Link>

@@ -11,15 +11,15 @@ import { siteMetadata } from '@/lib/metadata';
 import nagabali from '../../images/sarpadosha.jpg';
 
 export const metadata: Metadata = {
-    title: 'Nag Bali Sarpa Dosha Pooja Gokarna | Naga Dosha Remedies',
-    description: 'Nag Bali and Sarpa Dosha pooja in Gokarna. Traditional ritual for Naga Dosha, guided personally by Guruji. Call to know more.',
+    title: 'Nag Bali, Sarpa Dosha & Kaal Sarp Dosh Puja in Gokarna',
+    description: 'Nag Bali, Sarpa Dosha and Kaal Sarp Dosh puja in Gokarna, performed and guided personally by Guruji. No fixed packages. Call +91 96638 28936.',
     alternates: {
         canonical: '/nag-bali-sarpa-dosha-gokarna',
     },
     openGraph: {
         ...siteMetadata.openGraph,
-        title: 'Nag Bali Sarpa Dosha Pooja Gokarna | Naga Dosha Remedies',
-        description: 'Nag Bali and Sarpa Dosha pooja in Gokarna. Traditional ritual for Naga Dosha, guided personally by Guruji. Call to know more.',
+        title: 'Nag Bali, Sarpa Dosha & Kaal Sarp Dosh Puja in Gokarna',
+        description: 'Nag Bali, Sarpa Dosha and Kaal Sarp Dosh puja in Gokarna, performed and guided personally by Guruji. No fixed packages. Call +91 96638 28936.',
         url: '/nag-bali-sarpa-dosha-gokarna',
     },
 };
@@ -43,6 +43,10 @@ const faqs = [
         a: 'Yes. When both Doshas are present, the two are often performed together as Nag-Narayana Bali. Where Sarpa Dosha is linked to the ancestors, Pitru Dosha Pooja may also be advised.',
     },
     {
+        q: 'Do you perform Kaal Sarp Dosh puja in Gokarna?',
+        a: 'Yes. Guruji performs Kaal Sarp Dosh Shanti puja in Gokarna for families whose Jataka has been read as showing Kaal Sarp Dosha. After hearing your situation he advises whether it is needed on its own or together with Nag Bali, and fixes a suitable day.',
+    },
+    {
         q: 'How is the dakshina for Nag Bali decided?',
         a: 'There is no fixed package. It depends on whether Nag Bali is performed alone or combined with Narayana Bali, and on the rites advised for your family. Guruji tells you the amount openly on the phone, and there are no hidden charges.',
     },
@@ -54,7 +58,7 @@ export default function NagBaliPage() {
             <PageJsonLd
                 path="/nag-bali-sarpa-dosha-gokarna"
                 name="Nag Bali & Sarpa Dosha Pooja in Gokarna"
-                description="Nag Bali and Sarpa Dosha pooja in Gokarna. Traditional ritual for Naga Dosha, guided personally by Guruji. Call to know more."
+                description="Nag Bali, Sarpa Dosha and Kaal Sarp Dosh puja in Gokarna, performed and guided personally by Guruji. No fixed packages. Call +91 96638 28936."
                 faqs={faqs}
             />
             <Header />
@@ -84,20 +88,20 @@ export default function NagBaliPage() {
                             Nag Bali & Sarpa Dosha Pooja in <span className="text-saffron">Gokarna</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto font-medium">
-                            Nag Bali and Sarpa Dosha Pooja in Gokarna, performed by experienced priests seeking the blessings of Naga Devata.
+                            Nag Bali, Sarpa Dosha and Kaal Sarp Dosh puja in Gokarna, performed by experienced priests seeking the blessings of Naga Devata.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
                             <TrackedLink
                                 href="tel:+919663828936"
-                                className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.4)]"
+                                className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors shadow-md"
                             >
                                 <Phone size={24} className="fill-current" />
                                 Call Guruji: +91 96638 28936
                             </TrackedLink>
                             <TrackedLink
                                 href="https://wa.me/919663828936?text=Namaste%20Guruji,%20I%20want%20to%20know%20about%20Nag%20Bali%20Pooja%20in%20Gokarna."
-                                className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105"
+                                className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
                             >
                                 <MessageCircle size={24} />
                                 WhatsApp Enquiry
@@ -142,7 +146,6 @@ export default function NagBaliPage() {
 
             {/* HOW IT HAPPENS - Abstract BG */}
             <section className="py-20 bg-green-50/30 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                 <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-8">
                         Nag Bali Procedure (Vidhi)
@@ -176,17 +179,39 @@ export default function NagBaliPage() {
                 </div>
             </section>
 
+            {/* KAAL SARP DOSH */}
+            <section className="py-20 bg-white">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-6 text-center">
+                        Kaal Sarp Dosh Puja in Gokarna
+                    </h2>
+                    <div className="space-y-5 text-charcoal/80 text-lg leading-relaxed">
+                        <p>
+                            In jyotisha, Kaal Sarp Dosha is said to be present in a Jataka when all seven grahas fall between Rahu and Ketu. Families who have been told this by their jyotishi often come to Gokarna for Kaal Sarp Dosh Shanti puja.
+                        </p>
+                        <p>
+                            Guruji performs the puja in Gokarna with the karta present. Because Kaal Sarp Dosha and Sarpa Dosha are related, he first listens to what has been advised for your family and tells you whether Kaal Sarp Dosh puja alone is enough or whether Nag Bali should be done with it.
+                        </p>
+                    </div>
+                    <div className="mt-10 text-center">
+                        <TrackedLink href="tel:+919663828936" className="inline-flex items-center gap-2 text-saffron font-bold text-lg hover:underline decoration-2 underline-offset-4">
+                            Ask Guruji about Kaal Sarp Dosh puja <ArrowRight size={20} />
+                        </TrackedLink>
+                    </div>
+                </div>
+            </section>
+
             {/* COST SECTION - Simplified */}
             <section className="py-20 bg-stone-900 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-stone-900 to-black"></div>
                 <div className="container mx-auto px-4 max-w-3xl relative z-10">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8 text-white">Pooja Dakshina</h2>
                     <p className="text-gray-300 text-xl mb-10 leading-relaxed">
-                        The cost depends on whether Nag Bali is performed alone or combined with Narayana Bali (Nag-Narayana Bali).
+                        The cost depends on whether Nag Bali or Kaal Sarp Dosh puja is performed alone or combined with Narayana Bali (Nag-Narayana Bali).
                     </p>
 
                     <div>
-                        <TrackedLink href="tel:+919663828936" className="inline-block bg-saffron hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,153,51,0.3)]">
+                        <TrackedLink href="tel:+919663828936" className="inline-block bg-saffron hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-colors shadow-md">
                             Get Cost Details
                         </TrackedLink>
                     </div>
@@ -223,14 +248,14 @@ export default function NagBaliPage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <TrackedLink
                             href="tel:+919663828936"
-                            className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.4)]"
+                            className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors shadow-md"
                         >
                             <Phone size={24} className="fill-current" />
                             Call +91 96638 28936
                         </TrackedLink>
                         <TrackedLink
                             href="https://wa.me/919663828936?text=Namaste%20Guruji,%20I%20want%20to%20know%20about%20Nag%20Bali%20Pooja%20in%20Gokarna."
-                            className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105"
+                            className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
                         >
                             <MessageCircle size={24} />
                             WhatsApp Guruji

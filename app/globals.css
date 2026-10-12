@@ -4,7 +4,9 @@
   --color-saffron: #FF9933;
   --color-deep-blue: #1E3A8A;
   --color-gold: #D4AF37;
-  --color-cream: #F8F9FA;
+  /* Warm off-white. The old #F8F9FA was a cool grey-white that read as a
+     generic SaaS background rather than anything devotional. */
+  --color-cream: #FAF6EE;
   --color-charcoal: #1F2937;
 
   --font-sans: var(--font-lato);
@@ -52,9 +54,10 @@
 }
 
 @layer components {
+  /* No glow, no grow. A flat saffron button that darkens on hover reads as a
+     real call button; the neon halo was the single loudest generated-template tell. */
   .btn-primary {
-    @apply bg-saffron text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105;
-    box-shadow: 0 0 30px rgba(255, 153, 51, 0.4);
+    @apply bg-saffron text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors shadow-md;
   }
 
   .btn-primary:hover {

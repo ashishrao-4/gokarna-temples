@@ -11,15 +11,15 @@ import { siteMetadata } from '@/lib/metadata';
 import pitruDoshaNivarana from '../../images/pitrudosh.jpg';
 
 export const metadata: Metadata = {
-    title: 'Pitru Dosha Pooja Gokarna | Pitru Dosha Nivarana by Vedic Priests',
-    description: "Pitru Dosha Nivarana pooja in Gokarna. Guidance from a traditional Vedic priest. Call to plan your family's ritual.",
+    title: 'Pitru Dosha Pooja, Pind Daan & Tripindi Shradh in Gokarna',
+    description: "Pitru Dosha Nivarana, Pind Daan and Tripindi Shradh in Gokarna, guided by a traditional Vedic priest. Call to plan your family's ritual.",
     alternates: {
         canonical: '/pitru-dosha-pooja-gokarna',
     },
     openGraph: {
         ...siteMetadata.openGraph,
-        title: 'Pitru Dosha Pooja Gokarna | Pitru Dosha Nivarana by Vedic Priests',
-        description: "Pitru Dosha Nivarana pooja in Gokarna. Guidance from a traditional Vedic priest. Call to plan your family's ritual.",
+        title: 'Pitru Dosha Pooja, Pind Daan & Tripindi Shradh in Gokarna',
+        description: "Pitru Dosha Nivarana, Pind Daan and Tripindi Shradh in Gokarna, guided by a traditional Vedic priest. Call to plan your family's ritual.",
         url: '/pitru-dosha-pooja-gokarna',
     },
 };
@@ -43,6 +43,10 @@ const faqs = [
         a: 'The rites usually take 3-4 hours and are best performed in the morning hours. Commonly Tripindi Shradh or Tila Homa is performed, with pindas offered to the ancestors of the father, mother and in-law lineages.',
     },
     {
+        q: 'Can we perform Pind Daan in Gokarna?',
+        a: 'Yes. Pind Daan with tarpana is performed in Gokarna, which is revered as Dakshin Kashi. It can be done in Pitru Paksha, on Amavasya, or on the tithi of the ancestor. Guruji advises whether Pind Daan alone is right for your family or whether Tripindi Shradh or Narayana Bali is needed.',
+    },
+    {
         q: 'How is the dakshina decided?',
         a: 'There is no fixed package. The dakshina depends on the rites advised, such as a simple Tila Homa or a complete Tripindi Shradh. Guruji tells you the amount openly on the phone, and there are no hidden charges.',
     },
@@ -54,7 +58,7 @@ export default function PitruDoshaPage() {
             <PageJsonLd
                 path="/pitru-dosha-pooja-gokarna"
                 name="Pitru Dosha Pooja in Gokarna"
-                description="Pitru Dosha Nivarana pooja in Gokarna. Guidance from a traditional Vedic priest. Call to plan your family's ritual."
+                description="Pitru Dosha Nivarana, Pind Daan and Tripindi Shradh in Gokarna, guided by a traditional Vedic priest. Call to plan your family's ritual."
                 faqs={faqs}
             />
             <Header />
@@ -90,14 +94,14 @@ export default function PitruDoshaPage() {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
                             <TrackedLink
                                 href="tel:+919663828936"
-                                className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.4)]"
+                                className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors shadow-md"
                             >
                                 <Phone size={24} className="fill-current" />
                                 Call Guruji: +91 96638 28936
                             </TrackedLink>
                             <TrackedLink
                                 href="https://wa.me/919663828936?text=Namaste%20Guruji,%20I%20want%20to%20know%20about%20Pitru%20Dosha%20Pooja%20in%20Gokarna."
-                                className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105"
+                                className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
                             >
                                 <MessageCircle size={24} />
                                 WhatsApp Enquiry
@@ -164,7 +168,6 @@ export default function PitruDoshaPage() {
 
             {/* HOW IT HAPPENS */}
             <section className="py-20 bg-saffron/5 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                 <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-8">
                         How Pitru Dosha Nivarana is Performed
@@ -202,21 +205,19 @@ export default function PitruDoshaPage() {
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal text-center mb-12">
                         What We Arrange
                     </h2>
-                    <div className="grid md:grid-cols-3 gap-8">
+                    {/* Plain description list, not a third copy of the same three-card row. */}
+                    <dl className="max-w-3xl mx-auto divide-y divide-gray-200 border-y border-gray-200">
                         {[
                             { title: "Vedic Priests", desc: "Qualified pandits to perform the pooja correctly." },
                             { title: "Pooja Samagri", desc: "Fresh flowers, ghee, havan samagri, and pinda materials." },
                             { title: "Consultation", desc: "Pre-pooja guidance on sankalpa and gothra details." }
-                        ].map((item, i) => (
-                            <div key={i} className="bg-stone-50 p-8 rounded-2xl border border-stone-100 text-center hover:shadow-xl transition-all hover:bg-orange-50/50 hover:border-orange-100 group">
-                                <div className="w-16 h-16 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
-                                    <Check className="text-saffron" size={32} />
-                                </div>
-                                <h3 className="font-bold text-xl text-charcoal mb-3">{item.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                        ].map((item) => (
+                            <div key={item.title} className="py-6 md:flex md:gap-10">
+                                <dt className="font-bold text-lg text-charcoal md:w-56 md:shrink-0">{item.title}</dt>
+                                <dd className="text-gray-600 leading-relaxed mt-1 md:mt-0">{item.desc}</dd>
                             </div>
                         ))}
-                    </div>
+                    </dl>
                 </div>
             </section>
 
@@ -229,7 +230,7 @@ export default function PitruDoshaPage() {
                         Dakshina varies based on specific rituals advised (e.g. Simple Tila Homa vs Complete Tripindi Shradh).
                     </p>
                     <div>
-                        <TrackedLink href="tel:+919663828936" className="inline-block bg-saffron hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,153,51,0.3)]">
+                        <TrackedLink href="tel:+919663828936" className="inline-block bg-saffron hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-colors shadow-md">
                             Speak to Guruji
                         </TrackedLink>
                     </div>

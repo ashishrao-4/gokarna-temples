@@ -20,6 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: route === '' ? 1 : 0.9,
     }));
 
+    // Legal pages: required by Google Ads policy, but not content we want ranked.
+    const legal = ['/privacy-policy', '/terms-of-service'].map((route) => ({
+        url: `${baseUrl}${route}`,
+        lastModified: new Date(),
+        changeFrequency: 'yearly' as const,
+        priority: 0.2,
+    }));
+
     // Add llms.txt
     const assets = [
         {
@@ -30,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         }
     ];
 
-    return [...routes, ...assets];
+    return [...routes, ...legal, ...assets];
 
 
 }

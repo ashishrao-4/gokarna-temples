@@ -11,20 +11,20 @@ import { siteMetadata } from '@/lib/metadata';
 import tripindiShradh from '../../images/tripindi1.jpg';
 
 export const metadata: Metadata = {
-    title: { absolute: 'Pitru Paksha 2026 Puja in Gokarna | Tripindi & Narayana Bali' },
-    description: 'Pitru Paksha 2026 (Sep 26 - Oct 10) shraddha in Gokarna: Tripindi, Narayana Bali, Pinda Daan. Call +91 96638 28936 to fix the right day for your family.',
+    title: { absolute: 'Pitru Paksha & Shraddha in Gokarna | Tripindi, Pinda Daan' },
+    description: 'Pitru Paksha and shraddha in Gokarna: Tripindi, Narayana Bali, Pinda Daan, performed in the fortnight or on Amavasya through the year. Call +91 96638 28936.',
     alternates: {
         canonical: '/pitru-paksha-gokarna',
     },
     openGraph: {
         ...siteMetadata.openGraph,
-        title: 'Pitru Paksha 2026 Puja in Gokarna | Tripindi & Narayana Bali',
-        description: 'Pitru Paksha 2026 (Sep 26 - Oct 10) shraddha in Gokarna: Tripindi, Narayana Bali, Pinda Daan. Call +91 96638 28936 to fix the right day for your family.',
+        title: 'Pitru Paksha & Shraddha in Gokarna | Tripindi, Pinda Daan',
+        description: 'Pitru Paksha and shraddha in Gokarna: Tripindi, Narayana Bali, Pinda Daan, performed in the fortnight or on Amavasya through the year. Call +91 96638 28936.',
         url: '/pitru-paksha-gokarna',
     },
 };
 
-const WHATSAPP_URL = 'https://wa.me/919663828936?text=Namaste%20Guruji,%20I%20want%20to%20perform%20shraddha%20in%20Gokarna%20during%20Pitru%20Paksha%202026.%20Please%20guide.';
+const WHATSAPP_URL = 'https://wa.me/919663828936?text=Namaste%20Guruji,%20I%20want%20to%20perform%20shraddha%20in%20Gokarna%20Please%20guide.';
 
 const rituals = [
     {
@@ -56,7 +56,7 @@ const rituals = [
 const steps = [
     { title: 'Call or WhatsApp Guruji', desc: 'Speak directly with the priest. No forms or booking portals.' },
     { title: 'Share your family situation', desc: 'Who you are performing the rites for, how and when they passed, and what you have been advised.' },
-    { title: 'Fix the ritual and the day', desc: 'Guruji recommends the vidhi and the most suitable day within Pitru Paksha for your case.' },
+    { title: 'Fix the ritual and the day', desc: 'Guruji recommends the vidhi and the most suitable day for your case, in Pitru Paksha or on another auspicious day.' },
     { title: 'Ritual at Gokarna', desc: 'The rites are performed in Gokarna with the karta present. If travel is truly impossible, ask about Sankalpa in your name.' },
 ];
 
@@ -70,8 +70,8 @@ const costFactors = [
 
 const faqs = [
     {
-        q: 'When is Pitru Paksha in 2026?',
-        a: 'Pitru Paksha 2026 runs from Saturday, September 26 to Saturday, October 10, 2026. The final day, October 10, is Sarva Pitru (Mahalaya) Amavasya.',
+        q: 'When is Pitru Paksha?',
+        a: 'Pitru Paksha is the waning fortnight of Bhadrapada in the South Indian calendar, usually falling in September or October. In 2026 it ran from September 26 to October 10. Outside the fortnight, shraddha, Tripindi and Pinda Daan can still be performed on Amavasya days or on the tithi of the ancestor through the year.',
     },
     {
         q: 'Which day should my family choose?',
@@ -79,7 +79,7 @@ const faqs = [
     },
     {
         q: 'What if I do not know the tithi on which my ancestor passed away?',
-        a: 'Sarva Pitru Amavasya on October 10 is traditionally observed for all ancestors, including those whose tithi is unknown. Guruji can also advise other suitable days during the fortnight.',
+        a: 'Sarva Pitru (Mahalaya) Amavasya, the last day of Pitru Paksha, is traditionally observed for all ancestors, including those whose tithi is unknown. Outside the fortnight, Guruji can advise a suitable Amavasya.',
     },
     {
         q: 'Should I perform Narayana Bali or Tripindi Shraddha?',
@@ -95,7 +95,7 @@ const faqs = [
     },
     {
         q: 'How early should I call?',
-        a: 'Pitru Paksha is the busiest period of the year in Gokarna, and the most significant days fill quickly. Call as early as possible so a suitable day and priests can be arranged.',
+        a: 'Pitru Paksha is the busiest period of the year in Gokarna, and its most significant days fill quickly, so call well ahead for those. At other times of the year a suitable day can usually be arranged sooner.',
     },
 ];
 
@@ -104,8 +104,8 @@ export default function PitruPakshaPage() {
         <main className="min-h-screen bg-cream selection:bg-saffron selection:text-white font-sans">
             <PageJsonLd
                 path="/pitru-paksha-gokarna"
-                name="Pitru Paksha 2026 Shraddha in Gokarna"
-                description="Pitru Paksha 2026 (Sep 26 - Oct 10) shraddha in Gokarna: Tripindi, Narayana Bali, Pinda Daan. Call +91 96638 28936 to fix the right day for your family."
+                name="Pitru Paksha and Shraddha in Gokarna"
+                description="Pitru Paksha and shraddha in Gokarna: Tripindi, Narayana Bali, Pinda Daan, performed in the fortnight or on Amavasya through the year. Call +91 96638 28936."
                 faqs={faqs}
             />
             <Header />
@@ -129,13 +129,13 @@ export default function PitruPakshaPage() {
                 <div className="relative z-20 container mx-auto px-4 text-center text-white pt-32 pb-20">
                     <div className="animate-in fade-in zoom-in duration-700 space-y-6 max-w-4xl mx-auto">
                         <span className="inline-flex items-center gap-2 py-1 px-4 rounded-full bg-saffron/20 border border-saffron/50 text-saffron font-bold text-sm tracking-widest uppercase backdrop-blur-sm">
-                            <Calendar size={16} /> Sat, Sep 26 &ndash; Sat, Oct 10, 2026
+                            <Calendar size={16} /> Shraddha through the year
                         </span>
                         <p className="text-sm md:text-base text-gray-200 max-w-2xl mx-auto bg-black/30 border border-white/10 rounded-xl px-4 py-2 backdrop-blur-sm">
-                            The Pitru Paksha fortnight runs <span className="font-bold text-white">Sep 26 &ndash; Oct 10, 2026</span>. Mahalaya Amavasya (Sat, Oct 10) and the other major days are taken up first, so call early to fix your family&apos;s day.
+                            Pitru Paksha 2026 (Sep 26 &ndash; Oct 10) has ended. Shraddha, Tripindi and Pinda Daan can still be performed in Gokarna on <span className="font-bold text-white">Amavasya days</span> and on your ancestor&apos;s tithi.
                         </p>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight drop-shadow-lg text-white">
-                            Pitru Paksha 2026 Shraddha in <span className="text-saffron">Gokarna</span>
+                            Pitru Paksha &amp; Shraddha in <span className="text-saffron">Gokarna</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto font-medium">
                             The fortnight of the ancestors is the most meaningful time of the year to offer shraddha. Perform Tripindi Shraddha, Narayana Bali or Pinda Daan in Gokarna with an experienced local priest who first listens to your family&apos;s situation, then advises the right ritual and the right day.
@@ -144,14 +144,14 @@ export default function PitruPakshaPage() {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
                             <TrackedLink
                                 href="tel:+919663828936"
-                                className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.4)]"
+                                className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors shadow-md"
                             >
                                 <Phone size={24} className="fill-current" />
                                 Call Guruji: +91 96638 28936
                             </TrackedLink>
                             <TrackedLink
                                 href={WHATSAPP_URL}
-                                className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105"
+                                className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
                             >
                                 <MessageCircle size={24} />
                                 WhatsApp Guruji
@@ -199,7 +199,7 @@ export default function PitruPakshaPage() {
                             Within Pitru Paksha, certain days carry special meaning. <strong>Maha Bharani</strong> is considered auspicious for all ancestors, <strong>Matru Navami</strong> is observed for departed mothers, and <strong>Ghata Chaturdashi</strong> is traditionally kept for those who passed away through untimely or accidental deaths.
                         </p>
                         <p className="text-gray-700 text-lg leading-relaxed">
-                            <strong>Sarva Pitru (Mahalaya) Amavasya on October 10, 2026</strong> closes the fortnight and is observed for all ancestors, including those whose tithi is not known.
+                            <strong>Sarva Pitru (Mahalaya) Amavasya</strong> closes the fortnight and is observed for all ancestors, including those whose tithi is not known. Outside Pitru Paksha, every Amavasya is traditionally suitable for tarpana and shraddha.
                         </p>
                         <div className="pt-2">
                             <TrackedLink href="tel:+919663828936" className="inline-flex items-center gap-2 text-saffron font-bold text-lg hover:underline decoration-2 underline-offset-4">
@@ -214,7 +214,7 @@ export default function PitruPakshaPage() {
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4 max-w-5xl">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal text-center mb-12">
-                        Rituals Performed During Pitru Paksha
+                        Rituals for Ancestors in Gokarna
                     </h2>
                     <div className="grid md:grid-cols-2 gap-8">
                         {rituals.map((item) => (
@@ -272,7 +272,7 @@ export default function PitruPakshaPage() {
                         ))}
                     </ul>
                     <div>
-                        <TrackedLink href="tel:+919663828936" className="inline-block bg-saffron hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,153,51,0.3)]">
+                        <TrackedLink href="tel:+919663828936" className="inline-block bg-saffron hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-colors shadow-md">
                             Call Guruji to Discuss
                         </TrackedLink>
                     </div>
@@ -283,7 +283,7 @@ export default function PitruPakshaPage() {
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4 max-w-3xl">
                     <h2 className="text-3xl font-serif font-bold text-charcoal text-center mb-12">
-                        Pitru Paksha 2026 FAQ
+                        Pitru Paksha &amp; Shraddha FAQ
                     </h2>
                     <div className="space-y-4">
                         {faqs.map((faq) => (
@@ -303,22 +303,22 @@ export default function PitruPakshaPage() {
             <section className="py-20 bg-cream text-center">
                 <div className="container mx-auto px-4 max-w-3xl">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-6">
-                        Plan Your Family&apos;s Shraddha for Pitru Paksha 2026
+                        Plan Your Family&apos;s Shraddha in Gokarna
                     </h2>
                     <p className="text-charcoal/80 text-xl mb-10 leading-relaxed">
-                        September 26 to October 10, 2026. Speak with Guruji today to choose the right ritual and day.
+                        In Pitru Paksha, on Amavasya, or on your ancestor&apos;s tithi. Speak with Guruji to choose the right ritual and day.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <TrackedLink
                             href="tel:+919663828936"
-                            className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.4)]"
+                            className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors shadow-md"
                         >
                             <Phone size={24} className="fill-current" />
                             Call +91 96638 28936
                         </TrackedLink>
                         <TrackedLink
                             href={WHATSAPP_URL}
-                            className="bg-white hover:bg-orange-50 border-2 border-saffron/30 text-charcoal px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105"
+                            className="bg-white hover:bg-orange-50 border-2 border-saffron/30 text-charcoal px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
                         >
                             <MessageCircle size={24} className="text-saffron" />
                             WhatsApp Guruji

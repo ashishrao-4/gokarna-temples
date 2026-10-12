@@ -21,9 +21,11 @@ export default function JsonLd() {
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 14.5452037,
-            "longitude": 74.3184742
+            "latitude": 14.5448794,
+            "longitude": 74.3186305
         },
+        // Owner's verified Google Business Profile listing ("Balachandra Prasad").
+        "hasMap": "https://maps.app.goo.gl/LCcoKXtkdEKj6FEG6",
         "areaServed": "Gokarna, Karnataka",
         "telephone": "+919663828936",
         "url": SITE_URL,

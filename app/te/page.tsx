@@ -7,10 +7,10 @@ import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
 import TrackedLink from '@/components/TrackedLink';
 import { siteMetadata } from '@/lib/metadata';
-import heroImage from '../../images/narayana-bali.jpg';
+import heroImage from '../../images/koti 3.jpg';
 
 const TITLE = 'గోకర్ణంలో నారాయణ బలి, నాగ బలి, పితృ దోషం పూజ';
-const DESCRIPTION = 'గోకర్ణంలో బాలచంద్ర ప్రసాద్ గురూజీ ద్వారా శాస్త్రోక్తంగా నారాయణ బలి, నాగ బలి, పితృ దోషం పూజ మరియు పితృ పక్షం 2026 శ్రాద్ధం. గురూజీ తెలుగులోనే మాట్లాడతారు. కాల్ చేయండి: +91 96638 28936.';
+const DESCRIPTION = 'గోకర్ణంలో బాలచంద్ర ప్రసాద్ గురూజీ ద్వారా శాస్త్రోక్తంగా నారాయణ బలి, నాగ బలి, పితృ దోషం పూజ మరియు పితృ పక్షం శ్రాద్ధం. గురూజీ తెలుగులోనే మాట్లాడతారు. కాల్ చేయండి: +91 96638 28936.';
 
 export const metadata: Metadata = {
     title: { absolute: TITLE },
@@ -55,10 +55,10 @@ const rituals = [
         linkText: 'పితృ దోషం పూజ గురించి మరిన్ని వివరాలు (English)',
     },
     {
-        title: 'పితృ పక్షం 2026',
-        desc: 'ఈ సంవత్సరం పితృ పక్షం సెప్టెంబర్ 26 నుండి అక్టోబర్ 10, 2026 వరకు. అక్టోబర్ 10 మహాలయ అమావాస్య; తిథి తెలియని పెద్దలకు కూడా ఆ రోజు శ్రాద్ధం పెట్టే ఆచారం ఉంది. ఈ పదిహేను రోజులు గోకర్ణానికి చాలా మంది వస్తారు, కాబట్టి ముందుగానే కాల్ చేసి రోజు ఖరారు చేసుకోండి.',
+        title: 'పితృ పక్షం మరియు శ్రాద్ధం',
+        desc: 'పితృ పక్షం ప్రతి సంవత్సరం సెప్టెంబర్ లేదా అక్టోబర్‌లో వస్తుంది (2026లో సెప్టెంబర్ 26 – అక్టోబర్ 10). మహాలయ అమావాస్య రోజు తిథి తెలియని పెద్దలకు కూడా శ్రాద్ధం పెట్టే ఆచారం ఉంది. మిగతా రోజుల్లో అమావాస్య లేదా పెద్దల తిథి రోజున గోకర్ణంలో శ్రాద్ధం చేయవచ్చు. రోజు ఖరారు కోసం గురూజీకి కాల్ చేయండి.',
         href: '/pitru-paksha-gokarna',
-        linkText: 'పితృ పక్షం 2026 గురించి మరిన్ని వివరాలు (English)',
+        linkText: 'పితృ పక్షం గురించి మరిన్ని వివరాలు (English)',
     },
 ];
 
@@ -84,7 +84,7 @@ const faqs = [
     },
     {
         q: 'పితృ పక్షంలో పూజ కోసం ఎప్పుడు కాల్ చేయాలి?',
-        a: 'వీలైనంత త్వరగా. పితృ పక్షం (సెప్టెంబర్ 26 – అక్టోబర్ 10, 2026) గోకర్ణంలో సంవత్సరంలోనే అత్యంత రద్దీ సమయం. మహాలయ అమావాస్య వంటి ముఖ్యమైన రోజులు త్వరగా నిండిపోతాయి.',
+        a: 'వీలైనంత త్వరగా. పితృ పక్షం గోకర్ణంలో సంవత్సరంలోనే అత్యంత రద్దీ సమయం; మహాలయ అమావాస్య వంటి ముఖ్యమైన రోజులు త్వరగా నిండిపోతాయి. మిగతా సమయంలో సాధారణంగా రోజు త్వరగా దొరుకుతుంది.',
     },
     {
         q: 'దక్షిణ ఎంత?',
@@ -103,7 +103,7 @@ export default function TeluguPage() {
                     <div className="absolute inset-0 z-0">
                         <Image
                             src={heroImage}
-                            alt="గోకర్ణంలో నారాయణ బలి కర్మ"
+                            alt="గోకర్ణంలోని కోటి తీర్థం"
                             fill
                             className="object-cover"
                             priority
@@ -131,14 +131,14 @@ export default function TeluguPage() {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
                                 <TrackedLink
                                     href={PHONE_HREF}
-                                    className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.4)]"
+                                    className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors shadow-md"
                                 >
                                     <Phone size={24} className="fill-current" />
                                     గురూజీకి కాల్ చేయండి: +91 96638 28936
                                 </TrackedLink>
                                 <TrackedLink
                                     href={WHATSAPP_URL}
-                                    className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105"
+                                    className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
                                 >
                                     <MessageCircle size={24} />
                                     వాట్సాప్ చేయండి
@@ -236,14 +236,14 @@ export default function TeluguPage() {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <TrackedLink
                                 href={PHONE_HREF}
-                                className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.4)]"
+                                className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors shadow-md"
                             >
                                 <Phone size={24} className="fill-current" />
                                 కాల్ చేయండి: +91 96638 28936
                             </TrackedLink>
                             <TrackedLink
                                 href={WHATSAPP_URL}
-                                className="bg-white hover:bg-orange-50 border-2 border-saffron/30 text-charcoal px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105"
+                                className="bg-white hover:bg-orange-50 border-2 border-saffron/30 text-charcoal px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
                             >
                                 <MessageCircle size={24} className="text-saffron" />
                                 వాట్సాప్ చేయండి

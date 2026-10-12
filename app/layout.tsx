@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display, Noto_Serif_Devanagari, Cinzel, Lato, Great_Vibes, Noto_Sans_Kannada, Noto_Sans_Telugu } from "next/font/google";
+import { Playfair_Display, Cinzel, Lato, Great_Vibes, Noto_Sans_Kannada, Noto_Sans_Telugu } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";

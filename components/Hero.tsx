@@ -34,19 +34,14 @@ export default function Hero() {
                         <span className="inline-block py-1 px-3 rounded-full bg-saffron/20 border border-saffron/50 text-saffron font-bold text-sm tracking-wide uppercase">
                             Independent Vedic Rituals, Gokarna
                         </span>
-                        <div className="flex items-center gap-2 bg-green-900/40 backdrop-blur-sm border border-green-500/30 px-3 py-1 rounded-full">
-                            <span className="relative flex h-3 w-3">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                            </span>
-                            <span className="text-green-400 text-xs font-bold uppercase tracking-wider">Available Now for Call</span>
-                        </div>
+                        <span className="text-white/80 text-sm">
+                            Calls 6 AM &ndash; midnight
+                        </span>
                     </div>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-4 leading-tight drop-shadow-lg text-white">
                         Narayana Bali Pooja in <br className="hidden md:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-saffron to-gold">
-                            Gokarna
-                        </span> <span className="text-3xl md:text-5xl block mt-2 font-serif text-white/90">| Ancestral Peace & Moksha</span>
+                        <span className="text-saffron">Gokarna</span>
+                        <span className="text-2xl md:text-4xl block mt-3 font-serif font-normal text-white/85">For the peace of your ancestors</span>
                     </h1>
                 </div>
 
@@ -88,20 +83,9 @@ export default function Hero() {
                     Note: We are an independent Vedic ritual service in Gokarna, not the official Mahabaleshwar Temple.
                 </p>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1, duration: 1 }}
-                    className="mt-8 flex justify-center gap-8 text-sm text-gray-400"
-                >
-                    <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                        Rituals Performed Through the Year
-                    </div>
-                    <div className="flex items-center gap-2">
-                        Trusted by Devotees Across India
-                    </div>
-                </motion.div>
+                <p className="mt-8 text-sm text-gray-400">
+                    Guruji speaks Kannada, Telugu, Hindi and Marathi on the phone.
+                </p>
             </div>
         </section >
     )

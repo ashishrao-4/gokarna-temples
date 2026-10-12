@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Navigation, ExternalLink, Bus, Train, Plane } from "lucide-react";
-import Image from "next/image";
+import { MapPin, ExternalLink, Bus, Train, Plane } from "lucide-react";
 
 export default function Location() {
     return (
@@ -44,7 +43,7 @@ export default function Location() {
 
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-blue-50 p-3 rounded-xl text-blue-600">
+                                    <div className="bg-cream p-3 rounded-xl text-saffron border border-saffron/15">
                                         <Bus size={24} />
                                     </div>
                                     <div>
@@ -57,7 +56,7 @@ export default function Location() {
                                 </div>
 
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-orange-50 p-3 rounded-xl text-orange-600">
+                                    <div className="bg-cream p-3 rounded-xl text-saffron border border-saffron/15">
                                         <Train size={24} />
                                     </div>
                                     <div>
@@ -70,7 +69,7 @@ export default function Location() {
                                 </div>
 
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-purple-50 p-3 rounded-xl text-purple-600">
+                                    <div className="bg-cream p-3 rounded-xl text-saffron border border-saffron/15">
                                         <Plane size={24} />
                                     </div>
                                     <div>
@@ -85,7 +84,7 @@ export default function Location() {
 
                             <div className="mt-8 pt-8 border-t border-gray-100">
                                 <a
-                                    href="https://maps.app.goo.gl/f9jaW8H4w4aJdFyNA"
+                                    href="https://maps.app.goo.gl/LCcoKXtkdEKj6FEG6"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-full bg-charcoal text-white hover:bg-black py-4 rounded-xl font-bold flex justify-center items-center gap-2 transition-colors"
@@ -104,7 +103,7 @@ export default function Location() {
                         className="relative h-[500px] w-full bg-gray-200 rounded-3xl overflow-hidden shadow-xl"
                     >
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1930.9719244671592!2d74.3184742!3d14.5452037!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbe83d377ddbb57%3A0xed891f7b6776b07a!2sG8V9%2BXC4%2C%20Dandebagh%2C%20Gokarna%2C%20Karnataka%20581326!5e0!3m2!1sen!2sin!4v1765800193073!5m2!1sen!2sin"
+                            src="https://www.google.com/maps?q=14.5448794,74.3186305&hl=en&z=16&output=embed"
                             width="100%"
                             height="100%"
                             allowFullScreen={true}
@@ -115,9 +114,9 @@ export default function Location() {
                         <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg max-w-xs">
                             <p className="font-bold text-charcoal flex items-center gap-1">
                                 <MapPin size={16} className="text-saffron" />
-                                Mahabaleshwar Temple
+                                Balachandra Prasad, Gokarna
                             </p>
-                            <p className="text-xs text-gray-500 mt-1">Car St, Gokarna, Karnataka 581326</p>
+                            <p className="text-xs text-gray-500 mt-1">Near Mahabaleshwar Temple, Car St, Gokarna, Karnataka 581326</p>
                         </div>
                     </motion.div>
                 </div>

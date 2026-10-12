@@ -33,6 +33,11 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# google ads credentials — NEVER commit
+google-ads.yaml
+google-ads.local.env
+.secrets/
+
 # vercel
 .vercel
 

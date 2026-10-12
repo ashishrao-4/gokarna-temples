@@ -7,10 +7,10 @@ import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
 import TrackedLink from '@/components/TrackedLink';
 import { siteMetadata } from '@/lib/metadata';
-import heroImage from '../../images/narayana-bali.jpg';
+import heroImage from '../../images/koti 2.jpg';
 
 const TITLE = 'ಗೋಕರ್ಣದಲ್ಲಿ ನಾರಾಯಣ ಬಲಿ, ನಾಗ ಬಲಿ, ಪಿತೃ ದೋಷ ಪೂಜೆ';
-const DESCRIPTION = 'ಗೋಕರ್ಣದಲ್ಲಿ ಬಾಲಚಂದ್ರ ಪ್ರಸಾದ್ ಗುರೂಜಿಯವರಿಂದ ಶಾಸ್ತ್ರೋಕ್ತವಾಗಿ ನಾರಾಯಣ ಬಲಿ, ನಾಗ ಬಲಿ, ಪಿತೃ ದೋಷ ಪೂಜೆ ಮತ್ತು ಪಿತೃ ಪಕ್ಷ 2026 ಶ್ರಾದ್ಧ. ಗುರೂಜಿ ಕನ್ನಡದಲ್ಲೇ ಮಾತನಾಡುತ್ತಾರೆ. ಕರೆ ಮಾಡಿ: +91 96638 28936.';
+const DESCRIPTION = 'ಗೋಕರ್ಣದಲ್ಲಿ ಬಾಲಚಂದ್ರ ಪ್ರಸಾದ್ ಗುರೂಜಿಯವರಿಂದ ಶಾಸ್ತ್ರೋಕ್ತವಾಗಿ ನಾರಾಯಣ ಬಲಿ, ನಾಗ ಬಲಿ, ಪಿತೃ ದೋಷ ಪೂಜೆ ಮತ್ತು ಪಿತೃ ಪಕ್ಷ ಶ್ರಾದ್ಧ. ಗುರೂಜಿ ಕನ್ನಡದಲ್ಲೇ ಮಾತನಾಡುತ್ತಾರೆ. ಕರೆ ಮಾಡಿ: +91 96638 28936.';
 
 export const metadata: Metadata = {
     title: { absolute: TITLE },
@@ -55,10 +55,10 @@ const rituals = [
         linkText: 'ಪಿತೃ ದೋಷ ಪೂಜೆ ಬಗ್ಗೆ ಹೆಚ್ಚಿನ ವಿವರ (English)',
     },
     {
-        title: 'ಪಿತೃ ಪಕ್ಷ 2026',
-        desc: 'ಈ ವರ್ಷ ಪಿತೃ ಪಕ್ಷ ಸೆಪ್ಟೆಂಬರ್ 26 ರಿಂದ ಅಕ್ಟೋಬರ್ 10, 2026 ರವರೆಗೆ ಇದೆ. ಅಕ್ಟೋಬರ್ 10 ಮಹಾಲಯ ಅಮಾವಾಸ್ಯೆ; ತಿಥಿ ಗೊತ್ತಿಲ್ಲದ ಹಿರಿಯರಿಗೂ ಅಂದು ಶ್ರಾದ್ಧ ಮಾಡುವ ಪದ್ಧತಿ ಇದೆ. ಈ ಹದಿನೈದು ದಿನ ಗೋಕರ್ಣದಲ್ಲಿ ತುಂಬಾ ಜನ ಬರುತ್ತಾರೆ, ಹಾಗಾಗಿ ಬೇಗನೆ ಕರೆ ಮಾಡಿ ದಿನ ನಿಗದಿ ಮಾಡಿಕೊಳ್ಳಿ.',
+        title: 'ಪಿತೃ ಪಕ್ಷ ಮತ್ತು ಶ್ರಾದ್ಧ',
+        desc: 'ಪಿತೃ ಪಕ್ಷ ಪ್ರತಿ ವರ್ಷ ಸೆಪ್ಟೆಂಬರ್ ಅಥವಾ ಅಕ್ಟೋಬರ್‌ನಲ್ಲಿ ಬರುತ್ತದೆ (2026 ರಲ್ಲಿ ಸೆಪ್ಟೆಂಬರ್ 26 – ಅಕ್ಟೋಬರ್ 10). ಮಹಾಲಯ ಅಮಾವಾಸ್ಯೆಯಂದು ತಿಥಿ ಗೊತ್ತಿಲ್ಲದ ಹಿರಿಯರಿಗೂ ಶ್ರಾದ್ಧ ಮಾಡುವ ಪದ್ಧತಿ ಇದೆ. ಉಳಿದ ದಿನಗಳಲ್ಲಿ ಅಮಾವಾಸ್ಯೆ ಅಥವಾ ಹಿರಿಯರ ತಿಥಿಯಂದು ಗೋಕರ್ಣದಲ್ಲಿ ಶ್ರಾದ್ಧ ಮಾಡಬಹುದು. ದಿನ ನಿಗದಿಗೆ ಗುರೂಜಿಗೆ ಕರೆ ಮಾಡಿ.',
         href: '/pitru-paksha-gokarna',
-        linkText: 'ಪಿತೃ ಪಕ್ಷ 2026 ಬಗ್ಗೆ ಹೆಚ್ಚಿನ ವಿವರ (English)',
+        linkText: 'ಪಿತೃ ಪಕ್ಷ ಬಗ್ಗೆ ಹೆಚ್ಚಿನ ವಿವರ (English)',
     },
 ];
 
@@ -84,7 +84,7 @@ const faqs = [
     },
     {
         q: 'ಪಿತೃ ಪಕ್ಷದಲ್ಲಿ ಪೂಜೆಗೆ ಯಾವಾಗ ಕರೆ ಮಾಡಬೇಕು?',
-        a: 'ಆದಷ್ಟು ಬೇಗ. ಪಿತೃ ಪಕ್ಷ (ಸೆಪ್ಟೆಂಬರ್ 26 – ಅಕ್ಟೋಬರ್ 10, 2026) ಗೋಕರ್ಣದಲ್ಲಿ ವರ್ಷದ ಅತ್ಯಂತ ಜನದಟ್ಟಣೆಯ ಸಮಯ. ಮಹಾಲಯ ಅಮಾವಾಸ್ಯೆಯಂತಹ ಮುಖ್ಯ ದಿನಗಳು ಬೇಗನೆ ತುಂಬುತ್ತವೆ.',
+        a: 'ಆದಷ್ಟು ಬೇಗ. ಪಿತೃ ಪಕ್ಷ ಗೋಕರ್ಣದಲ್ಲಿ ವರ್ಷದ ಅತ್ಯಂತ ಜನದಟ್ಟಣೆಯ ಸಮಯ; ಮಹಾಲಯ ಅಮಾವಾಸ್ಯೆಯಂತಹ ಮುಖ್ಯ ದಿನಗಳು ಬೇಗನೆ ತುಂಬುತ್ತವೆ. ಉಳಿದ ಸಮಯದಲ್ಲಿ ದಿನ ಸಾಮಾನ್ಯವಾಗಿ ಬೇಗ ಸಿಗುತ್ತದೆ.',
     },
     {
         q: 'ದಕ್ಷಿಣೆ ಎಷ್ಟು?',
@@ -103,7 +103,7 @@ export default function KannadaPage() {
                     <div className="absolute inset-0 z-0">
                         <Image
                             src={heroImage}
-                            alt="ಗೋಕರ್ಣದಲ್ಲಿ ನಾರಾಯಣ ಬಲಿ ಕರ್ಮ"
+                            alt="ಗೋಕರ್ಣದ ಕೋಟಿ ತೀರ್ಥ"
                             fill
                             className="object-cover"
                             priority
@@ -131,14 +131,14 @@ export default function KannadaPage() {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
                                 <TrackedLink
                                     href={PHONE_HREF}
-                                    className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.4)]"
+                                    className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors shadow-md"
                                 >
                                     <Phone size={24} className="fill-current" />
                                     ಗುರೂಜಿಗೆ ಕರೆ ಮಾಡಿ: +91 96638 28936
                                 </TrackedLink>
                                 <TrackedLink
                                     href={WHATSAPP_URL}
-                                    className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105"
+                                    className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
                                 >
                                     <MessageCircle size={24} />
                                     ವಾಟ್ಸಾಪ್ ಮಾಡಿ
@@ -236,14 +236,14 @@ export default function KannadaPage() {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <TrackedLink
                                 href={PHONE_HREF}
-                                className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,153,51,0.4)]"
+                                className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors shadow-md"
                             >
                                 <Phone size={24} className="fill-current" />
                                 ಕರೆ ಮಾಡಿ: +91 96638 28936
                             </TrackedLink>
                             <TrackedLink
                                 href={WHATSAPP_URL}
-                                className="bg-white hover:bg-orange-50 border-2 border-saffron/30 text-charcoal px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-all hover:scale-105"
+                                className="bg-white hover:bg-orange-50 border-2 border-saffron/30 text-charcoal px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
                             >
                                 <MessageCircle size={24} className="text-saffron" />
                                 ವಾಟ್ಸಾಪ್ ಮಾಡಿ
