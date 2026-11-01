@@ -26,7 +26,7 @@ export default function Benefits() {
                     {benefits.map((b, i) => (
                         <div
                             key={i}
-                            className="flex gap-4 p-6 rounded-2xl bg-gray-50 hover:bg-cream border border-gray-100 hover:border-saffron/20 transition-all hover:shadow-lg group"
+                            className="flex gap-4 p-6 rounded-2xl bg-stone-50 hover:bg-cream border border-gray-100 hover:border-saffron/20 transition-all hover:shadow-lg group"
                         >
                             <div className="bg-white p-4 rounded-full shadow-sm h-fit text-saffron group-hover:bg-saffron group-hover:text-white transition-colors">
                                 <b.icon size={28} />

@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
 import TrackedLink from '@/components/TrackedLink';
+import ScrollCue from '@/components/ScrollCue';
 import { siteMetadata } from '@/lib/metadata';
 import heroImage from '@/images/koti 3.jpg';
 
@@ -113,7 +114,7 @@ export default function TeluguPage() {
                         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-charcoal/90 z-10" />
                     </div>
 
-                    <div className="relative z-20 container mx-auto px-4 text-center text-white pt-32 pb-20">
+                    <div className="relative z-20 container mx-auto px-4 text-center text-white pt-32 pb-36 md:pb-24">
                         <div className="animate-in fade-in zoom-in duration-700 space-y-6 max-w-4xl mx-auto">
                             <span className="inline-block py-1 px-4 rounded-full bg-saffron/20 border border-saffron/50 text-saffron font-bold text-sm backdrop-blur-sm">
                                 గోకర్ణ క్షేత్రం
@@ -147,10 +148,11 @@ export default function TeluguPage() {
                             </div>
                         </div>
                     </div>
+                    <ScrollCue href="#more" />
                 </section>
 
                 {/* LANGUAGE TRUST POINT */}
-                <section className="py-16 bg-gradient-to-b from-white to-orange-50/30">
+                <section id="more" className="py-16 bg-white">
                     <div className="container mx-auto px-4 max-w-3xl text-center">
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-6">
                             మీ భాషలోనే మాట్లాడండి
@@ -169,7 +171,7 @@ export default function TeluguPage() {
                         </h2>
                         <div className="grid md:grid-cols-2 gap-8">
                             {rituals.map((item) => (
-                                <div key={item.href} className="bg-stone-50 p-8 rounded-2xl border border-stone-100 hover:shadow-xl transition-all hover:bg-orange-50/50 hover:border-orange-100 flex flex-col">
+                                <div key={item.href} className="bg-stone-50 p-8 rounded-2xl border border-stone-100 hover:shadow-xl transition-all hover:bg-stone-50 hover:border-stone-300 flex flex-col">
                                     <h3 className="font-bold text-2xl font-serif text-charcoal mb-3">{item.title}</h3>
                                     <p className="text-gray-600 leading-relaxed mb-6 flex-1">{item.desc}</p>
                                     <Link href={item.href} hrefLang="en" className="text-saffron font-bold hover:underline flex items-center gap-1">
@@ -213,7 +215,7 @@ export default function TeluguPage() {
                         </h2>
                         <div className="space-y-4">
                             {faqs.map((faq) => (
-                                <details key={faq.q} className="group bg-gray-50 p-6 rounded-xl border border-gray-100 open:bg-orange-50 open:border-orange-100 transition-all cursor-pointer">
+                                <details key={faq.q} className="group bg-stone-50 p-6 rounded-xl border border-gray-100 open:bg-white open:border-stone-200 transition-all cursor-pointer">
                                     <summary className="font-bold text-lg text-charcoal list-none flex justify-between items-center gap-4 outline-none">
                                         {faq.q}
                                         <span className="group-open:rotate-180 transition-transform text-saffron">▼</span>
@@ -244,7 +246,7 @@ export default function TeluguPage() {
                             </TrackedLink>
                             <TrackedLink
                                 href={WHATSAPP_URL}
-                                className="bg-white hover:bg-orange-50 border-2 border-saffron/30 text-charcoal px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
+                                className="bg-white hover:bg-stone-50 border-2 border-saffron/30 text-charcoal px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
                             >
                                 <MessageCircle size={24} className="text-saffron" />
                                 వాట్సాప్ చేయండి

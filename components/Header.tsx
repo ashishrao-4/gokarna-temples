@@ -7,6 +7,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { gtag_report_conversion } from "@/lib/gtag";
 
+const HERO_PATHS = new Set<string>([
+    "/",
+    "/narayana-bali-pooja-gokarna",
+    "/pitru-dosha-pooja-gokarna",
+    "/nag-bali-sarpa-dosha-gokarna",
+    "/pitru-paksha-gokarna",
+    "/kn",
+    "/te",
+]);
+
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,11 +27,16 @@ export default function Header() {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
         };
+        handleScroll();
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const isTransparent = pathname === "/" && !isScrolled;
+    // Pages that open with a full-bleed image hero; the header sits transparent
+    // over it until the visitor scrolls. Text-only pages (privacy, terms) keep
+    // the solid header so the nav stays readable.
+    const hasImageHero = HERO_PATHS.has(pathname);
+    const isTransparent = hasImageHero && !isScrolled;
 
     const navLinks = [
         { name: "Poojas", href: "/#poojas" },
@@ -77,7 +92,7 @@ export default function Header() {
                                             <Link
                                                 key={subItem.name}
                                                 href={subItem.href}
-                                                className="block px-4 py-3 text-sm text-charcoal hover:bg-orange-50 hover:text-saffron font-medium transition-colors border-b border-gray-50 last:border-0"
+                                                className="block px-4 py-3 text-sm text-charcoal hover:bg-stone-50 hover:text-saffron font-medium transition-colors border-b border-gray-50 last:border-0"
                                             >
                                                 {subItem.name}
                                             </Link>

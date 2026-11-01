@@ -74,7 +74,7 @@ export default function PoojaServices() {
                                 <h3 className="absolute bottom-4 left-4 text-white text-xl font-bold font-serif shadow-black drop-shadow-md group-hover/card:text-saffron transition-colors">{pooja.title}</h3>
                             </Link>
                             <div className="p-6 flex flex-col flex-1">
-                                <p className="text-gray-600 text-sm mb-6 leading-relaxed bg-gray-50 p-3 rounded-lg border border-gray-100">{pooja.description}</p>
+                                <p className="text-gray-600 text-sm mb-6 leading-relaxed bg-stone-50 p-3 rounded-lg border border-gray-100">{pooja.description}</p>
 
                                 <div className="space-y-3 mb-8 flex-1">
                                     <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider">Benefits</h4>

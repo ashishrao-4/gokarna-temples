@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
 import PageJsonLd from '@/components/PageJsonLd';
 import TrackedLink from '@/components/TrackedLink';
+import ScrollCue from '@/components/ScrollCue';
 import { siteMetadata } from '@/lib/metadata';
 import tripindiShradh from '@/images/tripindi1.jpg';
 
@@ -126,7 +127,7 @@ export default function PitruPakshaPage() {
                     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-charcoal/90 z-10" />
                 </div>
 
-                <div className="relative z-20 container mx-auto px-4 text-center text-white pt-32 pb-20">
+                <div className="relative z-20 container mx-auto px-4 text-center text-white pt-32 pb-36 md:pb-24">
                     <div className="animate-in fade-in zoom-in duration-700 space-y-6 max-w-4xl mx-auto">
                         <span className="inline-flex items-center gap-2 py-1 px-4 rounded-full bg-saffron/20 border border-saffron/50 text-saffron font-bold text-sm tracking-widest uppercase backdrop-blur-sm">
                             <Calendar size={16} /> Shraddha through the year
@@ -159,10 +160,11 @@ export default function PitruPakshaPage() {
                         </div>
                     </div>
                 </div>
+                <ScrollCue href="#rituals" />
             </section>
 
             {/* WHY GOKARNA */}
-            <section className="py-20 bg-gradient-to-b from-white to-orange-50/30">
+            <section id="rituals" className="py-20 bg-white">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
                     <h2 className="text-3xl md:text-5xl font-serif font-bold text-charcoal mb-8">
                         Why Offer Shraddha in Gokarna?
@@ -177,7 +179,7 @@ export default function PitruPakshaPage() {
                             'Rites performed near sacred waters, as tradition prescribes',
                             'A personal ritual scoped to your family, not a fixed package',
                         ].map((item, i) => (
-                            <div key={i} className="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-all hover:border-orange-200">
+                            <div key={i} className="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-all hover:border-stone-300">
                                 <div className="mt-1 bg-saffron/10 p-2 rounded-full text-saffron shrink-0">
                                     <Check size={18} strokeWidth={3} />
                                 </div>
@@ -218,7 +220,7 @@ export default function PitruPakshaPage() {
                     </h2>
                     <div className="grid md:grid-cols-2 gap-8">
                         {rituals.map((item) => (
-                            <div key={item.title} className="bg-stone-50 p-8 rounded-2xl border border-stone-100 hover:shadow-xl transition-all hover:bg-orange-50/50 hover:border-orange-100 flex flex-col">
+                            <div key={item.title} className="bg-stone-50 p-8 rounded-2xl border border-stone-100 hover:shadow-xl transition-all hover:bg-stone-50 hover:border-stone-300 flex flex-col">
                                 <h3 className="font-bold text-2xl font-serif text-charcoal mb-3">{item.title}</h3>
                                 <p className="text-gray-600 leading-relaxed mb-6 flex-1">{item.desc}</p>
                                 <Link href={item.href} className="text-saffron font-bold hover:underline flex items-center gap-1">
@@ -231,7 +233,7 @@ export default function PitruPakshaPage() {
             </section>
 
             {/* HOW IT WORKS */}
-            <section className="py-20 bg-saffron/5">
+            <section className="py-20 bg-cream">
                 <div className="container mx-auto px-4 max-w-5xl text-center">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-12">
                         How It Works
@@ -287,7 +289,7 @@ export default function PitruPakshaPage() {
                     </h2>
                     <div className="space-y-4">
                         {faqs.map((faq) => (
-                            <details key={faq.q} className="group bg-gray-50 p-6 rounded-xl border border-gray-100 open:bg-orange-50 open:border-orange-100 transition-all cursor-pointer">
+                            <details key={faq.q} className="group bg-stone-50 p-6 rounded-xl border border-gray-100 open:bg-white open:border-stone-200 transition-all cursor-pointer">
                                 <summary className="font-bold text-lg text-charcoal list-none flex justify-between items-center outline-none">
                                     {faq.q}
                                     <span className="group-open:rotate-180 transition-transform text-saffron">▼</span>
@@ -318,7 +320,7 @@ export default function PitruPakshaPage() {
                         </TrackedLink>
                         <TrackedLink
                             href={WHATSAPP_URL}
-                            className="bg-white hover:bg-orange-50 border-2 border-saffron/30 text-charcoal px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
+                            className="bg-white hover:bg-stone-50 border-2 border-saffron/30 text-charcoal px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
                         >
                             <MessageCircle size={24} className="text-saffron" />
                             WhatsApp Guruji

@@ -2,7 +2,7 @@ import { MapPin, ExternalLink, Bus, Train, Plane } from "lucide-react";
 
 export default function Location() {
     return (
-        <section id="location" className="py-20 bg-gray-50">
+        <section id="location" className="py-20 bg-cream">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2

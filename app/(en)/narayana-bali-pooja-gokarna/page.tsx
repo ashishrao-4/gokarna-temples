@@ -7,19 +7,20 @@ import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
 import PageJsonLd from '@/components/PageJsonLd';
 import TrackedLink from '@/components/TrackedLink';
+import ScrollCue from '@/components/ScrollCue';
 import { siteMetadata } from '@/lib/metadata';
 import narayanaBali from '@/images/koti 2.jpg';
 
 export const metadata: Metadata = {
     title: { absolute: 'Narayana Bali Pooja in Gokarna: Process, Cost, Dates' },
-    description: "Narayana Bali pooja in Gokarna for Pitru Dosha. Guided by an experienced Vedic priest. Call to plan your family's ritual.",
+    description: "Narayana Bali pooja at Koti Teertha, Gokarna: a one-day ritual with all samagri arranged. Guruji guides the vidhi and muhurta. Call +91 96638 28936.",
     alternates: {
         canonical: '/narayana-bali-pooja-gokarna',
     },
     openGraph: {
         ...siteMetadata.openGraph,
-        title: 'Narayana Bali Pooja Gokarna | Expert Pandits, Authentic Rituals',
-        description: "Narayana Bali pooja in Gokarna for Pitru Dosha. Guided by an experienced Vedic priest. Call to plan your family's ritual.",
+        title: 'Narayana Bali Pooja in Gokarna: Process, Cost, Dates',
+        description: "Narayana Bali pooja at Koti Teertha, Gokarna: a one-day ritual with all samagri arranged. Guruji guides the vidhi and muhurta. Call +91 96638 28936.",
         url: '/narayana-bali-pooja-gokarna',
     },
 };
@@ -40,7 +41,35 @@ const faqs = [
     },
     {
         q: 'How is the dakshina for Narayana Bali decided?',
-        a: 'There is no fixed package. The dakshina depends on the number of days, the number of pandits involved, and any additional rites such as Tripindi Shradh performed along with it. Guruji tells you the amount openly on the phone, and there are no hidden charges.',
+        a: 'There is no fixed package. The dakshina depends on the number of pandits involved and any additional rites such as Tripindi Shradh performed along with it. Guruji tells you the amount openly on the phone, and there are no hidden charges.',
+    },
+    {
+        q: 'How long does Narayana Bali take?',
+        a: 'Narayana Bali is completed in one day at Koti Teertha in Gokarna. Guruji tells you the starting time when he confirms the date.',
+    },
+    {
+        q: 'Who should perform Narayana Bali?',
+        a: 'A close family member of the person who passed away sits as the karta and performs the rites, with Guruji guiding every step. Other family members can attend.',
+    },
+    {
+        q: 'Where in Gokarna is Narayana Bali performed?',
+        a: 'At Koti Teertha, the sacred tank in Gokarna close to the Mahabaleshwar temple, where ancestral rites have traditionally been performed.',
+    },
+    {
+        q: 'Do we need to bring anything for the pooja?',
+        a: 'No. All the samagri is arranged at Koti Teertha itself. If anything specific is needed for your family, Guruji tells you well in advance.',
+    },
+    {
+        q: 'Are there any food rules before Narayana Bali?',
+        a: 'On the day before the pooja, avoid non-vegetarian food, onion and garlic.',
+    },
+    {
+        q: 'Where can we stay in Gokarna?',
+        a: 'You are free to stay anywhere in Gokarna. If you cannot find a place or are unsure, ask Guruji and he will share the numbers of a few stays.',
+    },
+    {
+        q: 'What is the difference between Narayana Bali and Tripindi Shradh?',
+        a: 'Narayana Bali is done for a family member who passed away suddenly, by accident or in other untimely circumstances. Tripindi Shradh is generally done for ancestors of the last three generations whose rites may have been missed. Guruji suggests which one your family needs after hearing your situation.',
     },
     {
         q: 'Which languages can we speak to Guruji in?',
@@ -54,7 +83,7 @@ export default function NarayanaBaliPage() {
             <PageJsonLd
                 path="/narayana-bali-pooja-gokarna"
                 name="Narayana Bali Pooja in Gokarna"
-                description="Narayana Bali pooja in Gokarna for Pitru Dosha. Guided by an experienced Vedic priest. Call to plan your family's ritual."
+                description="Narayana Bali pooja at Koti Teertha, Gokarna: a one-day ritual with all samagri arranged. Guruji guides the vidhi and muhurta. Call +91 96638 28936."
                 faqs={faqs}
             />
             <Header />
@@ -75,7 +104,7 @@ export default function NarayanaBaliPage() {
                     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-charcoal/90 z-10" />
                 </div>
 
-                <div className="relative z-20 container mx-auto px-4 text-center text-white pt-32 pb-20">
+                <div className="relative z-20 container mx-auto px-4 text-center text-white pt-32 pb-36 md:pb-24">
                     <div className="animate-in fade-in zoom-in duration-700 space-y-6 max-w-4xl mx-auto">
                         <span className="inline-block py-1 px-4 rounded-full bg-saffron/20 border border-saffron/50 text-saffron font-bold text-sm tracking-widest uppercase backdrop-blur-sm">
                             Vedic Remedy for Ancestral Peace
@@ -108,10 +137,11 @@ export default function NarayanaBaliPage() {
                         </p>
                     </div>
                 </div>
+                <ScrollCue href="#who-should" />
             </section>
 
             {/* WHO SHOULD PERFORM - Clean layout without extra image */}
-            <section className="py-20 bg-gradient-to-b from-white to-orange-50/30">
+            <section id="who-should" className="py-20 bg-white">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
                     <h2 className="text-3xl md:text-5xl font-serif font-bold text-charcoal mb-12">
                         Who Should Perform Narayana Bali?
@@ -124,7 +154,7 @@ export default function NarayanaBaliPage() {
                             "Experiencing bad dreams or sensing presence of ancestors",
                             "Lack of peace and harmony in the household"
                         ].map((item, i) => (
-                            <div key={i} className="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-all hover:border-orange-200">
+                            <div key={i} className="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-all hover:border-stone-300">
                                 <div className="mt-1 bg-saffron/10 p-2 rounded-full text-saffron shrink-0">
                                     <Check size={18} strokeWidth={3} />
                                 </div>
@@ -141,13 +171,13 @@ export default function NarayanaBaliPage() {
             </section>
 
             {/* HOW IT HAPPENS - Abstract background */}
-            <section className="py-20 bg-saffron/5 relative overflow-hidden">
+            <section className="py-20 bg-cream relative overflow-hidden">
                 <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-8">
                         How Narayana Bali Pooja Happens in Gokarna
                     </h2>
                     <p className="text-charcoal/80 text-xl mb-12 leading-relaxed max-w-3xl mx-auto">
-                        The ritual commences with a <span className="font-bold text-charcoal">Sankalpa</span> (sacred vow) at the holy river banks or designated Mukti Sthala.
+                        The ritual commences with a <span className="font-bold text-charcoal">Sankalpa</span> (sacred vow) at Koti Teertha, taken by a close family member of the departed as the karta.
                         It involves invoking Lord Narayana to liberate the soul. The process includes <span className="font-bold text-charcoal">Homa</span>, offering of Pindas (Pind Daan),
                         and final prayers for the soul&apos;s ascension. Where Sarpa Dosha is also indicated in the family, the{' '}
                         <Link href="/nag-bali-sarpa-dosha-gokarna" className="text-saffron font-bold hover:underline">Nag Bali pooja</Link>{' '}
@@ -161,7 +191,7 @@ export default function NarayanaBaliPage() {
                                 <Calendar size={28} /> Duration
                             </h3>
                             <p className="text-charcoal font-medium">
-                                Typically 1 day ritual (sometimes 2 days based on severity). Usually starts early morning. Many families choose the{' '}
+                                Completed in one day. Guruji tells you the starting time when he confirms the date. Many families choose the{' '}
                                 <Link href="/pitru-paksha-gokarna" className="text-saffron hover:underline">Pitru Paksha fortnight</Link> for it.
                             </p>
                         </div>
@@ -169,7 +199,7 @@ export default function NarayanaBaliPage() {
                             <h3 className="font-bold text-2xl text-saffron mb-3 flex items-center gap-3">
                                 <Info size={28} /> Location
                             </h3>
-                            <p className="text-charcoal font-medium">Private ritual grounds near the main temple or sacred water bodies in Gokarna.</p>
+                            <p className="text-charcoal font-medium">Koti Teertha, the sacred tank in Gokarna close to the Mahabaleshwar temple.</p>
                         </div>
                     </div>
                 </div>
@@ -186,7 +216,7 @@ export default function NarayanaBaliPage() {
                     <div className="grid md:grid-cols-3 gap-10">
                         {[
                             { Icon: Users, title: "Expert Pandits", desc: "Experienced Gokarna pandits from traditional lineage proficient in Narayana Bali Vidhi." },
-                            { Icon: Flame, title: "Complete Samagri", desc: "All organic and scripturally correct pooja items (Samagri) arranged by us." },
+                            { Icon: Flame, title: "Complete Samagri", desc: "All pooja items (samagri) are arranged at Koti Teertha itself, so your family does not need to carry anything." },
                             { Icon: Calendar, title: "Muhurtha Guidance", desc: "Selection of best dates based on your family details." }
                         ].map(({ Icon, title, desc }) => (
                             <div key={title} className="border-t-2 border-saffron/30 pt-6">
@@ -199,14 +229,39 @@ export default function NarayanaBaliPage() {
                 </div>
             </section>
 
+            {/* BEFORE YOU COME */}
+            <section className="py-20 bg-cream">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal text-center mb-4">
+                        Before You Come to Gokarna
+                    </h2>
+                    <p className="text-gray-600 text-center text-lg mb-12 max-w-2xl mx-auto">
+                        What families usually ask Guruji before travelling for Narayana Bali.
+                    </p>
+                    <dl className="grid md:grid-cols-2 gap-x-10 gap-y-8">
+                        {[
+                            { term: "Plan for one day", detail: "The pooja is completed in a single day at Koti Teertha. Guruji confirms the date and starting time on the call." },
+                            { term: "Nothing to carry", detail: "All samagri is provided at Koti Teertha. If your family needs to bring anything specific, Guruji tells you beforehand." },
+                            { term: "Food the day before", detail: "Avoid non-vegetarian food, onion and garlic on the day before the pooja." },
+                            { term: "Where to stay", detail: "Stay anywhere you like in Gokarna. If you are unsure, ask Guruji and he will share the numbers of a few stays." },
+                        ].map(({ term, detail }) => (
+                            <div key={term} className="border-l-2 border-saffron/40 pl-5">
+                                <dt className="font-bold text-lg text-charcoal mb-1">{term}</dt>
+                                <dd className="text-gray-700 leading-relaxed">{detail}</dd>
+                            </div>
+                        ))}
+                    </dl>
+                </div>
+            </section>
+
             {/* COST SECTION - Simplified */}
             <section className="py-20 bg-stone-900 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-stone-900 to-black"></div>
                 <div className="container mx-auto px-4 max-w-3xl relative z-10">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8 text-white">Dakshina & Cost Details</h2>
                     <p className="text-gray-300 text-xl mb-10 leading-relaxed">
-                        Dakshina for Narayana Bali varies based on number of days,
-                        number of pandits involved, and any additional rituals like Tripindi Shradh performed along with it.
+                        Dakshina for Narayana Bali varies based on the number of pandits involved
+                        and any additional rituals like Tripindi Shradh performed along with it.
                     </p>
 
                     <div>
@@ -225,7 +280,7 @@ export default function NarayanaBaliPage() {
                     </h2>
                     <div className="space-y-4">
                         {faqs.map((faq) => (
-                            <details key={faq.q} className="group bg-gray-50 p-6 rounded-xl border border-gray-100 open:bg-orange-50 open:border-orange-100 transition-all cursor-pointer">
+                            <details key={faq.q} className="group bg-stone-50 p-6 rounded-xl border border-gray-100 open:bg-white open:border-stone-200 transition-all cursor-pointer">
                                 <summary className="font-bold text-lg text-charcoal list-none flex justify-between items-center outline-none">
                                     {faq.q}
                                     <span className="group-open:rotate-180 transition-transform text-saffron">▼</span>

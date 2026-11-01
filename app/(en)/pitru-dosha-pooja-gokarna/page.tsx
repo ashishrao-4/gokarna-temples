@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
 import PageJsonLd from '@/components/PageJsonLd';
 import TrackedLink from '@/components/TrackedLink';
+import ScrollCue from '@/components/ScrollCue';
 import { siteMetadata } from '@/lib/metadata';
 import pitruDoshaNivarana from '@/images/pitrudosh.jpg';
 
@@ -79,7 +80,7 @@ export default function PitruDoshaPage() {
                     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-charcoal/90 z-10" />
                 </div>
 
-                <div className="relative z-20 container mx-auto px-4 text-center text-white pt-32 pb-20">
+                <div className="relative z-20 container mx-auto px-4 text-center text-white pt-32 pb-36 md:pb-24">
                     <div className="animate-in fade-in zoom-in duration-700 space-y-6 max-w-4xl mx-auto">
                         <span className="inline-block py-1 px-4 rounded-full bg-saffron/20 border border-saffron/50 text-saffron font-bold text-sm tracking-widest uppercase backdrop-blur-sm">
                             Ancestral Peace Rituals
@@ -112,10 +113,11 @@ export default function PitruDoshaPage() {
                         </p>
                     </div>
                 </div>
+                <ScrollCue href="#who-should" />
             </section>
 
             {/* INDICATIONS */}
-            <section className="py-20 bg-gradient-to-b from-white to-orange-50/30">
+            <section id="who-should" className="py-20 bg-white">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
                     <h2 className="text-3xl md:text-5xl font-serif font-bold text-charcoal mb-12">
                         Indications of Pitru Dosha
@@ -128,7 +130,7 @@ export default function PitruDoshaPage() {
                             "Delay in marriage or progeny (child birth)",
                             "Pitru Dosha seen in the family Jataka (horoscope)"
                         ].map((item, i) => (
-                            <div key={i} className="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-all hover:border-orange-200">
+                            <div key={i} className="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-all hover:border-stone-300">
                                 <div className="mt-1 bg-saffron/10 p-2 rounded-full text-saffron shrink-0">
                                     <Check size={18} strokeWidth={3} />
                                 </div>
@@ -167,7 +169,7 @@ export default function PitruDoshaPage() {
             </section>
 
             {/* HOW IT HAPPENS */}
-            <section className="py-20 bg-saffron/5 relative overflow-hidden">
+            <section className="py-20 bg-cream relative overflow-hidden">
                 <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-8">
                         How Pitru Dosha Nivarana is Performed
@@ -247,7 +249,7 @@ export default function PitruDoshaPage() {
                     </h2>
                     <div className="space-y-4">
                         {faqs.map((faq) => (
-                            <details key={faq.q} className="group bg-gray-50 p-6 rounded-xl border border-gray-100 open:bg-orange-50 open:border-orange-100 transition-all cursor-pointer">
+                            <details key={faq.q} className="group bg-stone-50 p-6 rounded-xl border border-gray-100 open:bg-white open:border-stone-200 transition-all cursor-pointer">
                                 <summary className="font-bold text-lg text-charcoal list-none flex justify-between items-center outline-none">
                                     {faq.q}
                                     <span className="group-open:rotate-180 transition-transform text-saffron">▼</span>

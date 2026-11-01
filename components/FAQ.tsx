@@ -42,7 +42,7 @@ export default function FAQ() {
                                         exit={{ height: 0, opacity: 0 }}
                                         transition={{ duration: 0.3 }}
                                     >
-                                        <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4 bg-gray-50/50">
+                                        <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4 bg-stone-50">
                                             {faq.a}
                                         </div>
                                     </motion.div>

@@ -3,10 +3,10 @@ import TrackedLink from "@/components/TrackedLink";
 
 export default function PriestBio() {
     return (
-        <section id="priest" className="py-20 bg-cream">
+        <section id="priest" className="py-20 bg-white">
             <div className="container mx-auto px-4">
                 <div
-                    className="flex flex-col md:flex-row items-center gap-12 bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 overflow-hidden relative"
+                    className="flex flex-col md:flex-row items-center gap-12 bg-cream rounded-3xl p-8 md:p-12 border border-stone-200 overflow-hidden relative"
                 >
                     {/* Guruji does not want a photograph of himself on the site. A plain
                         shloka panel stands in — no emoji, no blurred colour orbs. */}

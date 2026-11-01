@@ -4,9 +4,10 @@
   --color-saffron: #FF9933;
   --color-deep-blue: #1E3A8A;
   --color-gold: #D4AF37;
-  /* Warm off-white. The old #F8F9FA was a cool grey-white that read as a
-     generic SaaS background rather than anything devotional. */
-  --color-cream: #FAF6EE;
+  /* Paper tone: warm but low-chroma, so it never reads as the peach/orange-50
+     wash. Sections alternate cream and white; saffron is for CTAs and accents
+     only, never for section backgrounds. */
+  --color-cream: #F6F4EF;
   --color-charcoal: #1F2937;
 
   --font-sans: var(--font-lato);
