@@ -12,7 +12,7 @@ export const siteMetadata: Metadata = {
         template: "%s | Gokarna Temples",
     },
     description:
-        "Book authentic Narayana Bali, Pitru Dosha Nivarana, and Tripindi Shradh Pujas in Gokarna. Performed by expert Vedic priests for ancestral peace and moksha. Call +91 96638 28936.",
+        "Narayana Bali, Pitru Dosha Nivarana and Tripindi Shradh in Gokarna, performed by experienced Vedic priests for ancestral peace. Call +91 96638 28936.",
     keywords: [
         "Narayana Bali Puja Gokarna",
         "Pitru Dosha Nivarana Gokarna",

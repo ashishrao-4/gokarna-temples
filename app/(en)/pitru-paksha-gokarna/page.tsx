@@ -8,7 +8,7 @@ import PhoneCTA from '@/components/PhoneCTA';
 import PageJsonLd from '@/components/PageJsonLd';
 import TrackedLink from '@/components/TrackedLink';
 import { siteMetadata } from '@/lib/metadata';
-import tripindiShradh from '../../images/tripindi1.jpg';
+import tripindiShradh from '@/images/tripindi1.jpg';
 
 export const metadata: Metadata = {
     title: { absolute: 'Pitru Paksha & Shraddha in Gokarna | Tripindi, Pinda Daan' },

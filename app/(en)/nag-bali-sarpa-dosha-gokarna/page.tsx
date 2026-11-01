@@ -8,10 +8,10 @@ import PhoneCTA from '@/components/PhoneCTA';
 import PageJsonLd from '@/components/PageJsonLd';
 import TrackedLink from '@/components/TrackedLink';
 import { siteMetadata } from '@/lib/metadata';
-import nagabali from '../../images/sarpadosha.jpg';
+import nagabali from '@/images/sarpadosha.jpg';
 
 export const metadata: Metadata = {
-    title: 'Nag Bali, Sarpa Dosha & Kaal Sarp Dosh Puja in Gokarna',
+    title: { absolute: 'Nag Bali, Sarpa Dosha & Kaal Sarp Dosh Puja in Gokarna' },
     description: 'Nag Bali, Sarpa Dosha and Kaal Sarp Dosh puja in Gokarna, performed and guided personally by Guruji. No fixed packages. Call +91 96638 28936.',
     alternates: {
         canonical: '/nag-bali-sarpa-dosha-gokarna',

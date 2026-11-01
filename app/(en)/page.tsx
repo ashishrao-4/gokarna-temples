@@ -4,7 +4,7 @@ import HomeJsonLd from "@/components/HomeJsonLd";
 import { siteMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = {
-  title: "Narayana Bali Pooja Gokarna | Pitru Dosha & Ancestral Rituals",
+  title: { absolute: "Narayana Bali & Pitru Dosha Pooja in Gokarna" },
   description: "Book authentic Narayana Bali and Pitru Dosha pooja in Gokarna. 20+ years of Vedic experience. Personal guidance for your family's rituals, by phone.",
   alternates: {
     canonical: '/',
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
       'en-IN': '/',
       'kn-IN': '/kn',
       'te-IN': '/te',
+      'x-default': '/',
     },
   },
   openGraph: {

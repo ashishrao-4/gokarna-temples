@@ -11,25 +11,18 @@ export default function FAQ() {
         <section className="py-20 bg-cream">
             <div className="container mx-auto px-4 max-w-3xl">
                 <div className="text-center mb-12">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                    <h2
                         className="text-3xl md:text-5xl font-serif font-bold text-charcoal mb-4"
                     >
                         Frequently Asked Questions
-                    </motion.h2>
+                    </h2>
                     <p className="text-gray-600">Common doubts about Vedic rituals in Gokarna.</p>
                 </div>
 
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
                             className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                         >
                             <button
@@ -55,7 +48,7 @@ export default function FAQ() {
                                     </motion.div>
                                 )}
                             </AnimatePresence>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

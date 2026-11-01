@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
 import TrackedLink from '@/components/TrackedLink';
 import { siteMetadata } from '@/lib/metadata';
-import heroImage from '../../images/koti 3.jpg';
+import heroImage from '@/images/koti 3.jpg';
 
 const TITLE = 'గోకర్ణంలో నారాయణ బలి, నాగ బలి, పితృ దోషం పూజ';
 const DESCRIPTION = 'గోకర్ణంలో బాలచంద్ర ప్రసాద్ గురూజీ ద్వారా శాస్త్రోక్తంగా నారాయణ బలి, నాగ బలి, పితృ దోషం పూజ మరియు పితృ పక్షం శ్రాద్ధం. గురూజీ తెలుగులోనే మాట్లాడతారు. కాల్ చేయండి: +91 96638 28936.';
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
             'en-IN': '/',
             'kn-IN': '/kn',
             'te-IN': '/te',
+            'x-default': '/',
         },
     },
     openGraph: {

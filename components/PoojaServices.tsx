@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -49,24 +46,17 @@ export default function PoojaServices() {
         <section id="poojas" className="py-20 bg-cream">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                    <div
                     >
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-charcoal mb-4">Our Sacred Vedic Rituals in Gokarna</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto text-lg">Authentic Narayana Bali, Pitru Dosha, and Nag Bali poojas performed by experienced Vedic pandits.</p>
-                    </motion.div>
+                    </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {poojas.map((pooja, index) => (
-                        <motion.div
+                    {poojas.map((pooja) => (
+                        <div
                             key={pooja.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
                             className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow flex flex-col group/card"
                         >
                             <Link href={pooja.link} className="relative h-56 w-full overflow-hidden block">
@@ -103,7 +93,7 @@ export default function PoojaServices() {
                                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                                 </Link>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

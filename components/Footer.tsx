@@ -1,7 +1,6 @@
-"use client";
 import Link from "next/link";
 import { Phone, MapPin } from "lucide-react";
-import { gtag_report_conversion } from "@/lib/gtag";
+import TrackedLink from "@/components/TrackedLink";
 
 export default function Footer() {
     return (
@@ -34,7 +33,7 @@ export default function Footer() {
                             <li><Link href="/narayana-bali-pooja-gokarna" className="hover:text-saffron transition-colors hover:pl-2">Narayana Bali</Link></li>
                             <li><Link href="/pitru-dosha-pooja-gokarna" className="hover:text-saffron transition-colors hover:pl-2">Pitru Dosha Pooja</Link></li>
                             <li><Link href="/nag-bali-sarpa-dosha-gokarna" className="hover:text-saffron transition-colors hover:pl-2">Nag Bali / Sarpa Dosha</Link></li>
-                            <li><Link href="/pitru-dosha-pooja-gokarna" className="hover:text-saffron transition-colors hover:pl-2">Tripindi Shradh</Link></li>
+                            <li><Link href="/pitru-paksha-gokarna" className="hover:text-saffron transition-colors hover:pl-2">Tripindi Shradh &amp; Pinda Daan</Link></li>
                         </ul>
                     </div>
 
@@ -58,7 +57,7 @@ export default function Footer() {
                                 <Phone className="text-saffron shrink-0 mt-1" size={18} />
                                 <div>
                                     <div className="text-xs text-gray-500 uppercase font-bold mb-1">Phone</div>
-                                    <a href="tel:+919663828936" onClick={() => gtag_report_conversion(undefined, "call")} className="text-white font-bold hover:text-saffron text-lg block">+91 96638 28936</a>
+                                    <TrackedLink href="tel:+919663828936" className="text-white font-bold hover:text-saffron text-lg block">+91 96638 28936</TrackedLink>
                                 </div>
                             </div>
 
@@ -70,7 +69,7 @@ export default function Footer() {
                                 </div>
                                 <div>
                                     <div className="text-xs text-gray-500 uppercase font-bold mb-1">WhatsApp</div>
-                                    <a href="https://wa.me/919663828936" target="_blank" rel="noopener noreferrer" onClick={() => gtag_report_conversion(undefined, "whatsapp")} className="text-white hover:text-saffron block">Chat on WhatsApp</a>
+                                    <TrackedLink href="https://wa.me/919663828936" target="_blank" rel="noopener noreferrer" className="text-white hover:text-saffron block">Chat on WhatsApp</TrackedLink>
                                 </div>
                             </div>
 
@@ -82,7 +81,7 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                    <p>&copy; 2026 Gokarna Temples. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Gokarna Temples. All rights reserved.</p>
                     <div className="flex gap-6 mt-4 md:mt-0">
                         <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
                         <Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>

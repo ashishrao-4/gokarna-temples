@@ -1,70 +1,74 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Phone, MessageCircle, Calendar, Check, Info, ArrowRight, Users, Flame } from 'lucide-react';
+import { Phone, MessageCircle, Calendar, Check, Info, ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
 import PageJsonLd from '@/components/PageJsonLd';
 import TrackedLink from '@/components/TrackedLink';
 import { siteMetadata } from '@/lib/metadata';
-import narayanaBali from '../../images/koti 2.jpg';
+import pitruDoshaNivarana from '@/images/pitrudosh.jpg';
 
 export const metadata: Metadata = {
-    title: 'Narayana Bali Pooja Gokarna | Expert Pandits, Authentic Rituals',
-    description: "Narayana Bali pooja in Gokarna for Pitru Dosha. Guided by an experienced Vedic priest. Call to plan your family's ritual.",
+    title: { absolute: 'Pitru Dosha Pooja, Pind Daan & Tripindi Shradh in Gokarna' },
+    description: "Pitru Dosha Nivarana, Pind Daan and Tripindi Shradh in Gokarna, guided by a traditional Vedic priest. Call to plan your family's ritual.",
     alternates: {
-        canonical: '/narayana-bali-pooja-gokarna',
+        canonical: '/pitru-dosha-pooja-gokarna',
     },
     openGraph: {
         ...siteMetadata.openGraph,
-        title: 'Narayana Bali Pooja Gokarna | Expert Pandits, Authentic Rituals',
-        description: "Narayana Bali pooja in Gokarna for Pitru Dosha. Guided by an experienced Vedic priest. Call to plan your family's ritual.",
-        url: '/narayana-bali-pooja-gokarna',
+        title: 'Pitru Dosha Pooja, Pind Daan & Tripindi Shradh in Gokarna',
+        description: "Pitru Dosha Nivarana, Pind Daan and Tripindi Shradh in Gokarna, guided by a traditional Vedic priest. Call to plan your family's ritual.",
+        url: '/pitru-dosha-pooja-gokarna',
     },
 };
 
 // Single source for the visible FAQ section and the FAQPage structured data.
 const faqs = [
     {
-        q: 'On which days can Narayana Bali be done?',
-        a: 'Ideally performed on Amavasya, Purnima, or specialized muhurtas. Guruji will check the panchang and suggest the best date.',
+        q: 'How do I know if I have Pitru Dosha?',
+        a: 'Common signs include delay in progeny, constant illness, and money loss. Consulting a family pandit can provide clarity.',
     },
     {
-        q: 'How many family members should attend?',
-        a: 'The main Karta (performer) must attend. Other family members can participate. It is good if the whole family attends for collective blessings.',
+        q: 'Can women perform Pitru Dosha Pooja?',
+        a: 'Yes, women can perform specific rituals or participate along with family. Guruji can guide on the exact Vidhi based on tradition.',
     },
     {
-        q: 'Can I do Narayana Bali if I live abroad?',
-        a: 'Yes, if you cannot travel, Sankalpa can be done in your name. However, for Narayana Bali, Guruji recommends the family attend in person at Gokarna wherever possible, as the karta traditionally performs the rites.',
+        q: 'What is the difference between Narayana Bali and Pitru Dosha Pooja?',
+        a: 'Narayana Bali is a specific ritual for unnatural or severe accidental deaths, and in such cases it is often considered a prerequisite for Pitru Dosha nivarana. Pitru Dosha Pooja or Tripindi Shradh is generally performed for unsatisfied souls from the last three generations who may have passed naturally but are stuck.',
     },
     {
-        q: 'How is the dakshina for Narayana Bali decided?',
-        a: 'There is no fixed package. The dakshina depends on the number of days, the number of pandits involved, and any additional rites such as Tripindi Shradh performed along with it. Guruji tells you the amount openly on the phone, and there are no hidden charges.',
+        q: 'How long does the Pitru Dosha Nivarana take?',
+        a: 'The rites usually take 3-4 hours and are best performed in the morning hours. Commonly Tripindi Shradh or Tila Homa is performed, with pindas offered to the ancestors of the father, mother and in-law lineages.',
     },
     {
-        q: 'Which languages can we speak to Guruji in?',
-        a: 'Guruji Balachandra Prasad has over 20 years of experience in these rituals and speaks Kannada, Telugu, Hindi and Marathi, apart from English, so families can discuss the vidhi comfortably in their own language.',
+        q: 'Can we perform Pind Daan in Gokarna?',
+        a: 'Yes. Pind Daan with tarpana is performed in Gokarna, which is revered as Dakshin Kashi. It can be done in Pitru Paksha, on Amavasya, or on the tithi of the ancestor. Guruji advises whether Pind Daan alone is right for your family or whether Tripindi Shradh or Narayana Bali is needed.',
+    },
+    {
+        q: 'How is the dakshina decided?',
+        a: 'There is no fixed package. The dakshina depends on the rites advised, such as a simple Tila Homa or a complete Tripindi Shradh. Guruji tells you the amount openly on the phone, and there are no hidden charges.',
     },
 ];
 
-export default function NarayanaBaliPage() {
+export default function PitruDoshaPage() {
     return (
         <main className="min-h-screen bg-cream selection:bg-saffron selection:text-white font-sans">
             <PageJsonLd
-                path="/narayana-bali-pooja-gokarna"
-                name="Narayana Bali Pooja in Gokarna"
-                description="Narayana Bali pooja in Gokarna for Pitru Dosha. Guided by an experienced Vedic priest. Call to plan your family's ritual."
+                path="/pitru-dosha-pooja-gokarna"
+                name="Pitru Dosha Pooja in Gokarna"
+                description="Pitru Dosha Nivarana, Pind Daan and Tripindi Shradh in Gokarna, guided by a traditional Vedic priest. Call to plan your family's ritual."
                 faqs={faqs}
             />
             <Header />
 
-            {/* HERO SECTION - Full Background Image */}
+            {/* HERO SECTION - Full Background */}
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src={narayanaBali}
-                        alt="Koti Teertha tank at Gokarna, where ancestral rites are performed"
+                        src={pitruDoshaNivarana}
+                        alt="Pitru Dosha Pooja Gokarna ritual"
                         fill
                         className="object-cover"
                         priority
@@ -78,13 +82,13 @@ export default function NarayanaBaliPage() {
                 <div className="relative z-20 container mx-auto px-4 text-center text-white pt-32 pb-20">
                     <div className="animate-in fade-in zoom-in duration-700 space-y-6 max-w-4xl mx-auto">
                         <span className="inline-block py-1 px-4 rounded-full bg-saffron/20 border border-saffron/50 text-saffron font-bold text-sm tracking-widest uppercase backdrop-blur-sm">
-                            Vedic Remedy for Ancestral Peace
+                            Ancestral Peace Rituals
                         </span>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight drop-shadow-lg text-white">
-                            Narayana Bali Pooja in <span className="text-saffron">Gokarna</span>
+                            Pitru Dosha Pooja in <span className="text-saffron">Gokarna</span>
                         </h1>
                         <p className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto font-medium">
-                            Narayana Bali Pooja in Gokarna for the departed soul, performed by experienced pandits as prescribed in shastra.
+                            Pitru Dosha Nivarana in Gokarna, performed at the holy Mukti Sthala by pandits of a traditional Vedic lineage.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
@@ -96,11 +100,11 @@ export default function NarayanaBaliPage() {
                                 Call Guruji: +91 96638 28936
                             </TrackedLink>
                             <TrackedLink
-                                href="https://wa.me/919663828936?text=Namaste%20Guruji,%20I%20want%20to%20perform%20Narayana%20Bali%20in%20Gokarna.%20Please%20guide."
+                                href="https://wa.me/919663828936?text=Namaste%20Guruji,%20I%20want%20to%20know%20about%20Pitru%20Dosha%20Pooja%20in%20Gokarna."
                                 className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2 transition-colors"
                             >
                                 <MessageCircle size={24} />
-                                WhatsApp Booking
+                                WhatsApp Enquiry
                             </TrackedLink>
                         </div>
                         <p className="text-sm text-gray-300">
@@ -110,19 +114,19 @@ export default function NarayanaBaliPage() {
                 </div>
             </section>
 
-            {/* WHO SHOULD PERFORM - Clean layout without extra image */}
+            {/* INDICATIONS */}
             <section className="py-20 bg-gradient-to-b from-white to-orange-50/30">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
                     <h2 className="text-3xl md:text-5xl font-serif font-bold text-charcoal mb-12">
-                        Who Should Perform Narayana Bali?
+                        Indications of Pitru Dosha
                     </h2>
                     <div className="grid md:grid-cols-2 gap-6 text-left">
                         {[
-                            "Family history of unnatural or sudden deaths",
-                            "Repeated obstacles in career, marriage, or health",
-                            "Advice from family elders or spiritual guides",
-                            "Experiencing bad dreams or sensing presence of ancestors",
-                            "Lack of peace and harmony in the household"
+                            "Repeated failures in business or career",
+                            "Family disputes and lack of harmony",
+                            "Advice from learned elders or pandits",
+                            "Delay in marriage or progeny (child birth)",
+                            "Pitru Dosha seen in the family Jataka (horoscope)"
                         ].map((item, i) => (
                             <div key={i} className="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-all hover:border-orange-200">
                                 <div className="mt-1 bg-saffron/10 p-2 rounded-full text-saffron shrink-0">
@@ -134,40 +138,64 @@ export default function NarayanaBaliPage() {
                     </div>
                     <div className="mt-10">
                         <TrackedLink href="tel:+919663828936" className="inline-flex items-center gap-2 text-saffron font-bold text-lg hover:underline decoration-2 underline-offset-4">
-                            Unsure if this is right for you? Talk to Guruji <ArrowRight size={20} />
+                            Consult Guruji for Guidance <ArrowRight size={20} />
                         </TrackedLink>
                     </div>
                 </div>
             </section>
 
-            {/* HOW IT HAPPENS - Abstract background */}
+            {/* INFO: NARAYANA BALI VS PITRU DOSHA */}
+            <section className="py-16 bg-stone-100">
+                <div className="container mx-auto px-4 max-w-4xl text-center">
+                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-charcoal mb-8">
+                        Difference Between Narayana Bali & Pitru Dosha Pooja
+                    </h2>
+                    <div className="bg-white p-8 rounded-2xl shadow-sm border-l-4 border-saffron text-left space-y-6">
+                        <p className="text-gray-700 text-lg leading-relaxed">
+                            <strong>Narayana Bali</strong> is a specific ritual for &ldquo;unnatural deaths&rdquo; or severe accidental causes, often considered a prerequisite for Pitru Dosha nivarana in such cases.
+                        </p>
+                        <p className="text-gray-700 text-lg leading-relaxed">
+                            <strong>Pitru Dosha Pooja / Tripindi Shradh</strong> is generally performed for &ldquo;unsatisfied souls&rdquo; from the last three generations who may have passed naturally but are stuck.
+                        </p>
+                        <div className="pt-4">
+                            <Link href="/narayana-bali-pooja-gokarna" className="text-saffron font-bold hover:underline flex items-center gap-1 text-lg">
+                                Learn more about Narayana Bali <ArrowRight size={20} />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* HOW IT HAPPENS */}
             <section className="py-20 bg-saffron/5 relative overflow-hidden">
                 <div className="container mx-auto px-4 max-w-4xl text-center relative z-10">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal mb-8">
-                        How Narayana Bali Pooja Happens in Gokarna
+                        How Pitru Dosha Nivarana is Performed
                     </h2>
-                    <p className="text-charcoal/80 text-xl mb-12 leading-relaxed max-w-3xl mx-auto">
-                        The ritual commences with a <span className="font-bold text-charcoal">Sankalpa</span> (sacred vow) at the holy river banks or designated Mukti Sthala.
-                        It involves invoking Lord Narayana to liberate the soul. The process includes <span className="font-bold text-charcoal">Homa</span>, offering of Pindas (Pind Daan),
-                        and final prayers for the soul&apos;s ascension. Where Sarpa Dosha is also indicated in the family, the{' '}
+                    <p className="text-charcoal/80 text-xl mb-6 leading-relaxed max-w-3xl mx-auto">
+                        The exact procedure (Vidhi) depends on the guidance of the Pandit.
+                        Commonly, <span className="font-bold text-charcoal">Tripindi Shradh</span> or <span className="font-bold text-charcoal">Tila Homa</span> is performed.
+                        It involves offering pindas to ancestors of father/mother/in-law lineages to satisfy their souls.
+                    </p>
+                    <p className="text-charcoal/80 text-lg mb-12 leading-relaxed max-w-3xl mx-auto">
+                        Many families prefer to do these rites during the{' '}
+                        <Link href="/pitru-paksha-gokarna" className="text-saffron font-bold hover:underline">Pitru Paksha fortnight in Gokarna</Link>,
+                        when Shraddha and Tarpana for ancestors carry special significance. Where Sarpa Dosha is also indicated, the{' '}
                         <Link href="/nag-bali-sarpa-dosha-gokarna" className="text-saffron font-bold hover:underline">Nag Bali pooja</Link>{' '}
-                        is performed along with it as Nag-Narayana Bali.
+                        can be performed alongside.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6 text-left">
                         <div className="bg-white/80 backdrop-blur p-8 rounded-2xl shadow-lg border border-saffron/20 flex-1 transform transition hover:-translate-y-1">
                             <h3 className="font-bold text-2xl text-saffron mb-3 flex items-center gap-3">
-                                <Calendar size={28} /> Duration
+                                <Calendar size={28} /> Timing
                             </h3>
-                            <p className="text-charcoal font-medium">
-                                Typically 1 day ritual (sometimes 2 days based on severity). Usually starts early morning. Many families choose the{' '}
-                                <Link href="/pitru-paksha-gokarna" className="text-saffron hover:underline">Pitru Paksha fortnight</Link> for it.
-                            </p>
+                            <p className="text-charcoal font-medium">Usually takes 3-4 hours. Best performed in the morning hours.</p>
                         </div>
                         <div className="bg-white/80 backdrop-blur p-8 rounded-2xl shadow-lg border border-saffron/20 flex-1 transform transition hover:-translate-y-1">
                             <h3 className="font-bold text-2xl text-saffron mb-3 flex items-center gap-3">
-                                <Info size={28} /> Location
+                                <Info size={28} /> Ritual Type
                             </h3>
-                            <p className="text-charcoal font-medium">Private ritual grounds near the main temple or sacred water bodies in Gokarna.</p>
+                            <p className="text-charcoal font-medium">Peaceful Vedic Homa and Pinda Pradan rituals. Non-intimidating and satvik.</p>
                         </div>
                     </div>
                 </div>
@@ -177,23 +205,21 @@ export default function NarayanaBaliPage() {
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4 max-w-5xl">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-charcoal text-center mb-12">
-                        What We Arrange for Your Family
+                        What We Arrange
                     </h2>
-                    {/* Distinct icons, left aligned. Three identical check-marks in three
-                        identical circles is the row every generated page ships with. */}
-                    <div className="grid md:grid-cols-3 gap-10">
+                    {/* Plain description list, not a third copy of the same three-card row. */}
+                    <dl className="max-w-3xl mx-auto divide-y divide-gray-200 border-y border-gray-200">
                         {[
-                            { Icon: Users, title: "Expert Pandits", desc: "Experienced Gokarna pandits from traditional lineage proficient in Narayana Bali Vidhi." },
-                            { Icon: Flame, title: "Complete Samagri", desc: "All organic and scripturally correct pooja items (Samagri) arranged by us." },
-                            { Icon: Calendar, title: "Muhurtha Guidance", desc: "Selection of best dates based on your family details." }
-                        ].map(({ Icon, title, desc }) => (
-                            <div key={title} className="border-t-2 border-saffron/30 pt-6">
-                                <Icon className="text-saffron mb-4" size={28} strokeWidth={1.5} />
-                                <h3 className="font-bold text-xl text-charcoal mb-3">{title}</h3>
-                                <p className="text-gray-600 leading-relaxed">{desc}</p>
+                            { title: "Vedic Priests", desc: "Qualified pandits to perform the pooja correctly." },
+                            { title: "Pooja Samagri", desc: "Fresh flowers, ghee, havan samagri, and pinda materials." },
+                            { title: "Consultation", desc: "Pre-pooja guidance on sankalpa and gothra details." }
+                        ].map((item) => (
+                            <div key={item.title} className="py-6 md:flex md:gap-10">
+                                <dt className="font-bold text-lg text-charcoal md:w-56 md:shrink-0">{item.title}</dt>
+                                <dd className="text-gray-600 leading-relaxed mt-1 md:mt-0">{item.desc}</dd>
                             </div>
                         ))}
-                    </div>
+                    </dl>
                 </div>
             </section>
 
@@ -201,15 +227,13 @@ export default function NarayanaBaliPage() {
             <section className="py-20 bg-stone-900 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-stone-900 to-black"></div>
                 <div className="container mx-auto px-4 max-w-3xl relative z-10">
-                    <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8 text-white">Dakshina & Cost Details</h2>
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8 text-white">Cost & Dakshina</h2>
                     <p className="text-gray-300 text-xl mb-10 leading-relaxed">
-                        Dakshina for Narayana Bali varies based on number of days,
-                        number of pandits involved, and any additional rituals like Tripindi Shradh performed along with it.
+                        Dakshina varies based on specific rituals advised (e.g. Simple Tila Homa vs Complete Tripindi Shradh).
                     </p>
-
                     <div>
                         <TrackedLink href="tel:+919663828936" className="inline-block bg-saffron hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-colors shadow-md">
-                            Call Guruji for Estimate
+                            Speak to Guruji
                         </TrackedLink>
                     </div>
                 </div>
@@ -219,7 +243,7 @@ export default function NarayanaBaliPage() {
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4 max-w-3xl">
                     <h2 className="text-3xl font-serif font-bold text-charcoal text-center mb-12">
-                        Narayana Bali FAQ
+                        Frequently Asked Questions
                     </h2>
                     <div className="space-y-4">
                         {faqs.map((faq) => (

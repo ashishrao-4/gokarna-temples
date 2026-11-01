@@ -1,5 +1,3 @@
-"use client";
-import { motion } from "framer-motion";
 import { Shield, Clock, Users, Heart, Sun, MapPin } from "lucide-react";
 
 const benefits = [
@@ -16,25 +14,18 @@ export default function Benefits() {
         <section id="benefits" className="py-20 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                    <h2
                         className="text-3xl md:text-5xl font-serif font-bold text-charcoal mb-4"
                     >
                         Why Choose Our Gokarna Pooja Services?
-                    </motion.h2>
+                    </h2>
                     <p className="text-gray-600">Expert guidance for Narayana Bali, Pitru Dosha, and Nag Bali ceremonies.</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {benefits.map((b, i) => (
-                        <motion.div
+                        <div
                             key={i}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.1 }}
                             className="flex gap-4 p-6 rounded-2xl bg-gray-50 hover:bg-cream border border-gray-100 hover:border-saffron/20 transition-all hover:shadow-lg group"
                         >
                             <div className="bg-white p-4 rounded-full shadow-sm h-fit text-saffron group-hover:bg-saffron group-hover:text-white transition-colors">
@@ -44,7 +35,7 @@ export default function Benefits() {
                                 <h3 className="font-bold text-xl text-charcoal mb-2 font-serif">{b.title}</h3>
                                 <p className="text-gray-600 text-sm leading-relaxed">{b.desc}</p>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

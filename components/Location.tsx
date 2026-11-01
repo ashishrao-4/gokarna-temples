@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { MapPin, ExternalLink, Bus, Train, Plane } from "lucide-react";
 
 export default function Location() {
@@ -8,31 +5,21 @@ export default function Location() {
         <section id="location" className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                    <h2
                         className="text-3xl md:text-5xl font-serif font-bold text-charcoal mb-4"
                     >
                         Visit the Sacred Grounds
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
+                    </h2>
+                    <p
                         className="text-gray-600 max-w-2xl mx-auto"
                     >
                         Gokarna is located in the Kumta taluk of Uttara Kannada district in Karnataka.
                         It is a celebrated pilgrimage center and a tourist destination.
-                    </motion.p>
+                    </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                    <div
                         className="space-y-8"
                     >
                         <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
@@ -94,12 +81,9 @@ export default function Location() {
                                 </a>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                    <div
                         className="relative h-[500px] w-full bg-gray-200 rounded-3xl overflow-hidden shadow-xl"
                     >
                         <iframe
@@ -118,7 +102,7 @@ export default function Location() {
                             </p>
                             <p className="text-xs text-gray-500 mt-1">Near Mahabaleshwar Temple, Car St, Gokarna, Karnataka 581326</p>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>

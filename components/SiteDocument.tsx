@@ -1,11 +1,13 @@
-import type { Metadata, Viewport } from "next";
-import { Playfair_Display, Cinzel, Lato, Great_Vibes, Noto_Sans_Kannada, Noto_Sans_Telugu } from "next/font/google";
+import { Playfair_Display, Cinzel, Lato, Noto_Sans_Kannada, Noto_Sans_Telugu } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import "./globals.css";
-import { siteMetadata, siteViewport } from "@/lib/metadata";
+import "@/app/globals.css";
 import JsonLd from "@/components/JsonLd";
 import Script from "next/script";
+
+// Shared <html>/<body> for the three root layouts in app/(en), app/(kn) and
+// app/(te). Each language group is its own root layout so <html lang> is
+// correct per page without making every page dynamic.
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -22,14 +24,7 @@ const playfair = Playfair_Display({
 const lato = Lato({
   subsets: ["latin"],
   variable: "--font-lato",
-  weight: ["300", "400", "700", "900"],
-  display: "swap",
-});
-
-const greatVibes = Great_Vibes({
-  subsets: ["latin"],
-  variable: "--font-great-vibes",
-  weight: ["400"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -53,18 +48,17 @@ const notoTelugu = Noto_Sans_Telugu({
 // NEXT_PUBLIC_GA_ID can override it per environment.
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-4B7GT6QNVK";
 
-export const metadata: Metadata = siteMetadata;
-export const viewport: Viewport = siteViewport;
-
-export default function RootLayout({
+export default function SiteDocument({
+  lang,
   children,
 }: Readonly<{
+  lang: "en" | "kn" | "te";
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang={lang} className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${cinzel.variable} ${playfair.variable} ${lato.variable} ${greatVibes.variable} ${notoKannada.variable} ${notoTelugu.variable} antialiased bg-cream text-charcoal font-sans`}
+        className={`${cinzel.variable} ${playfair.variable} ${lato.variable} ${notoKannada.variable} ${notoTelugu.variable} antialiased bg-cream text-charcoal font-sans`}
       >
         <JsonLd />
         {children}

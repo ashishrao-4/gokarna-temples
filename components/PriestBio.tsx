@@ -1,16 +1,11 @@
-"use client";
-import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
-import { gtag_report_conversion } from "@/lib/gtag";
+import TrackedLink from "@/components/TrackedLink";
 
 export default function PriestBio() {
     return (
         <section id="priest" className="py-20 bg-cream">
             <div className="container mx-auto px-4">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                <div
                     className="flex flex-col md:flex-row items-center gap-12 bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 overflow-hidden relative"
                 >
                     {/* Guruji does not want a photograph of himself on the site. A plain
@@ -53,20 +48,19 @@ export default function PriestBio() {
                         </dl>
 
                         <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                            <a
+                            <TrackedLink
                                 href="tel:+919663828936"
-                                onClick={() => gtag_report_conversion(undefined, "call")}
                                 className="bg-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-colors shadow-md"
                             >
                                 <Phone size={20} />
                                 Talk to Guruji Directly
-                            </a>
+                            </TrackedLink>
                             <p className="text-gray-500 text-sm">
                                 Calls taken 6 AM to midnight.
                             </p>
                         </div>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     )

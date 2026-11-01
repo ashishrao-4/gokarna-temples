@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import PhoneCTA from '@/components/PhoneCTA';
 import TrackedLink from '@/components/TrackedLink';
 import { siteMetadata } from '@/lib/metadata';
-import heroImage from '../../images/koti 2.jpg';
+import heroImage from '@/images/koti 2.jpg';
 
 const TITLE = 'ಗೋಕರ್ಣದಲ್ಲಿ ನಾರಾಯಣ ಬಲಿ, ನಾಗ ಬಲಿ, ಪಿತೃ ದೋಷ ಪೂಜೆ';
 const DESCRIPTION = 'ಗೋಕರ್ಣದಲ್ಲಿ ಬಾಲಚಂದ್ರ ಪ್ರಸಾದ್ ಗುರೂಜಿಯವರಿಂದ ಶಾಸ್ತ್ರೋಕ್ತವಾಗಿ ನಾರಾಯಣ ಬಲಿ, ನಾಗ ಬಲಿ, ಪಿತೃ ದೋಷ ಪೂಜೆ ಮತ್ತು ಪಿತೃ ಪಕ್ಷ ಶ್ರಾದ್ಧ. ಗುರೂಜಿ ಕನ್ನಡದಲ್ಲೇ ಮಾತನಾಡುತ್ತಾರೆ. ಕರೆ ಮಾಡಿ: +91 96638 28936.';
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
             'en-IN': '/',
             'kn-IN': '/kn',
             'te-IN': '/te',
+            'x-default': '/',
         },
     },
     openGraph: {
